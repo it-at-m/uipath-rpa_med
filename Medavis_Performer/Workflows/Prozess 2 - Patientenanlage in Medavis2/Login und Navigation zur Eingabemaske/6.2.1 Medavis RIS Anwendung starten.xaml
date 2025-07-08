@@ -1,0 +1,209 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_1_Medavis_RIS_Anwendung_starten__Neu_" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strMedavisAccountName" Type="InArgument(x:String)" />
+    <x:Property Name="in_secMedavisPasswort" Type="InArgument(ss:SecureString)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1410.4,1850.3999999999999</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_2_1_Medavis_RIS_Anwendung_starten__Neu__1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Medavis_RIS_Anwendung_starten" sap:VirtualizedContainerService.HintSize="545.6,1785.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ss:SecureString" Name="secMedavisPasswort" />
+      <Variable x:TypeArguments="x:String" Name="strMedavisBenutzername" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Login in Medavis" sap:VirtualizedContainerService.HintSize="483.2,1673.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="90c818df-1311-4a7a-ae56-ac02d534f90e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,1382.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Benutzername eingeben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="90c818df-1311-4a7a-ae56-ac02d534f90e" Text="[in_strMedavisAccountName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="254, 375, 410, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="13fadcd7-f5ef-402c-bc44-312b5f6d4ed0" InformativeScreenshot="3f6ce200d9fad2860779ef5eeca87542.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.49.5.3)' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="29, 375, 635, 45" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="5c2a0f1e-34a9-4b08-9ed4-aea8bb7a2d96" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Passwort eingeben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="90c818df-1311-4a7a-ae56-ac02d534f90e" SecureText="[in_secMedavisPasswort]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="254, 425, 410, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="507a7784-d84b-4e71-a24e-a08d0c5cdb5a" InformativeScreenshot="89fbdd44e0bcf48d429903c51df132fb.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.49.5.3)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="29, 425, 635, 45" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="f4ef3152-ce9f-4289-8284-2fa7b3531c4a" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf Button &quot;OK&quot;" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90c818df-1311-4a7a-ae56-ac02d534f90e" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="281, 510, 175, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd aaname='OK' cls='TMGButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd aaname='OK' cls='TMGButton' title='&amp;amp;OK' check:text='&amp;amp;OK' /&gt;" Guid="9e4bb29b-00d5-4ecc-b95b-d08a9ce532d7" InformativeScreenshot="e2144b9074cd5d22cbe0db0807f4276b.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.49.5.3)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="29, 510, 41, 41" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGButton' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGButton' /&gt;" Guid="33b17308-f6b9-4c00-ab35-5cc9247ba150" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="DropDownMenü Mandant auswählen öffnen" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90c818df-1311-4a7a-ae56-ac02d534f90e" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="254, 525, 410, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd cls='TMGComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd cls='TMGComboBox' check:text='TBC' /&gt;" Guid="3eefccdc-2364-4f18-acd7-e3289ecd122b" InformativeScreenshot="8dd9bc41a1c5d8accf0833d16915a656.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.49.5.3)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="29, 525, 635, 45" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd cls='TMGLabeledComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd cls='TMGLabeledComboBox' /&gt;" Guid="c185cf7b-ccd6-464c-a57d-de31f967541a" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Mandantenauswahl &quot;TBC&quot; anklicken" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90c818df-1311-4a7a-ae56-ac02d534f90e" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="-1, 1, 406, 38" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='TBC' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='TBC' role='list item' automationid='' check:text='TBC' /&gt;" Guid="d5319c17-46ac-438f-9fd3-94a08d29562e" InformativeScreenshot="e03746c5acd87ab3338ba72747cb113d.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGPopupListBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="-1, 39, 406, 37" ElementType="ListItem" FullSelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='AG' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='AG' role='list item' automationid='' check:text='AG' /&gt;" Guid="8b4a4651-2d70-470a-a42e-20194dc02639" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf &quot;OK&quot; zum anmelden" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90c818df-1311-4a7a-ae56-ac02d534f90e" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="291, 610, 175, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd aaname='OK' cls='TMGButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd aaname='OK' cls='TMGButton' title='&amp;amp;OK' check:text='&amp;amp;OK' /&gt;" Guid="07883d14-dc8f-4f11-b101-077b9e895d0a" InformativeScreenshot="d0a779c39e47a408fcdc19278d3d236e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.49.5.3)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="96, 610, 175, 41" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd aaname='Passwort ändern' cls='TMGButton' title='&amp;amp;Passwort ändern' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='ChooseMandator' /&gt;&lt;wnd aaname='Passwort ändern' cls='TMGButton' title='&amp;amp;Passwort ändern' check:text='&amp;amp;Passwort ändern' /&gt;" Guid="57241fff-c2b7-4089-b5a1-0afd28b2a419" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="614, 231, 693, 566" FilePath="C:\medavis\programm\ris.exe" IconBase64="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" InformativeScreenshot="698fad78872a2010f49f34bbdda8f1ae.png" Selector="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.49.5.3)' /&gt;" Title="Login - RIS (5.49.5.3)" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

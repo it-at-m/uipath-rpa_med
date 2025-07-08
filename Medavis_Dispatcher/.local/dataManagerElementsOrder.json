@@ -1,0 +1,293 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder",
+        "Produktiv",
+        "maximaleTransaktionen"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 1 - Eingangsprüfung neue Probandenliste/6.1.2 Vorqualifizierung der Liste in Excel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "gebDatum&Sequence_1",
+        "boolTest&Sequence_1",
+        "gebDatumDE&Sequence_1",
+        "str_ExcelDateiProbatenliste&Sequence_1",
+        "str_ExcelDateiKriterienliste&Sequence_1",
+        "dt_dummy&Sequence_1",
+        "dr_NewRowsValue&Sequence_1",
+        "str_bemerkungKriterienliste&Sequence_1",
+        "str_BemerkungProbandenliste&Sequence_1",
+        "drMatchRow&Sequence_1",
+        "str_Probantenliste&Sequence_1",
+        "str_ProbantenlistePath&Sequence_1",
+        "str_Geburstdatum&Sequence_1",
+        "list_workbookSheets_1&Sequence_1",
+        "dt_currentTable&Sequence_1",
+        "arrColumnsNames&Sequence_1",
+        "str_dt_currentTable&Sequence_1",
+        "int_filecounter&Sequence_1",
+        "str_RPA&Sequence_1",
+        "AlterProbante&Sequence_1",
+        "GeburstDatum&Sequence_1",
+        "arrGebDatumFormate&Sequence_1",
+        "int_Alter&Sequence_1",
+        "dt_kriterienListe&Sequence_1",
+        "str_Kriterienliste&Sequence_1",
+        "list_workbookSheetsKriterienList&Sequence_1",
+        "gvDate&Sequence_1",
+        "str_excelAllRowsTransactions&Sequence_1",
+        "dt_template&Sequence_1",
+        "str_tp&Sequence_1",
+        "str_Bemerkung_KriterienListe&Sequence_1",
+        "str_kritetien&Sequence_1",
+        "int_cellRowCounter&Sequence_1",
+        "dt_filteredtemplate&Sequence_1",
+        "str_roboterAnweisungen&Sequence_1",
+        "dictBotKriterien&Sequence_1",
+        "dt_newProbatenliste&Sequence_1",
+        "dt_newKriterienliste&Sequence_1",
+        "str_KriterienlistePath&Sequence_1",
+        "arrDateiListe&Sequence_1",
+        "str_ersteDatei&Sequence_1",
+        "rawData&Sequence_1",
+        "dt_CleanProbadenListe&Sequence_1",
+        "dt_filteredRowsProbatenliste&Sequence_1",
+        "str_listProbanden&Sequence_1",
+        "dt_finalProbanliste&Sequence_1",
+        "arrColName&Sequence_1",
+        "arrProbantenListe&Sequence_1",
+        "arrKriterienListe&Sequence_1",
+        "list_workbookSheets_2&Sequence_1",
+        "str_sheetProbatenliste&Sequence_1",
+        "str_sheetKriterienliste&Sequence_1",
+        "dt_temp&Sequence_205"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_OutputDateiPfad",
+        "in_str_OutputOrdnerName",
+        "in_str_OutputOrdnerPfad",
+        "in_str_ArchivOrdnerPfadProbandenliste",
+        "in_str_ProbandenlisteDateiName",
+        "in_str_ProbantenListeFolder",
+        "in_str_archiv",
+        "in_str_WorkingFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config",
+        "in_Produktiv"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_OutputOrdnerArchivOrdnerPfad&Sequence_2",
+        "str_OutputDateiPfad&Sequence_2",
+        "str_OutputDateiName&Sequence_2",
+        "str_OutputOrdnerPfad&Sequence_2",
+        "str_OutputOrdnerName&Sequence_2",
+        "str_ProbandenlisteDateiName&Sequence_2",
+        "strProbandenlisteOrdner&Sequence_2",
+        "int_maximaleTransaktionenProLauf&Sequence_2",
+        "str_ArchivOrdnerPfadProbandenliste&Sequence_2",
+        "str_ArchivOrdnerPfadQueueItems&Sequence_2",
+        "str_QueueItemsOrchestratorArchivDateiName&Sequence_2",
+        "strWorkingFolder&Sequence_2",
+        "arrDomainSplit&Sequence_2",
+        "strAbsenderDomains&Sequence_2",
+        "strOrgMailboxPostfachEmpfänger&Sequence_2",
+        "strBetreff&Sequence_2",
+        "strEmailText&Sequence_2",
+        "strSmtpServer&Sequence_2",
+        "intSmtpPort&Sequence_2",
+        "strGSRRobotAccount&Sequence_2",
+        "strGSRRobotPostfach&Sequence_2",
+        "secPasswordGSRRobotAccount&Sequence_2",
+        "str_ExcelDateinameOutput&Sequence_2",
+        "str_ExcelPfadOutput&Sequence_2",
+        "str_ProbantenListeFolder&Sequence_2",
+        "str_QueueItemsOrchestrator&Sequence_2",
+        "str_archiv&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_strOrchestratorOrdner"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 1 - Eingangsprüfung neue Probandenliste/6.1.1 Postfach und Kriterien der Mail prüfen.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "boolProbandenliste&Sequence_70",
+        "EMailMedavisMailMessage&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strOrchestratorOrdner",
+        "in_strSmtpServer",
+        "in_intSmtpPort",
+        "in_strGSRRobotAccount",
+        "in_strAbsenderDomains",
+        "in_strWorkingFolder",
+        "in_strGSRRobotPostfach",
+        "in_arrDomainSplit",
+        "in_strProbandenlisteOrdner",
+        "in_secPasswordGSRRobotAccount",
+        "in_listAnhang",
+        "in_str_ArchivFolder",
+        "in_str_ProbandenlisteDateiName",
+        "in_Config",
+        "in_strBetreffEingangsMail",
+        "in_strMailAnhang",
+        "in_strMailAnhangExcel",
+        "in_strBetreffBool",
+        "in_strAnhangBool",
+        "in_strOrdnerTrueFalse",
+        "in_boolFolderProbandenliste",
+        "in_strEmailEmpfaenger",
+        "in_strEmailInhalt",
+        "in_strBetreff"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/E-Mail Workflow/Sende Start E-Mail an Postfach.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strGSRRobotAccount&Sequence_2",
+        "secPasswordGSRRobotAccount&Sequence_2",
+        "intSmtpPort&Sequence_2",
+        "strSmtpServer&Sequence_2",
+        "strEmailText&Sequence_2",
+        "strBetreff&Sequence_2",
+        "strOrgMailboxPostfachEmpfänger&Sequence_2",
+        "listAnhang&Sequence_2",
+        "strGSRRobotPostfach&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strBetreff",
+        "in_EmailEmpfaenger",
+        "in_strEmailInhalt",
+        "in_secPasswordGSRRobotAccount",
+        "in_strGSRRobotPostfach",
+        "in_strGSRRobotAccount",
+        "in_intSmtpPort",
+        "in_strSmtpServer"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 1 - Eingangsprüfung neue Probandenliste/6.1.3 Anlage der Queue-Items im Orchestrator.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_rowIndex&Sequence_1",
+        "str_partlyfilteredrowstoprocess&Sequence_1",
+        "int_remainingTransactions&Sequence_1",
+        "int_transactionCounter&Sequence_1",
+        "int_cellRowCounter&Sequence_1",
+        "neuerDateiName&Sequence_43",
+        "neuerDateiName&Sequence_36",
+        "int_maxTransactionsPerRun&Sequence_1",
+        "int_ZeilennummerErhöhen&Sequence_1",
+        "boolOrdnerExistiert&Sequence_1",
+        "dt_fullRowsToProcess&Sequence_1",
+        "dt_filteredRowsToProcess&Sequence_1",
+        "str_WorkingFolder&Sequence_1",
+        "str_rows&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_OutputDateiPfad",
+        "in_str_OutputOrdnerPfad",
+        "in_str_OutputOrdnerArchivOrdnerPfad",
+        "in_str_QueueItemsOrchestratorArchivDateiName",
+        "in_int_maximaleTransaktionenProLauf",
+        "in_str_excelTableRowsToProcess"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/WorkflowTestCaseTemplate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

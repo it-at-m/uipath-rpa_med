@@ -1,0 +1,363 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </x:Property>
+    <x:Property Name="out_strOrchestratorOrdner" Type="OutArgument(x:String)" />
+  </x:Members>
+  <this:Process.in_Config>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+  </this:Process.in_Config>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1081.6,1300</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Process_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="512,1235.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strWorkingFolder" />
+      <Variable x:TypeArguments="s:String[]" Name="arrDomainSplit" />
+      <Variable x:TypeArguments="x:String" Name="strAbsenderDomains" />
+      <Variable x:TypeArguments="x:String" Name="strOrgMailboxPostfachEmpfänger" />
+      <Variable x:TypeArguments="x:String" Default="Start der Verarbeitung der Probandenliste" Name="strBetreff" />
+      <Variable x:TypeArguments="x:String" Default="Roboter startet die Verarbeitung der Daten aus der Excel-Datei (Probandenliste)." Name="strEmailText" />
+      <Variable x:TypeArguments="x:String" Name="strSmtpServer" />
+      <Variable x:TypeArguments="x:Int32" Name="intSmtpPort" />
+      <Variable x:TypeArguments="x:String" Name="strGSRRobotAccount" />
+      <Variable x:TypeArguments="x:String" Name="strGSRRobotPostfach" />
+      <Variable x:TypeArguments="ss:SecureString" Name="secPasswordGSRRobotAccount" />
+      <Variable x:TypeArguments="x:String" Name="str_ExcelDateinameOutput" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputOrdnerName" />
+      <Variable x:TypeArguments="x:String" Name="str_ExcelPfadOutput" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputOrdnerPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_ProbantenListeFolder" />
+      <Variable x:TypeArguments="x:String" Name="str_QueueItemsOrchestrator" />
+      <Variable x:TypeArguments="x:String" Name="str_archiv" />
+      <Variable x:TypeArguments="x:String" Name="str_ProbandenlisteDateiName" />
+      <Variable x:TypeArguments="x:String" Name="strProbandenlisteOrdner" />
+      <Variable x:TypeArguments="x:Int32" Name="int_maximaleTransaktionenProLauf" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputOrdnerArchivOrdnerPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputDateiPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_ArchivOrdnerPfadProbandenliste" />
+      <Variable x:TypeArguments="x:String" Name="str_ArchivOrdnerPfadQueueItems" />
+      <Variable x:TypeArguments="x:String" Name="str_QueueItemsOrchestratorArchivDateiName" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputDateiName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Initialisierung der Assets (z.B. Credentials für den Roboter, Ordnerpfade, Laufwerkpfade) welche im Laufe des Prozesses in den weiteren Workflows benötigt werden." DisplayName="Initialisierung der Assets" sap:VirtualizedContainerService.HintSize="449.6,143.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,117.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[out_strOrchestratorOrdner]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[in_Config("OrchestratorQueueFolder").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="rpa004_GSR_Robot_Account" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[secPasswordGSRRobotAccount]" Username="[strGSRRobotAccount]" />
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_Org_Mailbox" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[strOrgMailboxPostfachEmpfänger]</OutArgument>
+        </ui:GetRobotAsset.Value>
+      </ui:GetRobotAsset>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_EmailSmtpPort" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_11">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:Int32">[intSmtpPort]</OutArgument>
+        </ui:GetRobotAsset.Value>
+      </ui:GetRobotAsset>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_EmailSmtpServer" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_12">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[strSmtpServer]</OutArgument>
+        </ui:GetRobotAsset.Value>
+      </ui:GetRobotAsset>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_Working_Folder" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[strWorkingFolder]</OutArgument>
+        </ui:GetRobotAsset.Value>
+      </ui:GetRobotAsset>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_Absender_Domains" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[strAbsenderDomains]</OutArgument>
+        </ui:GetRobotAsset.Value>
+      </ui:GetRobotAsset>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_GSR_Robot_Postfach" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[strGSRRobotPostfach]</OutArgument>
+        </ui:GetRobotAsset.Value>
+      </ui:GetRobotAsset>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_Max_Transactions_Per_Run" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[out_strOrchestratorOrdner]" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_13">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:Int32">[int_maximaleTransaktionenProLauf]</OutArgument>
+        </ui:GetRobotAsset.Value>
+      </ui:GetRobotAsset>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,397.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strProbandenlisteOrdner]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Path.Combine(strWorkingFolder, "Probandenliste")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="s:String[]">[arrDomainSplit]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="s:String[]">[strAbsenderDomains.Split(";")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_ProbandenlisteDateiName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Path.Combine(strProbandenlisteOrdner, "GSR*")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_archiv]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["Archiv"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_ArchivOrdnerPfadProbandenliste]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Path.Combine(strProbandenlisteOrdner, str_archiv)]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_OutputOrdnerName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["Output"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_OutputOrdnerPfad]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Path.Combine(strProbandenlisteOrdner, str_OutputOrdnerName)]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_OutputOrdnerArchivOrdnerPfad]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Path.Combine(str_OutputOrdnerPfad, str_archiv)]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_OutputDateiPfad]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[Path.Combine(str_OutputOrdnerPfad, "Output.xlsx")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_OutputDateiName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["Output.xlsx"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+    </Sequence>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sende Start E-Mail an Postfach - Invoke Workflow File (Workflows\E-Mail Workflow\Sende Start E-Mail an Postfach.xaml)" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows\E-Mail Workflow\Sende Start E-Mail an Postfach.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strBetreff">[strBetreff]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_EmailEmpfaenger">[strOrgMailboxPostfachEmpfänger]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strEmailInhalt">[strEmailText]</InArgument>
+        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_secPasswordGSRRobotAccount">[secPasswordGSRRobotAccount]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strGSRRobotPostfach">[strGSRRobotPostfach]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strGSRRobotAccount">[strGSRRobotAccount]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_intSmtpPort">[intSmtpPort]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strSmtpServer">[strSmtpServer]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Erster Workflow zur Überprüfung, ob eine Mail im Postfach liegt und den vorgegebenen Kritrien entspricht." DisplayName="6.1.1 Postfach und Kriterien der Mail prüfen - Invoke Workflow File (Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml)" sap:VirtualizedContainerService.HintSize="449.6,234.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strBetreffEingangsMail" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strMailAnhang" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strMailAnhangExcel" />
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_strBetreffBool" />
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_strAnhangBool" />
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_strOrdnerTrueFalse" />
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolFolderProbandenliste" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strEmailEmpfaenger" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strEmailInhalt" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strBetreff" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ProbandenlisteDateiName" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ArchivFolder" />
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listAnhang" />
+        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_secPasswordGSRRobotAccount">[secPasswordGSRRobotAccount]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strProbandenlisteOrdner">[strProbandenlisteOrdner]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_arrDomainSplit">[arrDomainSplit]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strGSRRobotPostfach">[strGSRRobotPostfach]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strWorkingFolder">[strWorkingFolder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strAbsenderDomains">[strAbsenderDomains]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strGSRRobotAccount">[strGSRRobotAccount]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_intSmtpPort">[intSmtpPort]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strSmtpServer">[strSmtpServer]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strOrchestratorOrdner" />
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="6.1.2 Vorqualifizierung der Liste in Excel - Invoke Workflow File (Workflows\Excel\6.1.2 Vorqualifizierung der Liste in Excel.xaml)" sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.2 Vorqualifizierung der Liste in Excel.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_WorkingFolder">[strWorkingFolder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_archiv">[str_archiv]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ProbantenListeFolder">[strProbandenlisteOrdner]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ProbandenlisteDateiName">[str_ProbandenlisteDateiName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ArchivOrdnerPfadProbandenliste">[str_ArchivOrdnerPfadProbandenliste]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerPfad">[str_OutputOrdnerPfad]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerName">[str_OutputOrdnerName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputDateiPfad">[str_OutputDateiPfad]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="6.1.3 Anlage der Queue-Items im Orchestrator - Invoke Workflow File (Workflows\Excel\6.1.3 Anlage der Queue-Items im Orchestrator.xaml)" sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.3 Anlage der Queue-Items im Orchestrator.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_excelTableRowsToProcess">S:\Allgemein\RPA_medavis_TEST\Probandenliste\QueueItemsOrchestrator\QueueItemsProbandenliste_*.xlsx</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_int_maximaleTransaktionenProLauf">[int_maximaleTransaktionenProLauf]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_QueueItemsOrchestratorArchivDateiName">[str_QueueItemsOrchestratorArchivDateiName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerArchivOrdnerPfad">[str_OutputOrdnerArchivOrdnerPfad]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerPfad">[str_OutputOrdnerPfad]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputDateiPfad">[str_OutputDateiPfad]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>

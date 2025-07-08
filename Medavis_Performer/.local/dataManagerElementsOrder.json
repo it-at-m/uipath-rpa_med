@@ -1,0 +1,531 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "OutputArchivOrdnerNeuesteDateiMain&StateMachine_1",
+        "KriterienlisteDateiPfadMain&StateMachine_1",
+        "dtInputExcelDateiMain&StateMachine_1",
+        "QueueItemsOrchestratorArchivOrdnerDateiName&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder",
+        "Produktiv",
+        "maximaleTransaktionen"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config",
+        "in_Produktiv"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ArchivDateiName&Flowchart_1",
+        "str_QueueItemsArchivOrdnerDateiName&Flowchart_1",
+        "str_QueueItemsDateiName&Flowchart_1",
+        "dt_ProbandenlisteArchivOrdnerDateiName&Flowchart_1",
+        "str_ProbandenlisteArchivOrdnerDateiName&Flowchart_1",
+        "str_QueueItemsProbandenlisteDateiName&Flowchart_1",
+        "str_QueueItemsOrchestratorArchivOrdnerPfad&Flowchart_1",
+        "str_ArchivOrdnerPfadProbandenListe&Flowchart_1",
+        "int_maximaleTransaktionenProLauf&Flowchart_1",
+        "boolPopUpErgebnis&Flowchart_1",
+        "secMedavisPasswort&Flowchart_1",
+        "strMedavisAccountName&Flowchart_1",
+        "strProbandenlisteOrdner&Flowchart_1",
+        "str_ProbandenlisteDateiName&Flowchart_1",
+        "str_archiv&Flowchart_1",
+        "str_QueueItemsOrchestrator&Flowchart_1",
+        "str_ProbantenListeFolder&Flowchart_1",
+        "str_QueueItemsOrchestratorPfad&Flowchart_1",
+        "str_ExcelPfadOutput&Flowchart_1",
+        "str_QueueItemsOrchestratorFolderName&Flowchart_1",
+        "secPasswordGSRRobotAccount&Flowchart_1",
+        "strGSRRobotPostfach&Flowchart_1",
+        "intSmtpPort&Flowchart_1",
+        "strGSRRobotAccount&Flowchart_1",
+        "strSmtpServer&Flowchart_1",
+        "strEmailText&Flowchart_1",
+        "strBetreff&Flowchart_1",
+        "strOrgMailboxPostfachEmpfänger&Flowchart_1",
+        "strAbsenderDomains&Flowchart_1",
+        "arrDomainSplit&Flowchart_1",
+        "strWorkingFolder&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_strOrchestratorOrdner",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FallanmerkungVorhandenProcess&Sequence_1",
+        "FallanmerkungTextProcess&Sequence_1",
+        "PopUpErgebnis&Sequence_1",
+        "Config&Sequence_1",
+        "str_QueueItemsOrchestratorArchivOrdnerPfadDateiName&Sequence_1",
+        "row&Sequence_1",
+        "rowIndex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_OutputArchivOrdnerNeuesteDatei_Process",
+        "in_TransactionItem",
+        "in_Config",
+        "in_str_QueueItemsOrchestratorArchivOrdnerDateiName",
+        "in_dtInputExcelDatei_Process",
+        "in_KriterienlisteDateiPfadProcess"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Anwendung starten, Anmeldung am System, Anlegen des neuen Datensatzes/6.2.1 Medavis RIS Anwendung starten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strMedavisBenutzername&Sequence_1",
+        "secMedavisPasswort&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/E-Mail/SendeMailZuOrgMailbox.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strGSRRobotAccount&Sequence_2",
+        "secPasswordGSRRobotAccount&Sequence_2",
+        "intSmtpPort&Sequence_2",
+        "strSmtpServer&Sequence_2",
+        "strEmailText&Sequence_2",
+        "strBetreff&Sequence_2",
+        "strOrgMailboxPostfachEmpfänger&Sequence_2",
+        "listAnhang&Sequence_2",
+        "strGSRRobotPostfach&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strBetreff",
+        "in_EmailEmpfaenger",
+        "in_strEmailInhalt",
+        "in_secPasswordGSRRobotAccount",
+        "in_strGSRRobotPostfach",
+        "in_strGSRRobotAccount",
+        "in_intSmtpPort",
+        "in_strSmtpServer"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Anwendung starten, Anmeldung am System, Anlegen des neuen Datensatzes/6.2.2 Anmeldung am System.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Anwendung starten, Anmeldung am System, Anlegen des neuen Datensatzes/6.2.3 Anlage des neuen Datensatzes.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.4 Eingabe der Daten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "neuesteDatei&Sequence_1",
+        "arr_Dateien&Sequence_1",
+        "dt_QueueItemsArchivOrdnerDateiName&Sequence_1",
+        "dt_ProbandenlisteArchivOrdnerDateiName&Sequence_1",
+        "row&Sequence_1",
+        "currentRow&Sequence_1",
+        "rowIndex&Sequence_1",
+        "outTransaktionsItem&Sequence_1",
+        "int_Geburtsdatum&Sequence_1",
+        "str_Geschlecht&Sequence_1",
+        "str_Geburtsdatum&Sequence_1",
+        "str_Vorname&Sequence_1",
+        "str_Nachname&Sequence_1",
+        "OutputQueueItems&Sequence_1",
+        "IndexQueueItems&Sequence_1",
+        "boolPopUpPatientExistiertNicht&Sequence_7",
+        "boolPopUpPatientExistiert&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_QueueItemsOrchestratorArchivOrdnerPfad",
+        "in_str_QueueItemsArchivOrdnerDateiName",
+        "in_str_ProbandenlisteArchivOrdnerDateiName",
+        "in_dt_ProbandenlisteArchivOrdnerDateiName",
+        "out_PopUpErgebnis"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.5 Basisdaten Untersuchung eintragen.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.6 Konkrete Untersuchung auswählen und Terminvergabe starten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.7.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.8 Kalenderansicht starten und nächsten Werktag auswählen.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.9 Termin eintragen.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.10 Weiter zum nächsten Datensatz.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Eintragung der Daten im System/6.2.11 Medavis RIS Anwendung beenden.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "OutputArchivOrdnerNeuesteDatei&Sequence_9",
+        "KriterienlisteDateiPfadInit&Sequence_9",
+        "strMedavisAccountNameInit&Sequence_9",
+        "secMedavisPasswortInit&Sequence_9",
+        "MedavisAccountPasswort&Sequence_9",
+        "MedavisAccountName&Sequence_9",
+        "Medavis&Sequence_9",
+        "strGSRRobotAccount&Sequence_9",
+        "secPasswordGSRRobotAccount&Sequence_9",
+        "dtInputExcelDatei&Sequence_9",
+        "neuesteDatei&Sequence_9",
+        "InputExcelDateiPfad&Sequence_9",
+        "OrchestratorQueueName&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_OutputArchivOrdnerNeuesteDatei_Init",
+        "out_KriterienlisteDateiPfadInit",
+        "out_dtInputExcelDatei",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Initialisierung der Assets/Initialisierung der Assets.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_OutputArchivOrdnerPfadNeuesteDatei&Sequence_1",
+        "str_OutputOrdnerDateiName&Sequence_1",
+        "str_OutputDateiName&Sequence_1",
+        "str_OutputDateiPfad&Sequence_1",
+        "str_OutputOrdnerArchivOrdnerPfad&Sequence_1",
+        "str_OutputOrdnerPfad&Sequence_1",
+        "str_OutputOrdnerName&Sequence_1",
+        "str_KriterienlisteDateiPfad&Sequence_1",
+        "strWorkingFolder&Sequence_1",
+        "arrDomainSplit&Sequence_1",
+        "strAbsenderDomains&Sequence_1",
+        "strOrgMailboxPostfachEmpfänger&Sequence_1",
+        "strBetreff&Sequence_1",
+        "strEmailText&Sequence_1",
+        "strSmtpServer&Sequence_1",
+        "strGSRRobotAccount&Sequence_1",
+        "intSmtpPort&Sequence_1",
+        "strGSRRobotPostfach&Sequence_1",
+        "secPasswordGSRRobotAccount&Sequence_1",
+        "str_ExcelPfadOutput&Sequence_1",
+        "str_ProbantenListeFolder&Sequence_1",
+        "str_QueueItemsOrchestrator&Sequence_1",
+        "str_archiv&Sequence_1",
+        "str_ArchivOrdnerPfadProbandenListe&Sequence_1",
+        "str_ProbandenlisteDateiName&Sequence_1",
+        "strProbandenlisteOrdner&Sequence_1",
+        "strMedavisAccountName&Sequence_1",
+        "secMedavisPasswort&Sequence_1",
+        "boolPopUpErgebnis&Sequence_1",
+        "int_maximaleTransaktionenProLauf&Sequence_1",
+        "str_ProbandenlisteArchivOrdnerDateiName&Sequence_1",
+        "dt_ProbandenlisteArchivOrdnerDateiName&Sequence_1",
+        "str_ArchivDateiName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_OutputArchivOrdnerNeuesteDatei",
+        "out_KriterienlisteDateiPfad",
+        "out_secMedavisPasswort",
+        "out_strMedavisAccountName",
+        "out_secPasswordGSRRobotAccount",
+        "out_strGSRRobotAccount",
+        "out_strOrchestratorOrdner",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Login und Navigation zur Eingabemaske/6.2.1 Medavis RIS Anwendung starten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "secMedavisPasswort&Sequence_1",
+        "strMedavisBenutzername&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_secMedavisPasswort",
+        "in_strMedavisAccountName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.4 Eingabe der Daten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_QueueItemsArchivOrdnerNeuesteDatei&Sequence_1",
+        "str_Geburtsdatum&Sequence_1",
+        "OutputQueueItems&Sequence_1",
+        "boolPopUpPatientExistiert&Sequence_1",
+        "IndexQueueItems&Sequence_1",
+        "str_Nachname&Sequence_1",
+        "str_Vorname&Sequence_1",
+        "str_Geschlecht&Sequence_1",
+        "outTransaktionsItem&Sequence_1",
+        "rowIndex&Sequence_1",
+        "currentRow&Sequence_1",
+        "row&Sequence_1",
+        "dt_ProbandenlisteArchivOrdnerDateiName&Sequence_1",
+        "dt_QueueItemsArchivOrdnerDateiName&Sequence_1",
+        "arr_Dateien&Sequence_1",
+        "neuesteDatei&Sequence_1",
+        "boolPopUpPatientExistiertNicht&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_str_QueueItemsArchivOrdnerPfadDateiName",
+        "in_row",
+        "out_PopUpErgebnis",
+        "in_dt_ProbandenlisteArchivOrdnerDateiName",
+        "in_str_ProbandenlisteArchivOrdnerDateiName",
+        "in_str_QueueItemsArchivOrdnerDateiName",
+        "in_str_QueueItemsOrchestratorArchivOrdnerPfad"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.3 Anlage des neuen Datensatzes.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.9 Weiter zum nächsten Datensatz.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.5 Basisdaten Untersuchung eintragen.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FallanmerkungVorhanden&Sequence_1",
+        "FallanmerkungText&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_FallanmerkungText",
+        "out_FallanmerkungVorhanden",
+        "in_rowIndex",
+        "in_dtInputExcelDatei"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Login und Navigation zur Eingabemaske/6.2.2 Anmeldung am System.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.6 Konkrete Untersuchung auswählen und Terminvergabe starten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_FallanmerkungVorhanden"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.7 Kalenderansicht starten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.8 Termin eintragen.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "KriterienlisteDateiPfad&Sequence_1",
+        "TerminDatum&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_KriterienlisteDateiPfad",
+        "in_Config",
+        "in_Termindatum"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Logout/6.2.10 Medavis RIS Anwendung beenden.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Prozess 2 - Patientenanlage in Medavis2/Eintragung der Daten im System/6.2.6 Untersuchung auswählen Terminvergabe starten.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_FallanmerkungVorhanden"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
