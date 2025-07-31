@@ -1,0 +1,660 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_1_EingangspruefungNeueProbandenliste" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_strBetreffEingangsMail" Type="InArgument(x:String)" />
+    <x:Property Name="in_strMailAnhang" Type="InArgument(x:String)" />
+    <x:Property Name="in_strMailAnhangExcel" Type="InArgument(x:String)" />
+    <x:Property Name="in_strBetreffBool" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_strAnhangBool" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_strOrdnerTrueFalse" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_boolFolderProbandenliste" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_strEmailEmpfaenger" Type="InArgument(x:String)" />
+    <x:Property Name="in_strEmailInhalt" Type="InArgument(x:String)" />
+    <x:Property Name="in_strBetreff" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_ProbandenlisteDateiName" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_ArchivFolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_listAnhang" Type="InArgument(scg:List(x:String))" />
+    <x:Property Name="in_secPasswordGSRRobotAccount" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_strProbandenlisteOrdner" Type="InArgument(x:String)" />
+    <x:Property Name="in_arrDomainSplit" Type="InArgument(s:String[])" />
+    <x:Property Name="in_strGSRRobotPostfach" Type="InArgument(x:String)" />
+    <x:Property Name="in_strWorkingFolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_strAbsenderDomains" Type="InArgument(x:String)" />
+    <x:Property Name="in_strGSRRobotAccount" Type="InArgument(x:String)" />
+    <x:Property Name="in_intSmtpPort" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_strSmtpServer" Type="InArgument(x:String)" />
+    <x:Property Name="in_strOrchestratorOrdner" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_Config>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_Config>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffEingangsMail>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffEingangsMail>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhang>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhang>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhangExcel>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhangExcel>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffBool>
+    <InArgument x:TypeArguments="x:Boolean" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffBool>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strAnhangBool>
+    <InArgument x:TypeArguments="x:Boolean" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strAnhangBool>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strOrdnerTrueFalse>
+    <InArgument x:TypeArguments="x:Boolean" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strOrdnerTrueFalse>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_boolFolderProbandenliste>
+    <InArgument x:TypeArguments="x:Boolean" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_boolFolderProbandenliste>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strEmailEmpfaenger>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strEmailEmpfaenger>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strEmailInhalt>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strEmailInhalt>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreff>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreff>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_listAnhang>
+    <InArgument x:TypeArguments="scg:List(x:String)" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_listAnhang>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_secPasswordGSRRobotAccount>
+    <InArgument x:TypeArguments="ss:SecureString" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_secPasswordGSRRobotAccount>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strProbandenlisteOrdner>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strProbandenlisteOrdner>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_arrDomainSplit>
+    <InArgument x:TypeArguments="s:String[]" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_arrDomainSplit>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotPostfach>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotPostfach>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strWorkingFolder>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strWorkingFolder>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strAbsenderDomains>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strAbsenderDomains>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotAccount>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotAccount>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_intSmtpPort>
+    <InArgument x:TypeArguments="x:Int32" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_intSmtpPort>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strSmtpServer>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strSmtpServer>
+  <this:_6_1_EingangspruefungNeueProbandenliste.in_strOrchestratorOrdner>
+    <InArgument x:TypeArguments="x:String" />
+  </this:_6_1_EingangspruefungNeueProbandenliste.in_strOrchestratorOrdner>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1465.6,3499.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_1_EingangspruefungNeueProbandenliste_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_6_1_1_Postfach und Kriterien der Mail prüfen" sap:VirtualizedContainerService.HintSize="841.6,3434.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="EMailMedavisMailMessage" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="779.2,3322.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="E-Mail Anhang auf dem Laufwerk ablegen" sap:VirtualizedContainerService.HintSize="742.4,3091.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="[in_strGSRRobotPostfach]" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="680,24.8" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_2" MailFolder="Posteingang" MarkAsRead="True" Messages="[EMailMedavisMailMessage]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="30" />
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="680,2914.4" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[EMailMedavisMailMessage]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="snm:MailMessage">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="646.4,2777.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="Betreff wird um Sonderzeichen wie Bindestrich und Leerzeichen gekürzt und in kleine Schreibweise umgeschrieben" sap:VirtualizedContainerService.HintSize="603.2,125.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[in_strBetreffEingangsMail]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(currentMailMessage.Subject.ToString.Replace(" ", "").Replace("-", "").ToLower.Trim, "gsrliste").Value]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="603.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="Info" Message="[in_strBetreffEingangsMail]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <If Condition="[currentMailMessage.Sender.Address.EndsWith(&quot;@muenchen.de&quot;) AndAlso in_strBetreffEingangsMail.Equals(&quot;gsrliste&quot;) AndAlso currentMailMessage.Attachments.Count &gt; 0]" DisplayName="If: Überprüfung der Kriterien der E-Mail" sap:VirtualizedContainerService.HintSize="603.2,2340" sap2010:WorkflowViewState.IdRef="If_26">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="377.6,545.6" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="False" FolderPath="[in_strProbandenlisteOrdner]" sap:VirtualizedContainerService.HintSize="334.4,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_5" Message="[currentMailMessage]" OverwriteExisting="False" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Anhang in Ordner Probandenliste gespeichert.&quot;]" />
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignorierte Aktivitäten" sap:VirtualizedContainerService.HintSize="449.6,246.4" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:FolderExistsX DisplayName="Folder Exists" Exists="[in_boolFolderProbandenliste]" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="FolderExistsX_2" Path="[in_strProbandenlisteOrdner]" />
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignorierte Aktivitäten" sap:VirtualizedContainerService.HintSize="819.2,3245.6" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[in_boolFolderProbandenliste]" DisplayName="If: Überprüfung ob der Ordner 'Probandenliste' existiert" sap:VirtualizedContainerService.HintSize="756.8,3221.6" sap2010:WorkflowViewState.IdRef="If_30">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:Boolean" Name="boolProbandenliste" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="723.2,2956" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Ordner existiert nicht. Ordner wird angelegt.&quot;]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:LogMessage>
+                                    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="680,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[in_strProbandenlisteOrdner]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CreateDirectory>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Info" Message="[&quot;Ordner angelegt.&quot;]" />
+                                    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="680,2380.8" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[EMailMedavisMailMessage]">
+                                      <ui:ForEach.Body>
+                                        <ActivityAction x:TypeArguments="snm:MailMessage">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="646.4,2244" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If Condition="[currentMailMessage.Sender.Address.EndsWith(&quot;@muenchen.de&quot;) AndAlso in_strBetreffEingangsMail.Equals(&quot;gsrliste&quot;) AndAlso currentMailMessage.Attachments.Count &gt; 0]" DisplayName="If: Überprüfung der Kriterien der E-Mail" sap:VirtualizedContainerService.HintSize="603.2,2154.4" sap2010:WorkflowViewState.IdRef="If_27">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="377.6,360" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="False" FolderPath="[in_strProbandenlisteOrdner]" sap:VirtualizedContainerService.HintSize="334.4,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_6" Message="[currentMailMessage]" OverwriteExisting="False" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_44" Level="Info" Message="[&quot;Anhang in Ordner Probandenliste gespeichert.&quot;]" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="569.6,1611.2" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="[&quot;Mindestens eines der zwei Kriterien ist nichterfüllt.&quot;]" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_58" Level="Info" Message="[&quot;Betreff: &quot; + (currentMailMessage.Subject.Contains(&quot;GSR-Liste&quot;) Or currentMailMessage.Subject.Contains(&quot;GSR Liste&quot;) Or currentMailMessage.Subject.Contains(&quot;GSRliste&quot;)).ToString]" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_59" Level="Info" Message="[&quot;Anhang: &quot; + (currentMailMessage.Attachments.Count &gt; 0).ToString]" />
+                                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="526.4,272.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                                                    <ui:MultipleAssign.AssignOperations>
+                                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                                                          <ui:AssignOperation.To>
+                                                            <OutArgument x:TypeArguments="x:Boolean">[in_strBetreffBool]</OutArgument>
+                                                          </ui:AssignOperation.To>
+                                                          <ui:AssignOperation.Value>
+                                                            <InArgument x:TypeArguments="x:Boolean">[currentMailMessage.Subject.Contains("GSR-Liste") Or currentMailMessage.Subject.Contains("GSR Liste") Or currentMailMessage.Subject.Contains("GSRliste")]</InArgument>
+                                                          </ui:AssignOperation.Value>
+                                                        </ui:AssignOperation>
+                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                                                          <ui:AssignOperation.To>
+                                                            <OutArgument x:TypeArguments="x:Boolean">[in_strAnhangBool]</OutArgument>
+                                                          </ui:AssignOperation.To>
+                                                          <ui:AssignOperation.Value>
+                                                            <InArgument x:TypeArguments="x:Boolean">[currentMailMessage.Attachments.Any(Function(att) att.Name.EndsWith("*.xlsx"))]</InArgument>
+                                                          </ui:AssignOperation.Value>
+                                                        </ui:AssignOperation>
+                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                                                          <ui:AssignOperation.To>
+                                                            <OutArgument x:TypeArguments="x:String">[in_strBetreff]</OutArgument>
+                                                          </ui:AssignOperation.To>
+                                                          <ui:AssignOperation.Value>
+                                                            <InArgument x:TypeArguments="x:String">["E-Mail Kriterien nicht erfüllt: Bitte E-Mail erneut senden."]</InArgument>
+                                                          </ui:AssignOperation.Value>
+                                                        </ui:AssignOperation>
+                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                                                          <ui:AssignOperation.To>
+                                                            <OutArgument x:TypeArguments="scg:List(x:String)">[in_listAnhang]</OutArgument>
+                                                          </ui:AssignOperation.To>
+                                                          <ui:AssignOperation.Value>
+                                                            <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)]</InArgument>
+                                                          </ui:AssignOperation.Value>
+                                                        </ui:AssignOperation>
+                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                                                          <ui:AssignOperation.To>
+                                                            <OutArgument x:TypeArguments="x:String">[in_strEmailInhalt]</OutArgument>
+                                                          </ui:AssignOperation.To>
+                                                          <ui:AssignOperation.Value>
+                                                            <InArgument x:TypeArguments="x:String" xml:space="preserve">["Sehr geehrte Damen und Herren,
+
+eines der folgenden Kriterien wurde nicht beachtet:
+
+	1. Anhang möglicherweise nicht vorhanden oder besitzt den falschen Datentyp (Der richtige Datentyp ist .xslx)
+	2. Der Betreff der E-Mail stimmt nicht mit den Kriterien überein (GSR-Liste oder GSRliste oder GSR Liste)
+	
+Bitte prüfen Sie die gesendete Mail auf diese Kriterien und senden Sie die Mail erneut an diese E-Mail Adresse.
+
+
+Mit freundlichen Grüßen
+
+GSR-RPA-Robot-Account"]</InArgument>
+                                                          </ui:AssignOperation.Value>
+                                                        </ui:AssignOperation>
+                                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                                                          <ui:AssignOperation.To>
+                                                            <OutArgument x:TypeArguments="x:String">[in_strEmailEmpfaenger]</OutArgument>
+                                                          </ui:AssignOperation.To>
+                                                          <ui:AssignOperation.Value>
+                                                            <InArgument x:TypeArguments="x:String">nicolas.jahl@muenchen.de</InArgument>
+                                                          </ui:AssignOperation.Value>
+                                                        </ui:AssignOperation>
+                                                      </scg:List>
+                                                    </ui:MultipleAssign.AssignOperations>
+                                                  </ui:MultipleAssign>
+                                                  <If Condition="[(in_strAnhangBool Or in_strBetreffBool Or (in_strAnhangBool And in_strBetreffBool)).Equals(False)]" DisplayName="If: Kein Anhang vorhanden und/oder Betreff nicht richtig" sap:VirtualizedContainerService.HintSize="526.4,661.6" sap2010:WorkflowViewState.IdRef="If_31">
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="492.8,478.4" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <Sequence DisplayName="Sequence: Sende Mail an Fachbereich/Regierung v. Oberbayern" sap:VirtualizedContainerService.HintSize="449.6,258.4" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[in_strEmailInhalt]" DisplayName="Send SMTP Mail Message" Email="[in_strGSRRobotAccount]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="387.2,146.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[currentMailMessage]" Port="[in_intSmtpPort]" SecureConnection="Auto" SecurePassword="[in_secPasswordGSRRobotAccount]" Server="[in_strSmtpServer]" Subject="[in_strBetreff]" To="[in_strEmailEmpfaenger]">
+                                                            <ui:SendMail.Files>
+                                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                                            </ui:SendMail.Files>
+                                                          </ui:SendMail>
+                                                        </Sequence>
+                                                        <Throw Exception="[New BusinessRuleException(&quot;Die E-Mail enthält keinen Anhang und/oder der Betreff entspricht nicht den Kriterien.&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEach.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ForEach>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="569.6,1611.2" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_49" Level="Info" Message="[&quot;Mindestens eines der zwei Kriterien (Anhang vorhanden oder Betreff gültig) ist nicht erfüllt.&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Info" Message="[&quot;Betreff: &quot; + (currentMailMessage.Subject.Contains(&quot;GSR-Liste&quot;) Or currentMailMessage.Subject.Contains(&quot;GSR Liste&quot;) Or currentMailMessage.Subject.Contains(&quot;GSRliste&quot;)).ToString]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_53" Level="Info" Message="[&quot;Anhang: &quot; + (currentMailMessage.Attachments.Count &gt; 0).ToString]" />
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="526.4,272.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[in_strBetreffBool]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">[currentMailMessage.Subject.Contains("GSR-Liste") Or currentMailMessage.Subject.Contains("GSR Liste") Or currentMailMessage.Subject.Contains("GSRliste")]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[in_strAnhangBool]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">[currentMailMessage.Attachments.Any(Function(att) att.Name.EndsWith("*.xlsx"))]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[in_strBetreff]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">["E-Mail Kriterien nicht erfüllt: Bitte E-Mail erneut senden"]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="scg:List(x:String)">[in_listAnhang]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[in_strEmailInhalt]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["Sehr geehrte Damen und Herren,
+
+eines der folgenden Kriterien wurde nicht beachtet:
+
+	1. Anhang nicht vorhanden
+	2. Der Betreff der E-Mail stimmt nicht mit den Kriterien überein (die Wörter: GSR und Liste müssen vorhanden sein)
+	
+Bitte prüfen Sie die gesendete Mail auf diese Kriterien und senden Sie die Mail erneut an diese E-Mail Adresse.
+
+
+Mit freundlichen Grüßen
+
+GSR-RPA-Robot"]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[in_strEmailEmpfaenger]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">nicolas.jahl@muenchen.de</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                        <If Condition="[(in_strAnhangBool Or in_strBetreffBool Or (in_strAnhangBool And in_strBetreffBool)).Equals(False)]" DisplayName="If Mail senden falls kein Anhang vorhanden und/oder Betreff nicht vorhanden" sap:VirtualizedContainerService.HintSize="526.4,661.6" sap2010:WorkflowViewState.IdRef="If_29">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="492.8,478.4" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="Sequence Sende Mail an Fachbereich/Regierung v. Oberbayern" sap:VirtualizedContainerService.HintSize="449.6,258.4" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[in_strEmailInhalt]" DisplayName="Send SMTP Mail Message" Email="[in_strGSRRobotAccount]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="387.2,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[currentMailMessage]" Port="[in_intSmtpPort]" SecureConnection="Auto" SecurePassword="[in_secPasswordGSRRobotAccount]" Server="[in_strSmtpServer]" Subject="[in_strBetreff]" To="[in_strEmailEmpfaenger]">
+                                  <ui:SendMail.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </ui:SendMail.Files>
+                                </ui:SendMail>
+                              </Sequence>
+                              <Throw Exception="[New BusinessRuleException(&quot;Die E-Mail enthält keinen Anhang und/oder der Betreff entspricht nicht den Kriterien.&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEach>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="745.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="449.6,384.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[&quot;Workflow wird beendet, denn die E-Mail enthält keinen Anhang und/oder der Betreff entspricht nicht den Kriterien.&quot;]" />
+              <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_3" Reason="[exception.Message]" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
