@@ -19,13 +19,13 @@ using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
 using UiPath.CodedWorkflows.DescriptorIntegration;
 
-namespace Medavis_Performer_Final
+namespace Medavis_Performer
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.Excel.Activities.API.IExcelService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService)};
+            _ = new System.Type[]{typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Excel.Activities.API.IExcelService)};
         }
 
         protected UiPath.Excel.Activities.API.IExcelService excel { get => serviceContainer.Resolve<UiPath.Excel.Activities.API.IExcelService>(); }
@@ -40,14 +40,14 @@ namespace Medavis_Performer_Final
     }
 }
 
-namespace Medavis_Performer_Final.ObjectRepository
+namespace Medavis_Performer.ObjectRepository
 {
     public static class Descriptors
     {
     }
 }
 
-namespace Medavis_Performer_Final._Implementation
+namespace Medavis_Performer._Implementation
 {
     internal class ScreenDescriptorDefinition : IScreenDescriptorDefinition
     {
