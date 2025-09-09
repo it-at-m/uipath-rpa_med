@@ -95,7 +95,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1465.6,3499.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794.4,3499.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_1_EingangspruefungNeueProbandenliste_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -297,13 +297,13 @@
                         </ui:CommentOut>
                         <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                           <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignorierte Aktivitäten" sap:VirtualizedContainerService.HintSize="819.2,3245.6" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                            <Sequence DisplayName="Ignorierte Aktivitäten" sap:VirtualizedContainerService.HintSize="819.2,1007.2" sap2010:WorkflowViewState.IdRef="Sequence_78">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[in_boolFolderProbandenliste]" DisplayName="If: Überprüfung ob der Ordner 'Probandenliste' existiert" sap:VirtualizedContainerService.HintSize="756.8,3221.6" sap2010:WorkflowViewState.IdRef="If_30">
+                              <If Condition="[in_boolFolderProbandenliste]" DisplayName="If: Überprüfung ob der Ordner 'Probandenliste' existiert" sap:VirtualizedContainerService.HintSize="411.2,977.6" sap2010:WorkflowViewState.IdRef="If_30">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -323,13 +323,13 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="723.2,2956" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="377.6,712" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Ordner existiert nicht. Ordner wird angelegt.&quot;]">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Ordner existiert nicht. Ordner wird angelegt.&quot;]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -337,7 +337,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
-                                    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="680,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[in_strProbandenlisteOrdner]">
+                                    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334.4,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[in_strProbandenlisteOrdner]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -345,8 +345,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CreateDirectory>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Info" Message="[&quot;Ordner angelegt.&quot;]" />
-                                    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="680,2380.8" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[EMailMedavisMailMessage]">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Info" Message="[&quot;Ordner angelegt.&quot;]" />
+                                    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="334.4,136.8" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[EMailMedavisMailMessage]">
                                       <ui:ForEach.Body>
                                         <ActivityAction x:TypeArguments="snm:MailMessage">
                                           <ActivityAction.Argument>

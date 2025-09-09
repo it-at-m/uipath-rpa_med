@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>896,2105.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794.4,2105.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -98,6 +98,22 @@
   <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="540.8,2040.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="ItemInformationCollection" />
+      <Variable x:TypeArguments="x:String" Name="str_AbsenderDomains" />
+      <Variable x:TypeArguments="x:Int32" Name="int_EmailSmtpPort" />
+      <Variable x:TypeArguments="x:String" Name="str_EmailSmtpServer" />
+      <Variable x:TypeArguments="x:String" Name="str_GSRRobotPostfach" />
+      <Variable x:TypeArguments="x:String" Name="str_OrgMailbox" />
+      <Variable x:TypeArguments="x:String" Name="str_WorkingFolder" />
+      <Variable x:TypeArguments="x:String" Name="str_ProbandenlisteOrdner" />
+      <Variable x:TypeArguments="s:String[]" Name="arr_DomainSplit" />
+      <Variable x:TypeArguments="x:String" Name="str_ProbandenlisteDateiName" />
+      <Variable x:TypeArguments="x:String" Name="str_Archiv" />
+      <Variable x:TypeArguments="x:String" Name="str_ArchivordnerPfadProbandenliste" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputordnerName" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputordnerPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_ArchivordnerPfadOutput" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputdateiPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_OutputdateiName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -285,10 +301,10 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
               </ui:AddQueueItem>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,393.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -296,7 +312,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <If Condition="[exception.Message.ToLower.Contains(&quot;duplicate reference&quot;)]" DisplayName="If duplicate reference" sap:VirtualizedContainerService.HintSize="368,323.2" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[exception.Message.ToLower.Contains(&quot;duplicate reference&quot;)]" DisplayName="If duplicate reference" sap:VirtualizedContainerService.HintSize="334.4,183.2" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Throw DisplayName="Throw BRE duplicate reference" Exception="[new BusinessRuleException(exception.Message)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
                     </If.Then>
