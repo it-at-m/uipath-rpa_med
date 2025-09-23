@@ -1,0 +1,116 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_7_Kalenderansicht_starten" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.6,826.4" sap2010:WorkflowViewState.IdRef="_6_2_7_Kalenderansicht_starten_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_6_2_7_Kalenderansicht_starten" sap:VirtualizedContainerService.HintSize="545.6,676" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Kalenderansicht öffnen" sap:VirtualizedContainerService.HintSize="483.2,564" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="8d5850bb-65ce-4365-be95-f93164f76e52" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'Röntgen BK2'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8d5850bb-65ce-4365-be95-f93164f76e52" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="456, 116, 223, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK2' check:text='Röntgen BK2' /&gt;" Guid="2263a85a-5a59-491d-b7cd-ddec84bbf5fb" InformativeScreenshot="c180c8a83a98cdb96981314d6b8757ec.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMStepAppointmentViewer' title='Terminvergabe' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="231, 116, 223, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK' check:text='Röntgen BK' /&gt;" Guid="cedb75dc-6981-434d-a7c3-759227cc103d" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="345, 94, 910, 843" FilePath="C:\medavis\programm\ris.exe" IconBase64="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" InformativeScreenshot="0f1a587d2054176171d3b6c54ea8b462.png" Selector="&lt;wnd app='ris.exe' cls='TMStepAppointmentViewer' title='Terminvergabe' /&gt;" Title="Terminvergabe" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

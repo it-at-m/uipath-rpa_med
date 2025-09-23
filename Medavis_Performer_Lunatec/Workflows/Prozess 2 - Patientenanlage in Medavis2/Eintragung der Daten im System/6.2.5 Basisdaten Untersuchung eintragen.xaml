@@ -1,0 +1,248 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_5_Basisdaten_Untersuchung_eintragen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_dtInputExcelDatei" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_rowIndex" Type="InArgument(x:Int32)" />
+    <x:Property Name="out_FallanmerkungVorhanden" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_FallanmerkungText" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1794.4,2534.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_2_5_Basisdaten_Untersuchung_eintragen_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_6_2_5_Basisdaten_Untersuchung_eintragen" sap:VirtualizedContainerService.HintSize="668.8,2469.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FallanmerkungText" />
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="FallanmerkungVorhanden" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: medavis Ris (5.49.5.3) &quot;KIS_NETZ32&quot; - 1/TBC: RPA, User" sap:VirtualizedContainerService.HintSize="606.4,2357.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d1fea486-6359-402e-9cc2-4e0219c1f84a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen: Einträge für die Untersuchung durchführen" sap:VirtualizedContainerService.HintSize="572.8,2066.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'Untersuchung eintragen'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1fea486-6359-402e-9cc2-4e0219c1f84a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="690, 743, 143, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' check:text='Unt. &amp;amp;eintragen' /&gt;" Guid="63040c12-13fe-4947-a736-d368d917963b" InformativeScreenshot="7d4e90f5ad9cec007e1b70037092fa66.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="690, 790, 143, 41" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Unt. ändern' cls='TMGButton' title='Unt. &amp;amp;ändern' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Unt. ändern' cls='TMGButton' title='Unt. &amp;amp;ändern' check:text='Unt. &amp;amp;ändern' /&gt;" Guid="e55c0005-74df-408b-bee1-389e11b63ec1" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Überweiser' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="d1fea486-6359-402e-9cc2-4e0219c1f84a" Text="tbwa" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="226, 265, 151, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGTextField' idx='22' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="ba4399af-d0b8-4b57-9634-92ecab32a642" InformativeScreenshot="862f515ade419b758f9a280ea0c8767e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                      <uix:Target DesignTimeRectangle="11, 148, 50, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='46' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="05b49a89-d337-4dd1-88a0-4b3bfd4e872c" SearchSteps="Selector" />
+                      <uix:Target DesignTimeRectangle="76, 239, 546, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGLabeledComboBox' idx='14' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGLabeledComboBox' /&gt;" Guid="a2568cc4-9d05-4c50-921c-2250680e3daf" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Typ' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="d1fea486-6359-402e-9cc2-4e0219c1f84a" Text="301" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="226, 453, 396, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGComboBox' idx='13' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGComboBox' check:text='keine Auswahl' /&gt;" Guid="5f49fb6d-c207-4fbb-8c56-ea849b9fc50d" InformativeScreenshot="012b06a907e6f6742ec3a476dc68400b.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="76, 453, 546, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGLabeledComboBox' idx='12' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGLabeledComboBox' /&gt;" Guid="80a923ab-2360-4ddf-b806-1ea3a992e7fa" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Eingabe in Feld 'Typ' bestätigen mit Enter" sap:VirtualizedContainerService.HintSize="510.4,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Auftrag' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="510.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d1fea486-6359-402e-9cc2-4e0219c1f84a" Text="Asyl" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="226, 745, 396, 69" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGCustomTextArea' idx='4' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGCustomTextArea' /&gt;" Guid="7c424e0b-1e26-45cc-88b4-1c203da52522" InformativeScreenshot="5d5af3437fb47a18ec10d488691548dc.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="76, 745, 546, 69" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGTextArea' idx='4' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGTextArea' /&gt;" Guid="d24c6162-3073-4661-bb67-5212e64ba167" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <If Condition="[in_FallanmerkungText = &quot;Anlegen, mit Päd Filter (15-18)&quot;]" DisplayName="If: Fallanmerkung entspricht Text in DataTable" sap:VirtualizedContainerService.HintSize="510.4,784" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="476.8,429.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Fallanmerkung' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="d1fea486-6359-402e-9cc2-4e0219c1f84a" Text="Päd Filter (15-18)" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="226, 951, 396, 69" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGCustomTextArea' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGCustomTextArea' /&gt;" Guid="efafda6b-4716-4be0-a4e5-4501eab18ac0" InformativeScreenshot="385c115bc5f8e262a1a3035254071a72.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="76, 951, 546, 69" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGTextArea' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Fallangaben' /&gt;&lt;wnd cls='TMGTextArea' /&gt;" Guid="d82cf636-e933-47e5-bfcb-6a7b9c5543d1" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[out_FallanmerkungVorhanden]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[out_FallanmerkungVorhanden]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-10, -10, 1940, 1050" FilePath="C:\medavis\programm\ris.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAkKSURBVFhHrZcJUFRXFoYfyESUVZ1xqdREZ7SCIcYtVSZONILL1NRMUjVONIygQmQRcQkgmzQgILK4AYpLEAcQF7YCBZGloVlE6BbEBhTFuCEgKks3TUME6X/m3Ee3NEKcKme66qt33+t7z/nvOeee182xzzc2jlzs1UouPl/CnS2s4pKEVauSCqvaiEFCReA9YWuZDTnZtMq8XsclFlTppIlLuW/JJ/9Zs96Oi84o4WJzKnQISyKP6CZUavA/orGjJMqItfHCcp2jGaWcxdqNHBd6voA7kiZirIpMF/VFphf3R6aJVHRl4P+EireZJuqPTBcN+h6rdIpKF+nsS8rjuJCkPF3/WOEKuukjBgmVGoxFYEIuAhPHgJ4H0XWsNVowu4Mh52je2dz1NOY4j1OZnNvxS1l07SfwLtxPZiJDlI26u3mou1dAiFB/v5S4DmljJaLSc+F+ImPMtVqoCOZL7HEyk+OcDl9c6HDovNzx0IXXjocvqAiMyaHziM9Jh1KWi+6OAnR3iaCQlaFHXgmlohrKnlrI5PXkIJWfO6aNIZiPQYfD5wfI52puXfCZ2n8Enlapwa8SdBopRSlQdOVC1l4AWYcIss4yyGWVUMirCSn6X93F7pMXaX7s6PUj4f19F3S6lbP0Oqq08IxWqYEGy1FEwWp/DGoaMtH+PA/tL4qIUijlEopCNXoUUuRLRLDwiMZKr6M0X416rG2b0PhTcZ9sC1XOdd6Pt/nYKRRzGFvD3jDbMQwzt4Rh0a6DWOwagc8Jq4jjaGkT8wLOFV6l74Mx2ymE5qqh8RxirnOompF+uEl2Ab2mtv4Yxg9mO/xxIs0TSZcckJj+HeJTLRF3cTFiL5gj9twcHIybh093bIPp5gCYbPZDeX0hCailOrgD8T0JCmquQ1hzA4XSmyislSJTLMVyvxia76flZwjOxNa/l4AGfWsB4rOD8bjBDXdv2qBevBrS8nm4WTIN1SJD3CjSw80iDmnpUzHJzhdf+oSjs+sGuuW3qBjvoKenEX29j9DX14JXr15gYKALrweUuH73MT7Y4ANTu2FfDM6UIqC5YYo+2CDAleIQNNYOC6i5Ng9VxdMgKTKEuFAPlQU6yMuajN/+4IW/7o+kGqjiBfQqGngBSuUj9PY2k4jnJKILv/yiwJ2nbZhgvefdAkwo/Iab/OAQFYAH9e5oIAG3xStRUzYPN4qn8wIqhRNIgCHsI1bya6Y57EWxtACKbkoBRUBBAtq7HxDNRBs6FB14IetGYEouJtr4wpjSwPyMEmDMP/TDeEqB3joBfGI98LDWGruit8B8uyvmbt8FMwcXmNm7YJbdTvzGyhd6VnsIH6w7EIP+vno0Pq3Cyr3RmO8eQRwgDmLBzmiYb4uk1O6Dvk0gXzMaX28EGDMB9MWUH/yx/eQBxF0Owa1qd0glm/C7Lb4w3CiAuWswTmTHIa30HHGRSEVqaTquiq9QL6ii0EtxRpiN8VbeVBu0u83+mO+6DftjP8exhE8QFW+OLWF/xmQ7H/IlUIvQEsBCv+NUFGRtCWj6OZxS4IaH0g3Yc8oWRpv8IalPgbwjB/LOXLoKqRMWUye8RoipCVVRCqTolNXDbFcoGfbFDHtPFOZOQVXROFQX6dKVQ20xB9vQNbQhTRS0UjDBRoCwlBNob43H48Zw/Ew1wAT8lPw95TkALS0Z6Hx5BV3trBMK+U4o77ym7oQkQF6Lgf5GfCU4QsXsi9nOrpCIJvBFe6NQFxIhhxoRB8/oJZi4MWB0BEw2CbBw9z7cazyNZ48i0NTgDknFJiz4cTdfF25xMSQgm7gKZZcQ/T2l6OsuR59CglfKGvQp6xBXkA0jCq+JLYWYUup97CtUiVgEaPclHApzjKh/OI9OARuwBQaU6yl2fpS7AHzmKsB0ewEMKDWsYCZu9EV8fgIUnfnIKEvGl95hWOhBXdEjHIt2h+NT11AYUJUz53yBkZMPKRI5WVMgyp2IRa4OmGS7h3wM+RpRhGwwhB+MSISlfzjSSxKRUXoWmWVnyeFZZJcn4WnzZche5uHvYUdgYD10pFjtrA10oW75LRJSV+JfyUuIBYhPNkNRnimFXw91JTqw8LaGMUWZnQKN89EC2JdE7f1UyNuz6LU7jPxlFl8DMqqBjGvJdAx9aA2djp1eqJd8gwbxMtRXfIa68t9DWjYFNSUGkBTr851TItRF4sWP6BjupfoYdj5KANvRh44BaG7OwIu2S+h4fnkYdv9iqAbq72fxRWtEu1/m484LqKtYjtry+dS0ZqG6ZCp1TmMqQn1qXnqoKBiHK5cn88X3TgF8rslwDJ331uZMtLZoQaKetV5GU3M2XH46Dv0NvtRWWZ34Iinje9r91/TOIAGls1BRNB3XhZNQXmCA8vwJuJZngO2HLfj8a4dfI0CpLYBFwYhyNdM5CH9wCSTYdWg8g9ruVNsACr8A4/7pR/hD1yoABuv3Iid3DRrF5lgXbIOPnNwxc+swMxw8qVbIPp//YecMjQCVmhGTjKmbsXsDEmThH4pDaVGISovAkZQgHLqwBweTXBGeuBWnkq1xq3wF7pEA+4h1/CZ4NDb4XY9owRp/KiagTusB71gbZujjncFob0tB65N4ND2IxsO7IdQpvdB4axvuVG+gF9bfKAXLScR8FOebUVq8ae3o3Wqh8dfKBCykgZx4rX44YjITsEwQir7OdLQ0MQFHhwTc9kaj1AUN1da4zRfh1/TaXgCxaDb+6OzGr3vblhrmY5AYIFYzARx1wSy66SdGLWCGWINKKz6D3vYEyJ8dRVdTCDoeeuH5va1ovW2F5rq/4EnNUjypNkNM0jJao25GY9gjmADmS0xwTICukbXXCrrpI5gyTXj4BSyPRiSC/VhZ4hWMP3kHYql3AJZ6CfCFpw++8PAk3LFk949Y7LYTk6n7abfat+B3z7d+W//1BC+Ao1cn+2m2imAimLo3IoYKaaio2Bn+bzCxQ+EfIUBjj9keNFy73YmuOgTH6S+yZM4Z7IElkUf0EJpFvJD3RNsG21wZsdbEPoh3Pn6RxdA/ZCaCRUILMyKTeEVQwwn493vC1g4SpcRigtnWMXXcz/vkOI77D+Ysp+CfNtzoAAAAAElFTkSuQmCC" InformativeScreenshot="31875bc1b1ec6eac6b68f1d1ba5c0891.png" Selector="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" Title="medavis Ris (5.49.5.3) &quot;KIS_NETZ32&quot; - 1/TBC: RPA, User" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
