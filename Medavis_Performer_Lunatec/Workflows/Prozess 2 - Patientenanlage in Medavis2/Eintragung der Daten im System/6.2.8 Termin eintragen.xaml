@@ -1,0 +1,271 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_9_Termin_eintragen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Termindatum" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_KriterienlisteDateiPfad" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1465.6,3004</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_6_2_9_Termin_eintragen_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_6_2_8_Termin_eintragen" sap:VirtualizedContainerService.HintSize="545.6,2939.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="TerminDatum" />
+      <Variable x:TypeArguments="x:String" Name="KriterienlisteDateiPfad" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,281.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_KriterienlisteDateiPfad]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,172" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadCell Cell="C5" DisplayName="Zelle lesen" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" PreserveFormat="True" SheetName="EingabeFB_Zusätzliche freieTage">
+              <ui:ExcelReadCell.Result>
+                <OutArgument x:TypeArguments="ui:GenericValue">[TerminDatum]</OutArgument>
+              </ui:ExcelReadCell.Result>
+            </ui:ExcelReadCell>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: medavis Ris (5.49.5.3) - Di, 13. Mai 2025 - 1/TBC: RPA, User" sap:VirtualizedContainerService.HintSize="483.2,2505.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,2214.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Strg + I drücken, um Terminplatz zu suchen" sap:VirtualizedContainerService.HintSize="387.2,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Shortcuts="[d(hk)][d(ctrl)]i[u(ctrl)][u(hk)]" Version="V3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf Feld 'Von'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 88, 128, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" Guid="bbec5b79-831a-4845-b01e-7f6c86af3cee" InformativeScreenshot="11d4769a51df5a69c56a4e38b0b0f08f.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="30, 120, 170, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' idx='7' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' /&gt;" Guid="3ac36d1e-532f-4a77-81fe-3177889c5bf9" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Von' schreiben" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Text="[TerminDatum.ToString]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 88, 128, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" Guid="b667a436-d470-4961-aaf7-29b76f548975" InformativeScreenshot="11d4769a51df5a69c56a4e38b0b0f08f.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="30, 120, 170, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' idx='7' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' /&gt;" Guid="274a1beb-bb7a-4377-bcca-741b99483f21" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf Feld 'Bis'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 128, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" Guid="6ca1f944-ed38-437c-bf3f-625fd6b06352" InformativeScreenshot="5b1d3a5e161e6794bf05eb552c52d8f8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="30, 88, 170, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' idx='9' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' /&gt;" Guid="e4f35605-d8ca-436e-98ae-9ec90d3fabb3" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Bis' schreiben" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Text="[TerminDatum.ToString]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 128, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" Guid="c0ee85ef-dd4f-411f-9b35-6685002b01ad" InformativeScreenshot="ebc982638ade9d922f2759dccecdcb10.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="30, 88, 170, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' idx='9' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' /&gt;" Guid="0cdf92e8-2f37-4f18-a6d1-07f67986bf3f" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Eingabe in Feld 'Bis' bestätigen" sap:VirtualizedContainerService.HintSize="387.2,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf angezeigte Terminspalte" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="25, 273, 1155, 236" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Ergebnisse ' /&gt;&lt;wnd cls='TMGGrid' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Ergebnisse ' /&gt;&lt;wnd cls='TMGGrid' /&gt;&lt;ctrl role='client' automationid='' /&gt;" Guid="0f9793b4-5282-451d-818d-a216e1b30a5c" InformativeScreenshot="602dbce0b8017cf6684a2f0fc7a69c05.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1170, 186, 26, 26" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Wöchentliche Infozeit wählen' /&gt;&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Wöchentliche Infozeit wählen' /&gt;&lt;wnd cls='TMGButton' /&gt;" Guid="067c78c4-1bad-45b4-99a7-6d9eeb37e562" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopLeft" X="80" Y="33" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'Eintragen'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="150, 565, 121, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='Eintragen' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='Eintragen' check:text='Eintragen' /&gt;" Guid="e343bf0f-5761-4f40-94ff-69bd5882413d" InformativeScreenshot="b6952b2bcf75a2d4c987287bc5dd4638.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1170, 186, 26, 26" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Wöchentliche Infozeit wählen' /&gt;&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Wöchentliche Infozeit wählen' /&gt;&lt;wnd cls='TMGButton' /&gt;" Guid="41746d9d-bee3-401c-8729-d0074f842795" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Klick auf Terminspalte in Kalender" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 891" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="c369b20c-3e4b-4239-8c8d-019451f70961" InformativeScreenshot="e22d665fad74655574ea8322babe3c7c.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.49.5.3) - Fr, 30. Mai 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="73, 70, 1619, 25" FullSelectorArgument="&lt;ctrl idx='24' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="078cc398-d548-4548-8da9-ab2ba2805e5b" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopRight" X="-647" Y="26" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf den Button 'Termin eintragen'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 891" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="c369b20c-3e4b-4239-8c8d-019451f70961" InformativeScreenshot="e22d665fad74655574ea8322babe3c7c.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.49.5.3) - Fr, 30. Mai 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="73, 70, 1619, 25" FullSelectorArgument="&lt;ctrl idx='24' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="078cc398-d548-4548-8da9-ab2ba2805e5b" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopRight" X="-647" Y="26" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-10, -10, 1940, 1050" FilePath="C:\medavis\programm\ris.exe" IconBase64="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" InformativeScreenshot="54f94bb79032b332266d4be62648574c.png" Selector="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.49.5.3) - Di, 13. Mai 2025 - 1/TBC: RPA, User' /&gt;" Title="medavis Ris (5.49.5.3) - Mo, 05. Mai 2025 - 1/TBC: RPA, User" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
