@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1081.6,922.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,922.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -268,7 +268,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="230.4,194.4" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="580.8,1584" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="536,1108" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -298,9 +298,9 @@
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
                           <InArgument x:TypeArguments="x:String" x:Key="in_str_QueueItemsOrchestratorArchivOrdnerDateiName">[QueueItemsOrchestratorArchivOrdnerDateiName]</InArgument>
-                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtInputExcelDatei_Process">[dtInputExcelDateiMain]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_KriterienlisteDateiPfadProcess">[KriterienlisteDateiPfadMain]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputArchivOrdnerNeuesteDatei_Process">[OutputArchivOrdnerNeuesteDateiMain]</InArgument>
+                          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtInputExcelDatei_Process" />
+                          <InArgument x:TypeArguments="x:String" x:Key="in_KriterienlisteDateiPfadProcess" />
+                          <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputArchivOrdnerNeuesteDatei_Process" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                       <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="436.8,405.6" sap2010:WorkflowViewState.IdRef="TryCatch_10">

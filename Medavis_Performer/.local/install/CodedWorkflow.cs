@@ -25,7 +25,7 @@ namespace Medavis_Performer
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Excel.Activities.API.IExcelService)};
+            _ = new System.Type[]{typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Excel.Activities.API.IExcelService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.Core.Activities.API.ISystemService)};
         }
 
         protected UiPath.Excel.Activities.API.IExcelService excel { get => serviceContainer.Resolve<UiPath.Excel.Activities.API.IExcelService>(); }

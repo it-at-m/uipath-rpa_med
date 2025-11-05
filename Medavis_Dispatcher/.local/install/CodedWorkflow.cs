@@ -25,7 +25,7 @@ namespace Medavis_Dispatcher
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.Excel.Activities.API.IExcelService), typeof(UiPath.Testing.API.ITestingService)};
+            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.Excel.Activities.API.IExcelService), typeof(UiPath.Testing.API.ITestingService)};
         }
 
         protected UiPath.Excel.Activities.API.IExcelService excel { get => serviceContainer.Resolve<UiPath.Excel.Activities.API.IExcelService>(); }

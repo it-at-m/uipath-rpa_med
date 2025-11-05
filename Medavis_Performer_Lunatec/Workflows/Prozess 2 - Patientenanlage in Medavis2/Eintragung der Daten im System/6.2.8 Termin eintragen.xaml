@@ -2,12 +2,12 @@
   <x:Members>
     <x:Property Name="in_Termindatum" Type="InArgument(x:String)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="in_KriterienlisteDateiPfad" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_KriterienlisteDatei" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1465.6,3004</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,3108.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_2_9_Termin_eintragen_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,19 +116,24 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_2_8_Termin_eintragen" sap:VirtualizedContainerService.HintSize="545.6,2939.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_2_8_Termin_eintragen" sap:VirtualizedContainerService.HintSize="545.6,3044" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:GenericValue" Name="TerminDatum" />
       <Variable x:TypeArguments="x:String" Name="KriterienlisteDateiPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_KriterienlisteDatei" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,281.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_KriterienlisteDateiPfad]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,281.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_str_KriterienlisteDatei]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -149,19 +154,20 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: medavis Ris (5.49.5.3) - Di, 13. Mai 2025 - 1/TBC: RPA, User" sap:VirtualizedContainerService.HintSize="483.2,2505.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: medavis Ris (5.49.5.3) - Di, 13. Mai 2025 - 1/TBC: RPA, User" sap:VirtualizedContainerService.HintSize="483.2,2610.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,2214.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,2319.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Strg + I drücken, um Terminplatz zu suchen" sap:VirtualizedContainerService.HintSize="387.2,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Shortcuts="[d(hk)][d(ctrl)]i[u(ctrl)][u(hk)]" Version="V3" />
+            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="387.2,112.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="55" Version="V3" />
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Strg + I drücken, um Terminplatz zu suchen" sap:VirtualizedContainerService.HintSize="387.2,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Shortcuts="[d(hk)][d(ctrl)]i[u(ctrl)][u(hk)]" Version="V3" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf Feld 'Von'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="73, 88, 128, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" Guid="bbec5b79-831a-4845-b01e-7f6c86af3cee" InformativeScreenshot="11d4769a51df5a69c56a4e38b0b0f08f.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
@@ -206,7 +212,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Eingabe in Feld 'Bis' bestätigen" sap:VirtualizedContainerService.HintSize="387.2,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Eingabe in Feld 'Bis' bestätigen" sap:VirtualizedContainerService.HintSize="387.2,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf angezeigte Terminspalte" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="25, 273, 1155, 236" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Ergebnisse ' /&gt;&lt;wnd cls='TMGGrid' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Ergebnisse ' /&gt;&lt;wnd cls='TMGGrid' /&gt;&lt;ctrl role='client' automationid='' /&gt;" Guid="0f9793b4-5282-451d-818d-a216e1b30a5c" InformativeScreenshot="602dbce0b8017cf6684a2f0fc7a69c05.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
@@ -232,7 +238,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Klick auf Terminspalte in Kalender" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Klick auf Terminspalte im Kalender" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 891" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="c369b20c-3e4b-4239-8c8d-019451f70961" InformativeScreenshot="e22d665fad74655574ea8322babe3c7c.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.49.5.3) - Fr, 30. Mai 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
