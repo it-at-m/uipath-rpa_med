@@ -1,7 +1,5 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_5_Basisdaten_Untersuchung_eintragen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_5_Basisdaten_Untersuchung_eintragen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_dtInputExcelDatei" Type="InArgument(sd:DataTable)" />
-    <x:Property Name="in_rowIndex" Type="InArgument(x:Int32)" />
     <x:Property Name="out_FallanmerkungVorhanden" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_FallanmerkungText" Type="InArgument(x:String)" />
   </x:Members>
@@ -190,7 +188,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <If Condition="[in_FallanmerkungText = &quot;Anlegen, mit Päd Filter (15-18)&quot;]" DisplayName="If: Fallanmerkung entspricht Text in DataTable" sap:VirtualizedContainerService.HintSize="510.4,784" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[in_FallanmerkungText = &quot;Angelegt, mit Päd Filter (15-18)&quot;]" DisplayName="If: Fallanmerkung entspricht Text in DataTable" sap:VirtualizedContainerService.HintSize="510.4,784" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="476.8,429.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>

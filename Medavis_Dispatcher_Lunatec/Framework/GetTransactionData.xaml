@@ -2,13 +2,11 @@
   <x:Members>
     <x:Property Name="out_transactionData" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="out_OutputordnerPfad" Type="OutArgument(x:String)" />
-    <x:Property Name="out_ArchivordnerPfadOutput" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794.4,1928.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794.4,1741.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,7 +100,7 @@
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="540.8,1864" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="540.8,1676.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_GSRRobotAccount" />
       <Variable x:TypeArguments="ss:SecureString" Name="secPasswordGSRRobotAccount" />
@@ -122,6 +120,22 @@
       <Variable x:TypeArguments="x:String" Name="str_ArchivordnerPfadOutput" />
       <Variable x:TypeArguments="x:String" Name="str_OutputdateiPfad" />
       <Variable x:TypeArguments="x:String" Name="str_OutputdateiName" />
+      <Variable x:TypeArguments="x:String" Name="str_StatuslisteordnerName" />
+      <Variable x:TypeArguments="x:String" Name="str_VorpruefungordnerName" />
+      <Variable x:TypeArguments="x:String" Name="str_VorpruefungordnerPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_BearbeitungordnerName" />
+      <Variable x:TypeArguments="x:String" Name="str_BearbeitungordnerPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_ErgebnisordnerName" />
+      <Variable x:TypeArguments="x:String" Name="str_ErgebnisordnerPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_StatuslisteordnerPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_VorpruefungdateiPfad" />
+      <Variable x:TypeArguments="x:String" Name="str_VorpruefungdateiName" />
+      <Variable x:TypeArguments="x:String" Name="str_InputOrdner" />
+      <Variable x:TypeArguments="x:String" Name="str_DatenbankOrdner" />
+      <Variable x:TypeArguments="x:String" Name="str_ErgebnisOrdner" />
+      <Variable x:TypeArguments="x:String" Name="str_InputArchivOrdner" />
+      <Variable x:TypeArguments="x:String" Name="str_DatenbankDatei" />
+      <Variable x:TypeArguments="x:String" Name="str_InputdateiName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -130,7 +144,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start - GetTransactionData&quot;]" />
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="rpa004_GSR_Robot_Account" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="478.4,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secPasswordGSRRobotAccount]" Username="[str_GSRRobotAccount]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,647.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,460" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -181,12 +195,44 @@
               <InArgument x:TypeArguments="x:String">[in_config("rpa004_Working_Folder").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_ProbandenlisteOrdner]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[str_InputOrdner]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[Path.Combine(str_WorkingFolder, "Probandenliste")]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_config("rpa004_InputOrdner").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_DatenbankOrdner]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_config("rpa004_DatenbankOrdner").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_ErgebnisOrdner]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_config("rpa004_ErgebnisOrdner").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_InputArchivOrdner]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_config("rpa004_InputArchivOrdner").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_DatenbankDatei]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[Path.Combine(in_config("rpa004_DatenbankOrdner").ToString, "Datenbank.xlsx")]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -195,86 +241,6 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="s:String[]">[str_AbsenderDomains.Split(";")]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_ProbandenlisteDateiName]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[Path.Combine(str_ProbandenlisteOrdner, "GSR")]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_Archiv]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Archiv</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_ArchivordnerPfadProbandenliste]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[Path.Combine(str_ProbandenlisteOrdner, str_Archiv)]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_OutputordnerName]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Output</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_OutputordnerPfad]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[Path.Combine(str_ProbandenlisteOrdner, str_OutputordnerName)]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_ArchivordnerPfadOutput]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[Path.Combine(str_OutputordnerPfad, str_Archiv)]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_OutputdateiPfad]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[Path.Combine(str_OutputordnerPfad, "Output.xlsx")]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_OutputdateiName]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Output.xlsx</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[out_OutputordnerPfad]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[str_OutputordnerPfad]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[out_ArchivordnerPfadOutput]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[str_ArchivordnerPfadOutput]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -307,6 +273,8 @@
         <InArgument x:TypeArguments="x:Int32" x:Key="in_intSmtpPort">[int_EmailSmtpPort]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strSmtpServer">[str_EmailSmtpServer]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strOrchestratorOrdner" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strInputOrdner">[str_InputOrdner]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strInputdateiName">[str_InputdateiName]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.1.2 Vorqualifizierung der Liste in Excel - Invoke Workflow File (Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.2 Vorqualifizierung der Liste in Excel.xaml)" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.2 Vorqualifizierung der Liste in Excel.xaml">
@@ -319,9 +287,18 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerPfad">[str_OutputordnerPfad]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerName">[str_OutputordnerName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputDateiPfad">[str_OutputdateiPfad]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_VorpruefungordnerPfad">[str_VorpruefungordnerPfad]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_VorpruefungordnerName">[str_VorpruefungordnerName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_VorpruefungdateiPfad">[str_VorpruefungdateiPfad]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_InputOrdner">[str_InputOrdner]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_DatenbankOrdner">[str_DatenbankOrdner]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_ErgebnisOrdner">[str_ErgebnisOrdner]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_InputArchivOrdner">[str_InputArchivOrdner]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_DatenbankDatei">[str_DatenbankDatei]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_InputdateiName">[str_InputdateiName]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ReadRange AddHeaders="True" DataTable="[out_transactionData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Ergebnis" WorkbookPath="[str_OutputdateiPfad]">
+    <ui:ReadRange AddHeaders="True" DataTable="[out_transactionData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Datenbank" WorkbookPath="[str_DatenbankDatei]">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
