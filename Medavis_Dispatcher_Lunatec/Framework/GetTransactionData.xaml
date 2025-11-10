@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>530.4,1924</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>530.4,1741.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,7 +100,7 @@
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="540.8,1859.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="540.8,1676.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_GSRRobotAccount" />
       <Variable x:TypeArguments="ss:SecureString" Name="secPasswordGSRRobotAccount" />
@@ -246,7 +246,6 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;hallo&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.1.1 Postfach und Kriterien der Mail prüfen - Invoke Workflow File (Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml)" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
