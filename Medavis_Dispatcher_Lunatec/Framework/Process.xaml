@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794.4,4364</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794.4000000000003,4364</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -288,7 +288,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="587.2,143.2" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, InProgress" QueueName="in_Config(&quot;OrchestratorQueueName&quot;).ToString" Reference="[int_RowIndex.ToString]" Result="[queueitems]" />
+                <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="587.2,143.2" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, InProgress" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[int_RowIndex.ToString]" Result="[queueitems]" />
                 <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each currentQueueItem" sap:VirtualizedContainerService.HintSize="587.2,1340" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[queueitems]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="ui:QueueItem">
