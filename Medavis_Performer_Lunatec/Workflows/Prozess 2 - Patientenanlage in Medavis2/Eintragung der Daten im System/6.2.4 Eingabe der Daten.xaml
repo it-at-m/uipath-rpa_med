@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192.8,3561.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794.4,3561.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_2_4_Eingabe_der_Daten_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -286,7 +286,7 @@
             </uix:NTypeInto>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geschlecht' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geschlecht]" Version="V3">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="595, 218, 78, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='31' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="0f58e4d1-f733-4ad1-b2cc-9c7810af6b3c" ImageBase64="" InformativeScreenshot="7b6bd068d0c5b73b8fc83035089c0598.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="595, 218, 78, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='31' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="0f58e4d1-f733-4ad1-b2cc-9c7810af6b3c" ImageBase64="" InformativeScreenshot="82b18a0a16ea23ce14f517e5e3146db8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                       <uix:Target DesignTimeRectangle="508, 218, 165, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' idx='28' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="1576186b-f3b1-424f-800f-13f20664bb32" SearchSteps="Selector" />
@@ -303,7 +303,7 @@
             </uix:NTypeInto>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf gelbes Plus (Neuen Datensatz anlegen)" sap:VirtualizedContainerService.HintSize="1044.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="11, 448, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='83' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="bae753e6-b42d-4429-89e2-b8bc9f993b88" ImageBase64="" InformativeScreenshot="8d1c9e26975f7ef95be1324ef3678c71.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="11, 448, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='83' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="bae753e6-b42d-4429-89e2-b8bc9f993b88" ImageBase64="" InformativeScreenshot="ee4174ce9d6a8054bf7d35952bd6079a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                       <uix:Target DesignTimeRectangle="11, 398, 51, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="1737f83a-3cd5-4438-93b2-465c003b730b" SearchSteps="Selector" />
@@ -320,7 +320,7 @@
             </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'JA' bei Pop-Up (Patient in Tabelle anlegen)" sap:VirtualizedContainerService.HintSize="1044.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="347, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='&amp;amp;Ja' /&gt;" Guid="78ac6530-ff62-4960-922f-942e20fb5b5e" ImageBase64="" InformativeScreenshot="362cfbd38cd5b29dad505108e66d1fc6.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="347, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='&amp;amp;Ja' /&gt;" Guid="78ac6530-ff62-4960-922f-942e20fb5b5e" ImageBase64="" InformativeScreenshot="4c5049c8569c9ed41b2edda22dd660cc.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                       <uix:Target DesignTimeRectangle="19, 149, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="356cba48-1ca9-4ebe-831a-f9ba84a502b3" SearchSteps="Selector" />
@@ -345,7 +345,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'OK' bei PopUp 'Patient vorhanden'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="614, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='OK' check:text='OK' /&gt;" Guid="e79cbe5e-94b9-416c-8ad0-28893f697922" ImageBase64="" InformativeScreenshot="1ba499123fe30655a5f6c78bba0b6a08.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable DesignTimeRectangle="614, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='OK' check:text='OK' /&gt;" Guid="e79cbe5e-94b9-416c-8ad0-28893f697922" ImageBase64="" InformativeScreenshot="f0da774ccad240a07f6ff83affc50db3.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                             <uix:Target DesignTimeRectangle="19, 149, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="d3bb22a1-fbf2-4c8b-9692-57e3616ead10" SearchSteps="Selector" />
@@ -356,18 +356,16 @@
                   </uix:NClick>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'OK' bei PopUp 'Patientendaten gefunden'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="506, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='OK' check:text='OK' /&gt;" Guid="2b6c6af7-8eba-40a7-8652-76a055bff61b" ImageBase64="" InformativeScreenshot="2248769f9abbc1c7ed2dfb58175d3d4a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                            <uix:Target DesignTimeRectangle="19, 149, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="af2f46ec-3461-4489-b527-0e701046ad4d" SearchSteps="Selector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
+                      <uix:TargetAnchorable DesignTimeRectangle="19, 149, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="6dfa734d-33d4-4ab8-a48b-b788749e94fc" ImageBase64="" InformativeScreenshot="c307d1202d9564208843911df65484c2.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="BottomRight" X="410" Y="-14" />
+                        </uix:TargetAnchorable.PointOffset>
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'Abbrechen' der Dateneingabe" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="11, 398, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="068443df-ca02-4a20-b85e-5825664cf7ed" ImageBase64="" InformativeScreenshot="5a7e54d11f05c273f36d49c303b287dd.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable DesignTimeRectangle="11, 398, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="068443df-ca02-4a20-b85e-5825664cf7ed" ImageBase64="" InformativeScreenshot="88e441507e2b161b52b8e93435ea2d8e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                             <uix:Target DesignTimeRectangle="11, 448, 51, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='85' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="9563914c-64af-4cee-80ee-d9d46df883c8" SearchSteps="Selector" />
@@ -378,12 +376,10 @@
                   </uix:NClick>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'JA' bei Verwerfen der Eingabe" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="247, 159, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='&amp;amp;Ja' /&gt;" Guid="4f8db96c-8646-43c4-b944-27b5a768270b" ImageBase64="" InformativeScreenshot="7e543a3a6ff3f778cb93e816463b8fb6.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                            <uix:Target DesignTimeRectangle="19, 159, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="50217de4-9a06-4302-85c6-63b90851f503" SearchSteps="Selector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
+                      <uix:TargetAnchorable DesignTimeRectangle="19, 159, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="8185aa5c-7881-4199-b983-dad786521d8a" InformativeScreenshot="3dc66bde0b9395869b09d044f8be0e3a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset Position="BottomRight" X="201" Y="-12" />
+                        </uix:TargetAnchorable.PointOffset>
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
@@ -419,7 +415,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="98, 70, 569, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd aaname='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gef*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gef*' cls='TMGCustomTextArea' check:text='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gefunden!' /&gt;" Guid="0f5f7e12-ee08-43ba-aed5-9d3dbcda24b6" ImageBase64="" InformativeScreenshot="7d48f4329b6574de33d488be846eea2c.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="98, 70, 569, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd aaname='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gef*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gef*' cls='TMGCustomTextArea' check:text='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gefunden!' /&gt;" Guid="0f5f7e12-ee08-43ba-aed5-9d3dbcda24b6" ImageBase64="" InformativeScreenshot="d55172bbf683ec6c73defd7593965954.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                       <uix:Target DesignTimeRectangle="19, 149, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="c476a892-523e-406f-8c58-a67eba53d810" SearchSteps="Selector" />
