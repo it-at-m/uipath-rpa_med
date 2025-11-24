@@ -39,7 +39,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1266.4,16570.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,16570.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_1_Excel_VorqualifizierungListe_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -1523,7 +1523,7 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <If Condition="[CInt(AlterProbante) &gt; 18]" sap:VirtualizedContainerService.HintSize="555.2,574.4" sap2010:WorkflowViewState.IdRef="If_52">
+                                <If Condition="[CInt(AlterProbante) &gt;18]" sap:VirtualizedContainerService.HintSize="555.2,574.4" sap2010:WorkflowViewState.IdRef="If_52">
                                   <If.Then>
                                     <Sequence sap:VirtualizedContainerService.HintSize="521.6,391.2" sap2010:WorkflowViewState.IdRef="Sequence_265">
                                       <sap:WorkflowViewStateService.ViewState>
