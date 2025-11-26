@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794.4,3561.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192.8,4036</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_2_4_Eingabe_der_Daten_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -122,7 +122,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_2_4_Eingabe_der_Daten" sap:VirtualizedContainerService.HintSize="1203.2,3496.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_2_4_Eingabe_der_Daten" sap:VirtualizedContainerService.HintSize="1203.2,3971.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="OutputQueueItems" />
       <Variable x:TypeArguments="x:Boolean" Name="boolPopUpPatientExistiert" />
@@ -184,13 +184,13 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 6.2.4 Eingabe der Daten" sap:VirtualizedContainerService.HintSize="1140.8,3134.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="63063385-c041-4569-b185-ffe9efcc42ff" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 6.2.4 Eingabe der Daten" sap:VirtualizedContainerService.HintSize="1140.8,3608.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="63063385-c041-4569-b185-ffe9efcc42ff" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1107.2,2843.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1107.2,3317.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,7 +200,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 165, 216, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='22' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="4b2ef129-d164-4edb-af45-4948ebd54388" ImageBase64="" InformativeScreenshot="ea24553e324f5461de09e57fb677eb0d.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="76, 165, 341, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' idx='22' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="a60ccaf9-712d-4480-999b-635535927a50" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -217,7 +217,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 191, 216, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='13' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="a532182c-3b7f-4a72-b38e-bbee6aa84954" ImageBase64="" InformativeScreenshot="bf80d8c8aa40a69b52513590c3433d90.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="76, 191, 341, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' idx='13' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="0ce025a2-fe9f-42fe-bdb0-225f5e0b8f45" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -230,48 +230,66 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1044.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignorierte Aktivitäten" sap:VirtualizedContainerService.HintSize="1014.4,413.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <uix:NCheckState DisplayName="Warnung: Geschlecht für Vornamen festgestellt" sap:VirtualizedContainerService.HintSize="1044.8,527.2" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="PopUp wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,308.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="952,301.6" sap2010:WorkflowViewState.IdRef="NCheckState_3" Version="V3">
-                    <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Ziel wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Ziel wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </uix:NCheckState.IfNotExists>
-                  </uix:NCheckState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'Nein' für Geseschlecht" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="488, 159, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Nein' cls='TMGButton' title='&amp;amp;Nein' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Nein' cls='TMGButton' title='&amp;amp;Nein' check:text='&amp;amp;Nein' /&gt;" Guid="278fe98a-23ba-4beb-9c0e-8b8c4c904a2b" InformativeScreenshot="7825d101e65dd1c715c642d69e18a299.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Warnung' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="97, 60, 444, 50" FullSelectorArgument="&lt;wnd aaname='Für diesen Vornamen wurde das Geschlecht &amp;quot;W&amp;quot; ermittelt.  Möchten*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Für diesen Vornamen wurde das Geschlecht &amp;quot;W&amp;quot; ermittelt.  Möchten*' cls='TMGCustomTextArea' check:text='Für diesen Vornamen wurde das Geschlecht &amp;quot;W&amp;quot; ermittelt.&amp;#xD;&amp;#xA;Möchten Sie das Geschlecht übernehmen?' /&gt;" Guid="95df3c2b-fdef-4553-ad1a-d3ae1157b603" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
                 </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="PopUp wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 616, 209" DesignTimeScaleFactor="1.25" Guid="3eceaa11-a223-41ac-8db4-2132f325eb1d" InformativeScreenshot="bea27a1ff75468a7e39f32adac97b768.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Warnung' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="97, 60, 444, 50" FullSelectorArgument="&lt;wnd aaname='Für diesen Vornamen wurde das Geschlecht &amp;quot;W&amp;quot; ermittelt.  Möchten*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Für diesen Vornamen wurde das Geschlecht &amp;quot;W&amp;quot; ermittelt.  Möchten*' cls='TMGCustomTextArea' check:text='Für diesen Vornamen wurde das Geschlecht &amp;quot;W&amp;quot; ermittelt.&amp;#xD;&amp;#xA;Möchten Sie das Geschlecht übernehmen?' /&gt;" Guid="56d4d0f6-1588-4cc4-8bde-368be440e6ec" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geburtsdatum' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geburtsdatum]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 218, 106, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGDateField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGDateField' /&gt;" Guid="0e6f513a-d7d4-4c12-9dd9-69ef0eb03d43" ImageBase64="" InformativeScreenshot="8c301929ec3c8cab6f605680e34fa75c.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="76, 218, 231, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledDateField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledDateField' /&gt;" Guid="e696dca5-d018-4fa3-b091-b470898a6798" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -288,7 +306,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="595, 218, 78, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='31' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="0f58e4d1-f733-4ad1-b2cc-9c7810af6b3c" ImageBase64="" InformativeScreenshot="82b18a0a16ea23ce14f517e5e3146db8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="508, 218, 165, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' idx='28' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="1576186b-f3b1-424f-800f-13f20664bb32" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -305,7 +323,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="11, 448, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='83' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="bae753e6-b42d-4429-89e2-b8bc9f993b88" ImageBase64="" InformativeScreenshot="ee4174ce9d6a8054bf7d35952bd6079a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="11, 398, 51, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="1737f83a-3cd5-4438-93b2-465c003b730b" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -322,7 +340,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="347, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='&amp;amp;Ja' /&gt;" Guid="78ac6530-ff62-4960-922f-942e20fb5b5e" ImageBase64="" InformativeScreenshot="4c5049c8569c9ed41b2edda22dd660cc.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="19, 149, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="356cba48-1ca9-4ebe-831a-f9ba84a502b3" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -347,7 +365,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="614, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='OK' check:text='OK' /&gt;" Guid="e79cbe5e-94b9-416c-8ad0-28893f697922" ImageBase64="" InformativeScreenshot="f0da774ccad240a07f6ff83affc50db3.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="19, 149, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="d3bb22a1-fbf2-4c8b-9692-57e3616ead10" SearchSteps="Selector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -367,7 +385,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="11, 398, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="068443df-ca02-4a20-b85e-5825664cf7ed" ImageBase64="" InformativeScreenshot="88e441507e2b161b52b8e93435ea2d8e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="11, 448, 51, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='85' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="9563914c-64af-4cee-80ee-d9d46df883c8" SearchSteps="Selector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -417,7 +435,7 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="98, 70, 569, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd aaname='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gef*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gef*' cls='TMGCustomTextArea' check:text='Es wurde ein Patient mit dem gleichen Namen und Geburtsdatum gefunden!' /&gt;" Guid="0f5f7e12-ee08-43ba-aed5-9d3dbcda24b6" ImageBase64="" InformativeScreenshot="d55172bbf683ec6c73defd7593965954.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="19, 149, 31, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="c476a892-523e-406f-8c58-a67eba53d810" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
