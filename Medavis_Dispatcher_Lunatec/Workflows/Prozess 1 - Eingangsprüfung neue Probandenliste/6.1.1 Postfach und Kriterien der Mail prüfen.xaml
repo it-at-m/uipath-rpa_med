@@ -1,54 +1,32 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_6_1_EingangspruefungNeueProbandenliste" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_1_EingangspruefungNeueProbandenliste" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_strBetreffEingangsMail" Type="InArgument(x:String)" />
-    <x:Property Name="in_strMailAnhang" Type="InArgument(x:String)" />
-    <x:Property Name="in_strMailAnhangExcel" Type="InArgument(x:String)" />
     <x:Property Name="in_strBetreffBool" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_strAnhangBool" Type="InArgument(x:Boolean)" />
-    <x:Property Name="in_strOrdnerTrueFalse" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_boolFolderProbandenliste" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_strEmailEmpfaenger" Type="InArgument(x:String)" />
     <x:Property Name="in_strEmailInhalt" Type="InArgument(x:String)" />
     <x:Property Name="in_strBetreff" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_ProbandenlisteDateiName" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_ArchivFolder" Type="InArgument(x:String)" />
     <x:Property Name="in_listAnhang" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="in_secPasswordGSRRobotAccount" Type="InArgument(ss:SecureString)" />
     <x:Property Name="in_strProbandenlisteOrdner" Type="InArgument(x:String)" />
-    <x:Property Name="in_arrDomainSplit" Type="InArgument(s:String[])" />
     <x:Property Name="in_strGSRRobotPostfach" Type="InArgument(x:String)" />
-    <x:Property Name="in_strWorkingFolder" Type="InArgument(x:String)" />
-    <x:Property Name="in_strAbsenderDomains" Type="InArgument(x:String)" />
     <x:Property Name="in_strGSRRobotAccount" Type="InArgument(x:String)" />
     <x:Property Name="in_intSmtpPort" Type="InArgument(x:Int32)" />
     <x:Property Name="in_strSmtpServer" Type="InArgument(x:String)" />
-    <x:Property Name="in_strOrchestratorOrdner" Type="InArgument(x:String)" />
     <x:Property Name="in_strInputOrdner" Type="InArgument(x:String)" />
     <x:Property Name="out_strInputdateiName" Type="OutArgument(x:String)" />
   </x:Members>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_Config>
-    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_Config>
   <this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffEingangsMail>
     <InArgument x:TypeArguments="x:String" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffEingangsMail>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhang>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhang>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhangExcel>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_strMailAnhangExcel>
   <this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffBool>
     <InArgument x:TypeArguments="x:Boolean" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_strBetreffBool>
   <this:_6_1_EingangspruefungNeueProbandenliste.in_strAnhangBool>
     <InArgument x:TypeArguments="x:Boolean" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_strAnhangBool>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_strOrdnerTrueFalse>
-    <InArgument x:TypeArguments="x:Boolean" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_strOrdnerTrueFalse>
   <this:_6_1_EingangspruefungNeueProbandenliste.in_boolFolderProbandenliste>
     <InArgument x:TypeArguments="x:Boolean" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_boolFolderProbandenliste>
@@ -70,18 +48,9 @@
   <this:_6_1_EingangspruefungNeueProbandenliste.in_strProbandenlisteOrdner>
     <InArgument x:TypeArguments="x:String" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_strProbandenlisteOrdner>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_arrDomainSplit>
-    <InArgument x:TypeArguments="s:String[]" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_arrDomainSplit>
   <this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotPostfach>
     <InArgument x:TypeArguments="x:String" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotPostfach>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_strWorkingFolder>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_strWorkingFolder>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_strAbsenderDomains>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_strAbsenderDomains>
   <this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotAccount>
     <InArgument x:TypeArguments="x:String" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_strGSRRobotAccount>
@@ -91,9 +60,6 @@
   <this:_6_1_EingangspruefungNeueProbandenliste.in_strSmtpServer>
     <InArgument x:TypeArguments="x:String" />
   </this:_6_1_EingangspruefungNeueProbandenliste.in_strSmtpServer>
-  <this:_6_1_EingangspruefungNeueProbandenliste.in_strOrchestratorOrdner>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_EingangspruefungNeueProbandenliste.in_strOrchestratorOrdner>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -321,9 +287,6 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
                               <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_70">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:Boolean" Name="boolProbandenliste" />
-                                </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
