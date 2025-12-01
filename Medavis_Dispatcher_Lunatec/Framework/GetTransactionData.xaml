@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>530.4,1741.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794.4,1741.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,24 +112,8 @@
       <Variable x:TypeArguments="x:String" Name="str_WorkingFolder" />
       <Variable x:TypeArguments="x:String" Name="str_ProbandenlisteOrdner" />
       <Variable x:TypeArguments="s:String[]" Name="arr_DomainSplit" />
-      <Variable x:TypeArguments="x:String" Name="str_ProbandenlisteDateiName" />
-      <Variable x:TypeArguments="x:String" Name="str_Archiv" />
-      <Variable x:TypeArguments="x:String" Name="str_ArchivordnerPfadProbandenliste" />
-      <Variable x:TypeArguments="x:String" Name="str_OutputordnerName" />
       <Variable x:TypeArguments="x:String" Name="str_OutputordnerPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_ArchivordnerPfadOutput" />
       <Variable x:TypeArguments="x:String" Name="str_OutputdateiPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_OutputdateiName" />
-      <Variable x:TypeArguments="x:String" Name="str_StatuslisteordnerName" />
-      <Variable x:TypeArguments="x:String" Name="str_VorpruefungordnerName" />
-      <Variable x:TypeArguments="x:String" Name="str_VorpruefungordnerPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_BearbeitungordnerName" />
-      <Variable x:TypeArguments="x:String" Name="str_BearbeitungordnerPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_ErgebnisordnerName" />
-      <Variable x:TypeArguments="x:String" Name="str_ErgebnisordnerPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_StatuslisteordnerPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_VorpruefungdateiPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_VorpruefungdateiName" />
       <Variable x:TypeArguments="x:String" Name="str_InputOrdner" />
       <Variable x:TypeArguments="x:String" Name="str_DatenbankOrdner" />
       <Variable x:TypeArguments="x:String" Name="str_ErgebnisOrdner" />
@@ -249,50 +233,30 @@
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.1.1 Postfach und Kriterien der Mail prüfen - Invoke Workflow File (Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml)" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config" />
         <InArgument x:TypeArguments="x:String" x:Key="in_strBetreffEingangsMail" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_strMailAnhang" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_strMailAnhangExcel" />
         <InArgument x:TypeArguments="x:Boolean" x:Key="in_strBetreffBool" />
         <InArgument x:TypeArguments="x:Boolean" x:Key="in_strAnhangBool" />
-        <InArgument x:TypeArguments="x:Boolean" x:Key="in_strOrdnerTrueFalse" />
         <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolFolderProbandenliste" />
         <InArgument x:TypeArguments="x:String" x:Key="in_strEmailEmpfaenger" />
         <InArgument x:TypeArguments="x:String" x:Key="in_strEmailInhalt" />
         <InArgument x:TypeArguments="x:String" x:Key="in_strBetreff" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ProbandenlisteDateiName" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ArchivFolder" />
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_listAnhang" />
         <InArgument x:TypeArguments="ss:SecureString" x:Key="in_secPasswordGSRRobotAccount">[secPasswordGSRRobotAccount]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strProbandenlisteOrdner">[str_ProbandenlisteOrdner]</InArgument>
-        <InArgument x:TypeArguments="s:String[]" x:Key="in_arrDomainSplit">[arr_DomainSplit]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strGSRRobotPostfach">[str_GSRRobotPostfach]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strWorkingFolder">[str_WorkingFolder]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strAbsenderDomains">[str_AbsenderDomains]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strGSRRobotAccount">[str_GSRRobotAccount]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_intSmtpPort">[int_EmailSmtpPort]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strSmtpServer">[str_EmailSmtpServer]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strOrchestratorOrdner" />
         <InArgument x:TypeArguments="x:String" x:Key="in_strInputOrdner">[str_InputOrdner]</InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_strInputdateiName">[str_InputdateiName]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.1.2 Vorqualifizierung der Liste in Excel - Invoke Workflow File (Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.2 Vorqualifizierung der Liste in Excel.xaml)" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.2 Vorqualifizierung der Liste in Excel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_WorkingFolder">[str_WorkingFolder]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_archiv">[str_Archiv]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_ProbantenListeFolder">[str_ProbandenlisteOrdner]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ProbandenlisteDateiName">[str_ProbandenlisteDateiName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ArchivOrdnerPfadProbandenliste">[str_ArchivordnerPfadProbandenliste]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerPfad">[str_OutputordnerPfad]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputOrdnerName">[str_OutputordnerName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_OutputDateiPfad">[str_OutputdateiPfad]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_VorpruefungordnerPfad">[str_VorpruefungordnerPfad]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_VorpruefungordnerName">[str_VorpruefungordnerName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_VorpruefungdateiPfad">[str_VorpruefungdateiPfad]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_InputOrdner">[str_InputOrdner]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_DatenbankOrdner">[str_DatenbankOrdner]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_ErgebnisOrdner">[str_ErgebnisOrdner]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_InputArchivOrdner">[str_InputArchivOrdner]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_DatenbankDatei">[str_DatenbankDatei]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_InputdateiName">[str_InputdateiName]</InArgument>

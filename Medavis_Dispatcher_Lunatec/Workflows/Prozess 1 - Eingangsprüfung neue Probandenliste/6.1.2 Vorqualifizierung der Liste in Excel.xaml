@@ -1,45 +1,23 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="_6_1_Excel_VorqualifizierungListe" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sg="clr-namespace:System.Globalization;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_str_WorkingFolder" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_archiv" Type="InArgument(x:String)" />
     <x:Property Name="in_str_ProbantenListeFolder" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_ProbandenlisteDateiName" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_ArchivOrdnerPfadProbandenliste" Type="InArgument(x:String)" />
     <x:Property Name="in_str_OutputOrdnerPfad" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_OutputOrdnerName" Type="InArgument(x:String)" />
     <x:Property Name="in_str_OutputDateiPfad" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_VorpruefungordnerPfad" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_VorpruefungordnerName" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_VorpruefungdateiPfad" Type="InArgument(x:String)" />
     <x:Property Name="in_str_InputOrdner" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_DatenbankOrdner" Type="InArgument(x:String)" />
-    <x:Property Name="in_str_ErgebnisOrdner" Type="InArgument(x:String)" />
     <x:Property Name="in_str_InputArchivOrdner" Type="InArgument(x:String)" />
     <x:Property Name="in_str_DatenbankDatei" Type="InArgument(x:String)" />
     <x:Property Name="in_str_InputdateiName" Type="InArgument(x:String)" />
   </x:Members>
-  <this:_6_1_Excel_VorqualifizierungListe.in_str_WorkingFolder>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_Excel_VorqualifizierungListe.in_str_WorkingFolder>
-  <this:_6_1_Excel_VorqualifizierungListe.in_str_archiv>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_Excel_VorqualifizierungListe.in_str_archiv>
   <this:_6_1_Excel_VorqualifizierungListe.in_str_ProbantenListeFolder>
     <InArgument x:TypeArguments="x:String" />
   </this:_6_1_Excel_VorqualifizierungListe.in_str_ProbantenListeFolder>
-  <this:_6_1_Excel_VorqualifizierungListe.in_str_ArchivOrdnerPfadProbandenliste>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_Excel_VorqualifizierungListe.in_str_ArchivOrdnerPfadProbandenliste>
   <this:_6_1_Excel_VorqualifizierungListe.in_str_OutputOrdnerPfad>
     <InArgument x:TypeArguments="x:String" />
   </this:_6_1_Excel_VorqualifizierungListe.in_str_OutputOrdnerPfad>
-  <this:_6_1_Excel_VorqualifizierungListe.in_str_OutputOrdnerName>
-    <InArgument x:TypeArguments="x:String" />
-  </this:_6_1_Excel_VorqualifizierungListe.in_str_OutputOrdnerName>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794.4,17184.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,17184.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_1_Excel_VorqualifizierungListe_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -179,58 +157,25 @@
   </sap:WorkflowViewStateService.ViewState>
   <Sequence DisplayName="_6_1_2_Vorqualifizierung_der_Liste_in_Excel" sap:VirtualizedContainerService.HintSize="1276.8,17120" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_Probantenliste" />
-      <Variable x:TypeArguments="x:String" Name="str_ProbantenlistePath" />
       <Variable x:TypeArguments="s:DateTime" Name="gebDatum" />
-      <Variable x:TypeArguments="x:String" Name="str_Geburstdatum" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="list_workbookSheets_1" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_currentTable" />
-      <Variable x:TypeArguments="s:String[]" Name="arrColumnsNames" />
-      <Variable x:TypeArguments="x:String" Name="str_dt_currentTable" />
-      <Variable x:TypeArguments="x:Int32" Name="int_filecounter" />
-      <Variable x:TypeArguments="x:String" Default="RPA" Name="str_RPA" />
       <Variable x:TypeArguments="x:Object" Name="AlterProbante" />
-      <Variable x:TypeArguments="x:Boolean" Name="GeburstDatum" />
-      <Variable x:TypeArguments="s:String[]" Name="arrGebDatumFormate" />
-      <Variable x:TypeArguments="x:Int64" Name="int_Alter" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_kriterienListe" />
-      <Variable x:TypeArguments="x:String" Name="str_Kriterienliste" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="list_workbookSheetsKriterienList" />
-      <Variable x:TypeArguments="ui:GenericValue" Name="gvDate" />
-      <Variable x:TypeArguments="x:String" Name="str_excelAllRowsTransactions" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_template" />
-      <Variable x:TypeArguments="x:String" Name="str_tp" />
-      <Variable x:TypeArguments="x:String" Name="str_Bemerkung_KriterienListe" />
-      <Variable x:TypeArguments="x:String" Name="str_kritetien" />
-      <Variable x:TypeArguments="x:Int32" Name="int_cellRowCounter" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_filteredtemplate" />
-      <Variable x:TypeArguments="x:String" Name="str_roboterAnweisungen" />
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[New Dictionary(of String, String)]" Name="dictBotKriterien" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_newProbatenliste" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_newKriterienliste" />
-      <Variable x:TypeArguments="x:String" Name="str_KriterienlistePath" />
-      <Variable x:TypeArguments="s:String[]" Name="arrDateiListe" />
-      <Variable x:TypeArguments="x:String" Name="str_ersteDatei" />
-      <Variable x:TypeArguments="x:String" Name="rawData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_CleanProbadenListe" />
-      <Variable x:TypeArguments="scg:IEnumerable(sd:DataRow)" Name="dt_filteredRowsProbatenliste" />
       <Variable x:TypeArguments="x:String" Name="str_listProbanden" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_finalProbanliste" />
       <Variable x:TypeArguments="s:String[]" Name="arrColName" />
       <Variable x:TypeArguments="s:String[]" Name="arrProbantenListe" />
       <Variable x:TypeArguments="s:String[]" Name="arrKriterienListe" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="list_workbookSheets_2" />
       <Variable x:TypeArguments="x:String" Name="str_sheetProbatenliste" />
       <Variable x:TypeArguments="x:String" Name="str_sheetKriterienliste" />
       <Variable x:TypeArguments="sd:DataRow" Name="drMatchRow" />
       <Variable x:TypeArguments="x:String" Name="str_BemerkungProbandenliste" />
       <Variable x:TypeArguments="x:String" Name="str_bemerkungKriterienliste" />
       <Variable x:TypeArguments="sd:DataRow" Name="dr_NewRowsValue" />
-      <Variable x:TypeArguments="sd:DataColumn" Name="dt_dummy" />
       <Variable x:TypeArguments="x:String" Name="str_ExcelDateiKriterienliste" />
       <Variable x:TypeArguments="x:String" Name="str_ExcelDateiProbatenliste" />
-      <Variable x:TypeArguments="s:DateTime" Name="gebDatumDE" />
-      <Variable x:TypeArguments="x:Boolean" Name="boolTest" />
       <Variable x:TypeArguments="x:String" Name="str_newProbatenliste" />
       <Variable x:TypeArguments="x:String" Name="str_CleanProbatenliste" />
       <Variable x:TypeArguments="x:Int32" Name="int_iterationIndex" />
