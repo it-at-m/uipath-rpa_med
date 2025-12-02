@@ -111,10 +111,6 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Medavis_RIS_Anwendung_starten" sap:VirtualizedContainerService.HintSize="545.6,1785.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="ss:SecureString" Name="secMedavisPasswort" />
-      <Variable x:TypeArguments="x:String" Name="strMedavisBenutzername" />
-    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,7 +132,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="254, 375, 410, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="5082debc-d5ea-4e1a-82bb-fc470c3fd572" InformativeScreenshot="9a02f7b04564b15659e427bbc1c466b8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.38.6.10)' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="29, 375, 635, 45" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="57d1ef66-01e7-4686-b296-9b5c764cec84" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -147,7 +143,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="254, 375, 410, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="5250d4a4-bae0-4e78-9b98-2a8ec1b3187f" ImageBase64="" InformativeScreenshot="5071dc72cbe21f28df20dec22255a9d0.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMLogin' title='Login - RIS (5.38.6.10)' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="29, 425, 635, 45" FullSelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTabSheet' title='EnterUserName' /&gt;&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="d65397ee-fe2e-4fec-9245-8de8c7c12847" ImageBase64="" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
