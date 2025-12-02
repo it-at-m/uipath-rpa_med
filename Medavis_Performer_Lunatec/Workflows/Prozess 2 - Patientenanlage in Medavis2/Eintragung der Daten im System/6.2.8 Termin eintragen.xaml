@@ -1,6 +1,5 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="_6_2_9_Termin_eintragen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_Termindatum" Type="InArgument(x:String)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_str_KriterienlisteDatei" Type="InArgument(x:String)" />
   </x:Members>
@@ -125,8 +124,6 @@
   <Sequence DisplayName="_6_2_8_Termin_eintragen" sap:VirtualizedContainerService.HintSize="545.6,3516.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:GenericValue" Name="TerminDatum" />
-      <Variable x:TypeArguments="x:String" Name="KriterienlisteDateiPfad" />
-      <Variable x:TypeArguments="x:String" Name="str_KriterienlisteDatei" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -176,7 +173,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="73, 88, 128, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGDateComboBox' /&gt;" Guid="bbec5b79-831a-4845-b01e-7f6c86af3cee" ImageBase64="" InformativeScreenshot="f00642853591dfd7ea04faa24264a5b8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="30, 120, 170, 26" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' idx='7' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Zeitraum' /&gt;&lt;wnd cls='TMGPanel' /&gt;" Guid="3ac36d1e-532f-4a77-81fe-3177889c5bf9" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -221,7 +218,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="25, 273, 1155, 236" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Ergebnisse ' /&gt;&lt;wnd cls='TMGGrid' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Ergebnisse ' /&gt;&lt;wnd cls='TMGGrid' /&gt;&lt;ctrl role='client' automationid='' /&gt;" Guid="0f9793b4-5282-451d-818d-a216e1b30a5c" ImageBase64="" InformativeScreenshot="69ff11f6cb87602adfd498b0f709904d.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGAppointmentPlaceSearch' title='Freien Terminplatz suchen' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1170, 186, 26, 26" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Wöchentliche Infozeit wählen' /&gt;&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Filter' /&gt;&lt;wnd cls='TMGGroupBox' title='Wöchentliche Infozeit wählen' /&gt;&lt;wnd cls='TMGButton' /&gt;" Guid="067c78c4-1bad-45b4-99a7-6d9eeb37e562" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -258,7 +255,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="93fd2992ccd347506e7686dd3d193c4e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.38.6.10) - Di, 18. Nov 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1721, 960, 207, 35" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='31' name='Schließen' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Schließen' role='push button' check:text='Schließen' /&gt;" Guid="1e5f25aa-24c8-4b8c-bdbc-ad3b316b7426" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -272,7 +269,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="29e2759349ee3f28aa1b042df590ecae.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.38.6.10) - Di, 18. Nov 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1721, 960, 207, 35" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='31' name='Schließen' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Schließen' role='push button' check:text='Schließen' /&gt;" Guid="1e5f25aa-24c8-4b8c-bdbc-ad3b316b7426" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -286,7 +283,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="081092d1c3e3095453ac8c1862db1545.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.38.6.10) - Di, 18. Nov 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1721, 960, 207, 35" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='31' name='Schließen' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Schließen' role='push button' check:text='Schließen' /&gt;" Guid="1e5f25aa-24c8-4b8c-bdbc-ad3b316b7426" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>

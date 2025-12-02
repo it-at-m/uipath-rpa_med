@@ -1,8 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_4_Eingabe_der_Daten" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_6_2_4_Eingabe_der_Daten" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_PopUpErgebnis" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_row" Type="InArgument(sd:DataRow)" />
-    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -124,22 +123,10 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="_6_2_4_Eingabe_der_Daten" sap:VirtualizedContainerService.HintSize="1203.2,3971.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="OutputQueueItems" />
-      <Variable x:TypeArguments="x:Boolean" Name="boolPopUpPatientExistiert" />
-      <Variable x:TypeArguments="x:Int32" Name="IndexQueueItems" />
       <Variable x:TypeArguments="x:String" Name="str_Nachname" />
       <Variable x:TypeArguments="x:String" Name="str_Vorname" />
       <Variable x:TypeArguments="x:String" Name="str_Geburtsdatum" />
       <Variable x:TypeArguments="x:String" Name="str_Geschlecht" />
-      <Variable x:TypeArguments="ui:QueueItem" Name="outTransaktionsItem" />
-      <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
-      <Variable x:TypeArguments="sd:DataRow" Name="currentRow" />
-      <Variable x:TypeArguments="sd:DataRow" Name="row" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_ProbandenlisteArchivOrdnerDateiName" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_QueueItemsArchivOrdnerDateiName" />
-      <Variable x:TypeArguments="s:String[]" Name="arr_Dateien" />
-      <Variable x:TypeArguments="x:String" Name="neuesteDatei" />
-      <Variable x:TypeArguments="x:String" Name="str_QueueItemsArchivOrdnerNeuesteDatei" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -413,9 +400,6 @@
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
                 <Sequence DisplayName="Pop-Up wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="496,197.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Boolean" Name="boolPopUpPatientExistiertNicht" />
-                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
