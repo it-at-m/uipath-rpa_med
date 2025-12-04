@@ -82,7 +82,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 6.2.7 Kalenderansicht starten" sap:VirtualizedContainerService.HintSize="483.2,564" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="8d5850bb-65ce-4365-be95-f93164f76e52" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.7 Kalenderansicht starten" sap:VirtualizedContainerService.HintSize="483.2,564" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="8d5850bb-65ce-4365-be95-f93164f76e52" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -98,7 +98,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="456, 116, 223, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK2' check:text='Röntgen BK2' /&gt;" Guid="2263a85a-5a59-491d-b7cd-ddec84bbf5fb" ImageBase64="" InformativeScreenshot="1f21f60418d3de711706af5d3d2aa4ae.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMStepAppointmentViewer' title='Terminvergabe' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="231, 116, 223, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK' check:text='Röntgen BK' /&gt;" Guid="35db22ec-09f4-40b4-b341-41a3fbc1f8e9" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
