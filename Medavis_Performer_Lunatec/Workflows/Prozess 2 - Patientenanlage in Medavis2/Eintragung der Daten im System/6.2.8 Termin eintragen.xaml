@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,3581.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>535.2,3581.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_2_9_Termin_eintragen_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -151,7 +151,7 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 6.2.8 Termin eintragen" sap:VirtualizedContainerService.HintSize="483.2,3083.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.8 Termin eintragen" sap:VirtualizedContainerService.HintSize="483.2,3083.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -165,7 +165,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll ganz nach oben" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="55" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
               <uix:NMouseScroll.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="74, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TStandardGrid' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TStandardGrid' /&gt;" Guid="dec0525f-e06c-4f5d-8200-4a56226902ea" InformativeScreenshot="4c4496cd49c83caf1ed63bea1ef7f393.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.38.6.10) - Fr, 21. Nov 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                <uix:TargetAnchorable DesignTimeRectangle="74, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TStandardGrid' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TStandardGrid' /&gt;" Guid="dec0525f-e06c-4f5d-8200-4a56226902ea" InformativeScreenshot="4c4496cd49c83caf1ed63bea1ef7f393.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NMouseScroll.Target>
             </uix:NMouseScroll>
             <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Strg + I drücken, um Terminplatz zu suchen" sap:VirtualizedContainerService.HintSize="387.2,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Shortcuts="[d(hk)][d(ctrl)]i[u(ctrl)][u(hk)]" Version="V3" />
@@ -253,7 +253,7 @@
             </uix:NKeyboardShortcuts>
             <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Klick auf Terminspalte im Kalender" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="93fd2992ccd347506e7686dd3d193c4e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.38.6.10) - Di, 18. Nov 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="93fd2992ccd347506e7686dd3d193c4e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris *' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1721, 960, 207, 35" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='31' name='Schließen' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Schließen' role='push button' check:text='Schließen' /&gt;" Guid="1e5f25aa-24c8-4b8c-bdbc-ad3b316b7426" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
@@ -267,7 +267,7 @@
             </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Klick auf Terminspalte im Kalender" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="29e2759349ee3f28aa1b042df590ecae.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.38.6.10) - Di, 18. Nov 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="29e2759349ee3f28aa1b042df590ecae.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris *' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1721, 960, 207, 35" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='31' name='Schließen' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Schließen' role='push button' check:text='Schließen' /&gt;" Guid="1e5f25aa-24c8-4b8c-bdbc-ad3b316b7426" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
@@ -281,7 +281,7 @@
             </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Klick auf Button 'Termin eintragen'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dd71bed8-c9a8-443c-b881-cdecfb9285be" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="081092d1c3e3095453ac8c1862db1545.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris (5.38.6.10) - Di, 18. Nov 2025 - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="73, 120, 1619, 881" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl idx='23' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='client' /&gt;" Guid="be1fdd83-9f87-47a6-a542-e16bfa09c39a" ImageBase64="" InformativeScreenshot="081092d1c3e3095453ac8c1862db1545.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGScheduler' title='medavis Ris *' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1721, 960, 207, 35" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='31' name='Schließen' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Schließen' role='push button' check:text='Schließen' /&gt;" Guid="1e5f25aa-24c8-4b8c-bdbc-ad3b316b7426" ImageBase64="" SearchSteps="Selector, FuzzySelector" />

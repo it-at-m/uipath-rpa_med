@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794.4,1861.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,1861.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_2_6_Konkrete_Untersuchung_auswählen_und_Terminvergabe_starten_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,7 +110,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 6.2.6 Untersuchung auswählen Terminvergabe starten" sap:VirtualizedContainerService.HintSize="506.4,1684.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.6 Untersuchung auswählen Terminvergabe starten" sap:VirtualizedContainerService.HintSize="506.4,1684.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -124,9 +124,9 @@
             </sap:WorkflowViewStateService.ViewState>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Untersuchung' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="410.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Text="rthpa" Version="V3">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="778, 168, 91, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTextField' idx='10' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTextField' /&gt;" Guid="c6378134-b07c-4c40-aa9c-e606d7eb6638" ImageBase64="" InformativeScreenshot="f46263bbb484a923a8b870ae7397790a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="778, 168, 91, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTextField' idx='10' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTextField' /&gt;" Guid="c6378134-b07c-4c40-aa9c-e606d7eb6638" ImageBase64="" InformativeScreenshot="f46263bbb484a923a8b870ae7397790a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="653, 168, 216, 26" FullSelectorArgument="&lt;wnd cls='TMGLabeledTextField' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGLabeledTextField' /&gt;" Guid="8eeba03d-e7bf-477b-bc34-aedd1663b1a8" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -136,9 +136,9 @@
             <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Eingabe in Feld 'Untersuchung' mit Enter bestätigen" sap:VirtualizedContainerService.HintSize="410.4,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'Terminvergabe'" sap:VirtualizedContainerService.HintSize="410.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="1755, 829, 161, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Terminvergabe' cls='TMGButton' title='&amp;amp;Terminvergabe' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Terminvergabe' cls='TMGButton' title='&amp;amp;Terminvergabe' check:text='&amp;amp;Terminvergabe' /&gt;" Guid="7bd72653-15e4-4859-96ff-f96dac576019" ImageBase64="" InformativeScreenshot="b15b80c86017bc0d001b2c318b93acc8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris (5.49.5.3) &amp;quot;KIS_NETZ32&amp;quot; - 1/TBC: RPA, User' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="1755, 829, 161, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Terminvergabe' cls='TMGButton' title='&amp;amp;Terminvergabe' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Terminvergabe' cls='TMGButton' title='&amp;amp;Terminvergabe' check:text='&amp;amp;Terminvergabe' /&gt;" Guid="7bd72653-15e4-4859-96ff-f96dac576019" ImageBase64="" InformativeScreenshot="b15b80c86017bc0d001b2c318b93acc8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="948, 868, 978, 158" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title='Stationär von ... bis ...' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title='Stationär von ... bis ...' check:text='Stationär von ... bis ...' /&gt;" Guid="48c25abf-a9da-4373-aaba-f1ff731b2e2d" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -157,7 +157,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="289, 82, 270, 28" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGPanel' idx='10' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGPanel' /&gt;" Guid="2ddcf18d-56cc-444e-bd7a-cd2033460b76" InformativeScreenshot="57800eb0b4a4102513292cd4f7ed10e7.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMStepAppointmentViewer' title='Terminvergabe' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
                             <uix:Target DesignTimeRectangle="231, 116, 223, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK' check:text='Röntgen BK' /&gt;" Guid="769f6abd-02e1-4b8f-aedd-5cad5d147208" SearchSteps="Selector" />
                             <uix:Target DesignTimeRectangle="456, 116, 223, 31" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='Röntgen BK2' check:text='Röntgen BK2' /&gt;" Guid="38eed5e9-b86d-46fe-9e71-029d94a9fba6" SearchSteps="Selector" />
                           </scg:List>
@@ -172,7 +172,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="2, 309, 150, 24" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='Fuchsie' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='Fuchsie' role='list item' automationid='' check:text='Fuchsie' /&gt;" Guid="abc82088-c579-4e67-b7f4-9a83ea9ee951" InformativeScreenshot="7142936b0115436e20fcb836d22c71e9.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGPopupListBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="2, 286, 150, 23" ElementType="ListItem" FullSelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='Blau' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='Blau' role='list item' automationid='' check:text='Blau' /&gt;" Guid="8fa89f45-8312-418f-adf1-354bb80e0b4a" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
