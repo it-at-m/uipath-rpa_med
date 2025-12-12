@@ -2,11 +2,14 @@
   <x:Members>
     <x:Property Name="out_PopUpErgebnis" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_row" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="out_Patientennummer" Type="OutArgument(x:Int32)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,4036</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,4312</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_6_2_4_Eingabe_der_Daten_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -52,6 +55,8 @@
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -121,19 +126,22 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_2_4_Eingabe_der_Daten" sap:VirtualizedContainerService.HintSize="1203.2,3971.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_2_4_Eingabe_der_Daten" sap:VirtualizedContainerService.HintSize="1248,4247.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Nachname" />
       <Variable x:TypeArguments="x:String" Name="str_Vorname" />
       <Variable x:TypeArguments="x:String" Name="str_Geburtsdatum" />
       <Variable x:TypeArguments="x:String" Name="str_Geschlecht" />
+      <Variable x:TypeArguments="x:Int32" Name="int_Patientennummer" />
+      <Variable x:TypeArguments="x:String" Name="str_DatenbankDatei" />
+      <Variable x:TypeArguments="x:Int32" Name="int_RowIndex" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1140.8,210.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1185.6,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -168,22 +176,30 @@
               <InArgument x:TypeArguments="x:String">[in_row("Geschlecht").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_DatenbankDatei]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[Path.Combine(in_config("rpa004_DatenbankOrdner").ToString, "Datenbank.xlsx")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.4 Eingabe der Daten" sap:VirtualizedContainerService.HintSize="1140.8,3608.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="63063385-c041-4569-b185-ffe9efcc42ff" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.4 Eingabe der Daten" sap:VirtualizedContainerService.HintSize="1185.6,3852.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="63063385-c041-4569-b185-ffe9efcc42ff" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1107.2,3317.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1152,3561.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Nachname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Nachname]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Nachname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1089.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Nachname]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 165, 216, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='22' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="4b2ef129-d164-4edb-af45-4948ebd54388" ImageBase64="" InformativeScreenshot="ea24553e324f5461de09e57fb677eb0d.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -200,7 +216,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Vorname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Vorname]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Vorname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1089.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Vorname]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 191, 216, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='13' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="a532182c-3b7f-4a72-b38e-bbee6aa84954" ImageBase64="" InformativeScreenshot="bf80d8c8aa40a69b52513590c3433d90.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -217,7 +233,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NCheckState DisplayName="Warnung: Geschlecht für Vornamen festgestellt" sap:VirtualizedContainerService.HintSize="1044.8,527.2" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NCheckState DisplayName="Warnung: Geschlecht für Vornamen festgestellt" sap:VirtualizedContainerService.HintSize="1089.6,527.2" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="PopUp wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,308.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -272,7 +288,7 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geburtsdatum' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geburtsdatum]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geburtsdatum' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1089.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geburtsdatum]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 218, 106, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGDateField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGDateField' /&gt;" Guid="0e6f513a-d7d4-4c12-9dd9-69ef0eb03d43" ImageBase64="" InformativeScreenshot="8c301929ec3c8cab6f605680e34fa75c.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -289,7 +305,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geschlecht' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geschlecht]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geschlecht' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1089.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geschlecht]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="595, 218, 78, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='31' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="0f58e4d1-f733-4ad1-b2cc-9c7810af6b3c" ImageBase64="" InformativeScreenshot="82b18a0a16ea23ce14f517e5e3146db8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -306,7 +322,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf gelbes Plus (Neuen Datensatz anlegen)" sap:VirtualizedContainerService.HintSize="1044.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf gelbes Plus (Neuen Datensatz anlegen)" sap:VirtualizedContainerService.HintSize="1089.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="11, 448, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='83' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="bae753e6-b42d-4429-89e2-b8bc9f993b88" ImageBase64="" InformativeScreenshot="ee4174ce9d6a8054bf7d35952bd6079a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -323,7 +339,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'JA' bei Pop-Up (Patient in Tabelle anlegen)" sap:VirtualizedContainerService.HintSize="1044.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'JA' bei Pop-Up (Patient in Tabelle anlegen)" sap:VirtualizedContainerService.HintSize="1089.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="347, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='&amp;amp;Ja' /&gt;" Guid="78ac6530-ff62-4960-922f-942e20fb5b5e" ImageBase64="" InformativeScreenshot="4c5049c8569c9ed41b2edda22dd660cc.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -340,7 +356,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Use Application: 6.2.4 Eingabe der Daten - Sonderfall: Patient existiert bereits, check, ob Pop-Up 'Patient vorhanden' angezeigt wird" sap:VirtualizedContainerService.HintSize="1044.8,1206.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NCheckState DisplayName="Use Application: 6.2.4 Eingabe der Daten - Sonderfall: Patient existiert bereits, check, ob Pop-Up 'Patient vorhanden' angezeigt wird" sap:VirtualizedContainerService.HintSize="1089.6,1450.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Pop-Up wird angezeigt" sap:VirtualizedContainerService.HintSize="496,988" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -399,21 +415,83 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Pop-Up wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="496,197.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Pop-Up wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="540.8,1232" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign sap:VirtualizedContainerService.HintSize="478.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
-                      <OutArgument x:TypeArguments="x:Boolean">[out_PopUpErgebnis]</OutArgument>
+                      <OutArgument x:TypeArguments="x:Int32">[int_RowIndex]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                      <InArgument x:TypeArguments="x:Int32">[CInt(in_TransactionItem.SpecificContent("RowIndex"))]</InArgument>
                     </Assign.Value>
                   </Assign>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick in Feld 'Patientennummer'" sap:VirtualizedContainerService.HintSize="478.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="803, 689, 1004, 28" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' check:text='#2000627' /&gt;" Guid="b3fd7b7a-5c33-4066-9e19-5e232b48f0af" InformativeScreenshot="3c13b968068ddacef807f150593cc922.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="690, 733, 143, 41" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' check:text='Unt. &amp;amp;eintragen' /&gt;" Guid="813808f9-a5a7-492f-a986-4b7316c17658" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Doppelklick in Feld 'Patientennummer'" sap:VirtualizedContainerService.HintSize="478.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="803, 689, 1004, 28" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' check:text='#2000627' /&gt;" Guid="b3fd7b7a-5c33-4066-9e19-5e232b48f0af" InformativeScreenshot="3c13b968068ddacef807f150593cc922.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="690, 733, 143, 41" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' check:text='Unt. &amp;amp;eintragen' /&gt;" Guid="813808f9-a5a7-492f-a986-4b7316c17658" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="478.4,190.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V3">
+                    <uix:NKeyboardShortcuts.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NKeyboardShortcuts.VerifyOptions>
+                  </uix:NKeyboardShortcuts>
+                  <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="478.4,24.8" sap2010:WorkflowViewState.IdRef="GetFromClipboard_1">
+                    <ui:GetFromClipboard.Result>
+                      <OutArgument x:TypeArguments="x:Int32">[int_Patientennummer]</OutArgument>
+                    </ui:GetFromClipboard.Result>
+                  </ui:GetFromClipboard>
+                  <ui:WriteCell Cell="[&quot;O&quot; + (int_RowIndex + 1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Datenbank" Text="[int_Patientennummer.ToString]" WorkbookPath="[str_DatenbankDatei]" />
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,148" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Int32">[out_Patientennummer]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Int32">[int_Patientennummer]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[out_PopUpErgebnis]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>

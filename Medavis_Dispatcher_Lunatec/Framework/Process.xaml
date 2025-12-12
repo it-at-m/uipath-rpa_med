@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>815.2,4364</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,4364</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -298,7 +298,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Item mit Referenz&quot; +int_RowIndex.ToString+ &quot;ist bereits im Status: New&quot;]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Item mit Referenz &quot; +int_RowIndex.ToString+ &quot;ist bereits im Status: New&quot;]" />
                               <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Boolean">[bool_upload]</OutArgument>
@@ -321,7 +321,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Item mit Referenz&quot; +int_RowIndex.ToString+ &quot;ist bereits im Status: In Progress&quot;]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Item mit Referenz &quot; +int_RowIndex.ToString+ &quot;ist bereits im Status: In Progress&quot;]" />
                               <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Boolean">[bool_upload]</OutArgument>
