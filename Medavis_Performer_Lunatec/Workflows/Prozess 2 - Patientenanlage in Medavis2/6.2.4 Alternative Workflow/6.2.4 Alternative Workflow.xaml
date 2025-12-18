@@ -1,0 +1,219 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Retry_6_2_8" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_RowIndex" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1794.4,1611.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Retry_6_2_8_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="6_2_4_Alternative_Workflow" sap:VirtualizedContainerService.HintSize="641.6,1546.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="int_ExcelRow" />
+      <Variable x:TypeArguments="x:String" Name="str_Patientennummer" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.4 Alternative Workflow" sap:VirtualizedContainerService.HintSize="579.2,1434.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="e7ae3ab1-3239-48c1-a829-e515f8675497" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="545.6,1143.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Klick in Zeile 'Patientennummer' " sap:VirtualizedContainerService.HintSize="483.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e7ae3ab1-3239-48c1-a829-e515f8675497" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="803, 689, 1004, 28" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' check:text='#2000632' /&gt;" Guid="f7222ea0-ea52-4686-a984-658b53ce1239" InformativeScreenshot="b02642c098c130ef0fdf88f74ed0f0ac.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="690, 733, 143, 41" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' check:text='Unt. &amp;amp;eintragen' /&gt;" Guid="eba72139-bcbc-4230-b914-c8876b9a0424" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Element '#2000632'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="803, 689, 1004, 28" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' check:text='#2000632' /&gt;" Guid="53afc531-5743-45df-9f94-c01324c1587b" InformativeScreenshot="b02642c098c130ef0fdf88f74ed0f0ac.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="690, 733, 143, 41" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' check:text='Unt. &amp;amp;eintragen' /&gt;" Guid="28defd3f-3d9c-4b09-b3dc-b2dae7ca932a" SearchSteps="Selector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Assign sap:VirtualizedContainerService.HintSize="483.2,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[int_ExcelRow]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[in_RowIndex]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,281.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[Path.Combine(in_config(&quot;rpa004_DatenbankOrdner&quot;).ToString, &quot;Datenbank.xlsx&quot;)]">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="449.6,172" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelReadCell Cell="[&quot;O&quot; + (int_ExcelRow + 1).ToString]" DisplayName="Zelle Patientennummer aus Datenbankdatei lesen" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="Datenbank">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[str_Patientennummer]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+            </ui:ExcelApplicationScope>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Patientennummer in Suchfeld schreiben" sap:VirtualizedContainerService.HintSize="483.2,156" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[str_Patientennummer]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e605ee9f-c0e3-4a11-aeea-ed9568667173" InformativeScreenshot="f27ee629c9255ade02c6c7fa47745abb" Selector="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Patientennummersuche bestätigen mit 'Enter'" sap:VirtualizedContainerService.HintSize="483.2,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="e7ae3ab1-3239-48c1-a829-e515f8675497" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-10, -10, 1940, 1040" FilePath="C:\medavis\programm\ris.exe" IconBase64="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" InformativeScreenshot="9fd416703a90100f32d8b3721a5bd4dd.png" Selector="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" Title="Program Manager" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

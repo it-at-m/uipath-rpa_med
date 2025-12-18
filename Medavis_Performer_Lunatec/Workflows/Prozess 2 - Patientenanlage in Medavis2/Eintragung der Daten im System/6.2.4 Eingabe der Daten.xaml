@@ -434,7 +434,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="803, 689, 1004, 28" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patientenliste ' /&gt;&lt;wnd cls='TMGFilterField' check:text='#2000627' /&gt;" Guid="b3fd7b7a-5c33-4066-9e19-5e232b48f0af" InformativeScreenshot="3c13b968068ddacef807f150593cc922.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="690, 733, 143, 41" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Unt. eintragen' cls='TMGButton' title='Unt. &amp;amp;eintragen' check:text='Unt. &amp;amp;eintragen' /&gt;" Guid="813808f9-a5a7-492f-a986-4b7316c17658" SearchSteps="Selector, FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
