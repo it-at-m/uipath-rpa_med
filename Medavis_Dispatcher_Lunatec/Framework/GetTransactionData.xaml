@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794.4,1741.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,1956</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,7 +100,7 @@
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="540.8,1676.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="540.8,1891.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_GSRRobotAccount" />
       <Variable x:TypeArguments="ss:SecureString" Name="secPasswordGSRRobotAccount" />
@@ -120,6 +120,7 @@
       <Variable x:TypeArguments="x:String" Name="str_InputArchivOrdner" />
       <Variable x:TypeArguments="x:String" Name="str_DatenbankDatei" />
       <Variable x:TypeArguments="x:String" Name="str_InputdateiName" />
+      <Variable x:TypeArguments="x:String" Name="str_EmailEmpfaenger" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -230,6 +231,16 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Roboter-Start-Mail - Invoke Workflow File (Workflows\E-Mail Workflow\Roboter-Start-Mail.xaml)" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\E-Mail Workflow\Roboter-Start-Mail.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_GSRRobotPostfach">[str_GSRRobotPostfach]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_GSRRobotAccount">[str_GSRRobotAccount]</InArgument>
+        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_secPasswordGSRRobotAccount">[secPasswordGSRRobotAccount]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_int_EmailSmtpPort">[int_EmailSmtpPort]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_EmailSmtpServer">[str_EmailSmtpServer]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_OrgMailbox">[str_OrgMailbox]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.1.1 Postfach und Kriterien der Mail prüfen - Invoke Workflow File (Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml)" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.1 Postfach und Kriterien der Mail prüfen.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
