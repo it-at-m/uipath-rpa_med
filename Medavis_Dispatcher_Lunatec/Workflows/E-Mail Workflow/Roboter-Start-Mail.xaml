@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,1067.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>541.6,1213.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Roboter_Start_Mail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,26 +100,26 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Roboter_Start_Mail" sap:VirtualizedContainerService.HintSize="499.2,1002.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Roboter_Start_Mail" sap:VirtualizedContainerService.HintSize="552,1148.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sende Roboterstart E-Mail an Postfach.&quot;]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,525.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="489.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sende Roboterstart E-Mail an Postfach.&quot;]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="489.6,672" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Sehr geehrte Damen und Herren,&#xA;&#xA;der Medavis-Roboter wurde erfolgreich gestartet und beginnt mit der Bearbeitung.&#xA;&#xA;Bitte beachten Sie, dass während der Ausführung das Postfach sowie die relevanten Ordner nicht geöffnet werden sollten, um einen reibungslosen Ablauf zu gewährleisten.&#xA;&#xA;Vielen Dank für Ihr Verständnis.&#xA;&#xA;&#xA;Mit freundlichen Grüßen&#xA;&#xA;Medavis-Roboter" DisplayName="Send SMTP Mail Message" Email="[in_str_GSRRobotAccount]" EnableSSL="True" From="[in_str_GSRRobotPostfach]" sap:VirtualizedContainerService.HintSize="333.6,294.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="[in_int_EmailSmtpPort]" SecureConnection="Auto" SecurePassword="[in_secPasswordGSRRobotAccount]" Server="[in_str_EmailSmtpServer]" Subject="Medavis-Roboter wurde gestartet" To="[in_str_OrgMailbox]">
+        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Sehr geehrte Damen und Herren,&#xD;&#xA;&#xD;&#xA;der Medavis-Roboter wurde erfolgreich gestartet und beginnt mit der Bearbeitung.&#xD;&#xA;&#xD;&#xA;Bitte beachten Sie, dass während der Ausführung das Postfach sowie die relevanten Ordner nicht geöffnet werden sollten, um einen reibungslosen Ablauf zu gewährleisten.&#xD;&#xA;&#xD;&#xA;Vielen Dank für Ihr Verständnis.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Mit freundlichen Grüßen&#xD;&#xA;&#xD;&#xA;Ihr Medavis-Roboter" DisplayName="Send SMTP Mail Message" Email="[in_str_GSRRobotAccount]" EnableSSL="True" From="[in_str_GSRRobotPostfach]" sap:VirtualizedContainerService.HintSize="333.6,294.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="[in_int_EmailSmtpPort]" SecureConnection="Auto" SecurePassword="[in_secPasswordGSRRobotAccount]" Server="[in_str_EmailSmtpServer]" Subject="Medavis-Roboter wurde gestartet" To="[in_str_OrgMailbox]">
           <ui:SendMail.Files>
             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
           </ui:SendMail.Files>
         </ui:SendMail>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,507.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -133,13 +133,13 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email konnte nicht gesendet werden an RPA Postfach&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email konnte nicht gesendet werden an Orga. Postfach&quot;]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;ExceptionMessage: &quot;+exception.Message]" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Roboterstart E-Mail gesendet.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="489.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Roboterstart E-Mail gesendet.&quot;]" />
   </Sequence>
 </Activity>
