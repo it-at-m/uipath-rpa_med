@@ -534,11 +534,12 @@
                   </scg:List>
                 </ui:FilterDataTable.Filters>
                 <ui:FilterDataTable.SelectColumns>
-                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                  <scg:List x:TypeArguments="InArgument" Capacity="8">
                     <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
                     <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
                     <InArgument x:TypeArguments="x:Int32">[2]</InArgument>
                     <InArgument x:TypeArguments="x:Int32">[10]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32">[12]</InArgument>
                   </scg:List>
                 </ui:FilterDataTable.SelectColumns>
               </ui:FilterDataTable>
