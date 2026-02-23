@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Roboter_Ende_Mail__Zusammenfassung_" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Roboter_Ende_Mail__Zusammenfassung_" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410.4,1250.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410.4,3889.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Roboter_Ende_Mail__Zusammenfassung__1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -41,6 +41,12 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -95,23 +101,207 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Roboter_Ende_Mail__Zusammenfassung_" sap:VirtualizedContainerService.HintSize="499.2,1185.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Roboter_Ende_Mail__Zusammenfassung_" sap:VirtualizedContainerService.HintSize="841.6,3824.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_GSRRobotAcount" />
       <Variable x:TypeArguments="ss:SecureString" Name="sec_PasswordGSRRobotAccount" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Datenbank" />
+      <Variable x:TypeArguments="x:Int32" Name="int_erfolgreicheTransaktionen" />
+      <Variable x:TypeArguments="x:Int32" Name="int_fehlgeschlageneTransaktionen" />
+      <Variable x:TypeArguments="x:Int32" Name="int_doublettenTransaktionen" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="rpa004_GSR_Robot_Account" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="436.8,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sec_PasswordGSRRobotAccount]" Username="[str_GSRRobotAcount]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sende Roboterende E-Mail und Zusammenfassung an Postfach.&quot;]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,525.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="rpa004_GSR_Robot_Account" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="779.2,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sec_PasswordGSRRobotAccount]" Username="[str_GSRRobotAcount]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="779.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sende Roboterende E-Mail und Zusammenfassung an Postfach.&quot;]" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="779.2,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL.EXE" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="779.2,2424.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_config(&quot;rpa004_Working_Folder&quot;).ToString]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="745.6,2315.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_Datenbank]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="683.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Datenbank">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="683.2,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_erfolgreicheTransaktionen]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_fehlgeschlageneTransaktionen]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_doublettenTransaktionen]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Datenbank]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="683.2,1883.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Text" sap:VirtualizedContainerService.HintSize="649.6,1695.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[(CurrentRow(&quot;Inputdateiname&quot;).ToString = &quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="606.4,1605.6" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="572.8,1422.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[(CurrentRow(&quot;Status&quot;).ToString = &quot;Erfolgreich&quot;)]" sap:VirtualizedContainerService.HintSize="529.6,354.4" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[int_erfolgreicheTransaktionen]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[(int_erfolgreicheTransaktionen + 1)]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10" />
+                            </If.Else>
+                          </If>
+                          <ui:IfElseIfV2 Condition="[(CurrentRow(&quot;Status&quot;).ToString = &quot;Business Exception&quot;)]" DisplayName="Andernfalls wenn" sap:VirtualizedContainerService.HintSize="529.6,938.4" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                            <ui:IfElseIfV2.Else>
+                              <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_11" />
+                            </ui:IfElseIfV2.Else>
+                            <ui:IfElseIfV2.ElseIfs>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="ElseIf" Condition="[(CurrentRow(&quot;Status&quot;).ToString = &quot;System Exception&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[int_fehlgeschlageneTransaktionen]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[(int_fehlgeschlageneTransaktionen + 1)]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                                <ui:IfElseIfBlock BlockType="ElseIf" Condition="[(CurrentRow(&quot;Status&quot;).ToString = &quot;Doublette&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[int_doublettenTransaktionen]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[(int_doublettenTransaktionen + 1)]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIfV2.ElseIfs>
+                            <ui:IfElseIfV2.Then>
+                              <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[int_fehlgeschlageneTransaktionen]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[(int_fehlgeschlageneTransaktionen + 1)]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ui:IfElseIfV2.Then>
+                          </ui:IfElseIfV2>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="779.2,525.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Sehr geehrte Damen und Herren,&#xA;&#xA;der Medavis-Roboter wurde erfolgreich beendet.&#xA;&#xA;Im Folgenden finden Sie die Ergebnisse der Ausführung:&#xA;&#xA;- Erfolgreich durchgeführte Transaktionen: [Anzahl Erfolgreich]&#xA;- Fehlgeschlagene Transaktionen: [Anzahl Fehlgeschlagen]&#xA;- Vorhandene Duplikate: [Anzahl Duplikate]&#xA;&#xA;&#xA;Vielen Dank für Ihre Aufmerksamkeit.&#xA;&#xA;Mit freundlichen Grüßen&#xA;&#xA;Ihr Medavis-Roboter" DisplayName="Send SMTP Mail Message" Email="[str_GSRRobotAcount]" EnableSSL="True" From="[in_config(&quot;rpa004_GSR_Robot_Postfach&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,294.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="[Cint(in_config(&quot;rpa004_EmailSmtpPort&quot;))]" SecureConnection="Auto" SecurePassword="[sec_PasswordGSRRobotAccount]" Server="[in_config(&quot;rpa004_EmailSmtpServer&quot;).ToString]" Subject="Medavis-Roboter wurde beendet" To="[in_config(&quot;rpa004_Org_Mailbox&quot;).ToString]">
+        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Sehr geehrte Damen und Herren,&#xA;&#xA;der Medavis-Roboter wurde erfolgreich beendet.&#xA;&#xA;&#xA;Im Folgenden finden Sie die Ergebnisse der Ausführung:&#xA;&#xA;Ausgangsdatei: [Dateiname]&#xA;&#xA;- Erfolgreiche Transaktionen: [Anzahl Erfolgreich]&#xA;- Fehlgeschlagene Transaktionen: [Anzahl Fehlgeschlagen]&#xA;- Vorhandene Duplikate: [Anzahl Duplikate]&#xA;&#xA;&#xA;Vielen Dank für Ihre Aufmerksamkeit.&#xA;&#xA;Mit freundlichen Grüßen&#xA;&#xA;Ihr Medavis-Roboter" DisplayName="Send SMTP Mail Message" Email="[str_GSRRobotAcount]" EnableSSL="True" From="[in_config(&quot;rpa004_GSR_Robot_Postfach&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,294.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="[Cint(in_config(&quot;rpa004_EmailSmtpPort&quot;))]" SecureConnection="Auto" SecurePassword="[sec_PasswordGSRRobotAccount]" Server="[in_config(&quot;rpa004_EmailSmtpServer&quot;).ToString]" Subject="Medavis-Roboter wurde beendet" To="[in_config(&quot;rpa004_Org_Mailbox&quot;).ToString]">
           <ui:SendMail.Files>
             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
           </ui:SendMail.Files>
@@ -142,6 +332,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Roboterende E-Mail gesendet.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="779.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Roboterende E-Mail gesendet.&quot;]" />
   </Sequence>
 </Activity>
