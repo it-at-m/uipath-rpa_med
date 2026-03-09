@@ -1,0 +1,6 @@
+{
+  "Name": "Medavis Webex Report",
+  "ProjectType": "Process",
+  "Description": "Dieser Prozess verwendet die WebAPI von Webex, um dort in dem Gruppenchat zu Medavis, die Mitarbeiter auf dem laufenden zu halten und über die täglich verarbeiteten Transaktionen zu informieren. Dabei wird ein kurzer Bericht erstellt, der in den Webex-Chat schreibt, wie viele Transaktionen Erfolgreich, Fehlegeschlagen (Business-, System-Exception) hatten und wie viele ignoriert wurden.",
+  "MainFile": "Main.xaml"
+}
