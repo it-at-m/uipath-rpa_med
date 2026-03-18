@@ -16,6 +16,9 @@
             "minimum": -2147483648,
             "maximum": 2147483647
           },
+          "io_bool_PopupErgebnis": {
+            "type": "boolean"
+          },
           "in_OrchestratorQueueName": {
             "type": "string",
             "description": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file."
@@ -45,6 +48,9 @@
             "type": "integer",
             "minimum": -2147483648,
             "maximum": 2147483647
+          },
+          "io_bool_PopupErgebnis": {
+            "type": "boolean"
           }
         }
       }
