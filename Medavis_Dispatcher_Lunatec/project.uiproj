@@ -1,0 +1,6 @@
+{
+  "Name": "Medavis_Dispatcher_Lunatec",
+  "ProjectType": "Process",
+  "Description": "Modified Robotic Enterprise Framework ",
+  "MainFile": "Main.xaml"
+}
