@@ -2268,7 +2268,7 @@
                                                 <OutArgument x:TypeArguments="x:Object">[dr_NewRowsValue("RPA")]</OutArgument>
                                               </ui:AssignOperation.To>
                                               <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:Object">["Neue Bemerkung"]</InArgument>
+                                                <InArgument x:TypeArguments="x:Object">["Nicht angelegt, da unbekannte Bemerkung"]</InArgument>
                                               </ui:AssignOperation.Value>
                                             </ui:AssignOperation>
                                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_184">
