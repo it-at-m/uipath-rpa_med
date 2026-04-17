@@ -100,7 +100,7 @@
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Webex_Dispatcher_Start" sap:VirtualizedContainerService.HintSize="1662,1559" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Webex_Dispatcher_Start" sap:VirtualizedContainerService.HintSize="1698,1559" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_WebexToken" />
       <Variable x:TypeArguments="x:String" Name="str_WebexRoomID" />
@@ -134,7 +134,12 @@
               <OutArgument x:TypeArguments="x:String">[str_WebexMessage]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Hallo,Ihr Medavis-Roboter</InArgument>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">Hallo,
+
+der Medavis-Roboter hat mit der Bearbeitung begonnen.
+
+Mit freundlichen Grüßen
+Ihr Medavis-Roboter</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
