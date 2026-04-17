@@ -73,9 +73,10 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications.&#xA;&#xA;Implementation instruction. For every different application to be closed; Surround by a try catch. In the except, set bool_closeFailed to &quot;True&quot;" DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="1273.2,1358.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications.&#xA;&#xA;Implementation instruction. For every different application to be closed; Surround by a try catch. In the except, set bool_closeFailed to &quot;True&quot;" DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="1105.2,1152" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_closeFailed" />
     </Sequence.Variables>
@@ -140,11 +141,6 @@
         </TryCatch.Catches>
       </TryCatch>
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Webex_Performer_Ende - Invoke Workflow File (Workflows\Webex\Webex_Performer_Ende.xaml)" sap:VirtualizedContainerService.HintSize="484.8,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Webex\Webex_Performer_Ende.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
     <If Condition="[bool_closeFailed]" DisplayName="If min one application failed to closed normally" sap:VirtualizedContainerService.HintSize="484.8,332" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Throw DisplayName="Throw - AppEx close all application" Exception="[new system.Exception(&quot;Some application failed to close normally.&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
