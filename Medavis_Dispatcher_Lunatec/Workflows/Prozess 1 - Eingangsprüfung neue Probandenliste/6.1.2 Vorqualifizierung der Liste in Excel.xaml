@@ -167,7 +167,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="_6_1_2_Vorqualifizierung_der_Liste_in_Excel" sap:VirtualizedContainerService.HintSize="1287.6000000000001,15480.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_1_2_Vorqualifizierung_der_Liste_in_Excel" sap:VirtualizedContainerService.HintSize="1673,15488" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="gebDatum" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="list_workbookSheets_1" />
@@ -206,8 +206,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;START - Vorqualifizierung der Excel Liste&quot;]" />
-    <Assign DisplayName="Assign: Deutsches Datumsformat" sap:VirtualizedContainerService.HintSize="860.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_67">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="862,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;START - Vorqualifizierung der Excel Liste&quot;]" />
+    <Assign DisplayName="Assign: Deutsches Datumsformat" sap:VirtualizedContainerService.HintSize="862,175" sap2010:WorkflowViewState.IdRef="Assign_67">
       <Assign.To>
         <OutArgument x:TypeArguments="sg:CultureInfo">[System.Threading.Thread.CurrentThread.CurrentCulture]</OutArgument>
       </Assign.To>
@@ -215,7 +215,7 @@
         <InArgument x:TypeArguments="sg:CultureInfo">[New System.Globalization.CultureInfo("de-DE")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="860.8,166.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL.EXE">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="862,167" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL.EXE">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -223,7 +223,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="860.8,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_44">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="862,149" sap2010:WorkflowViewState.IdRef="MultipleAssign_44">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_144">
@@ -242,21 +242,21 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Sequence: Suche Excel-Dateien im Ordner" sap:VirtualizedContainerService.HintSize="860.8,1452" sap2010:WorkflowViewState.IdRef="Sequence_220">
+    <Sequence DisplayName="Sequence: Suche Excel-Dateien im Ordner" sap:VirtualizedContainerService.HintSize="862,1455" sap2010:WorkflowViewState.IdRef="Sequence_220">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Sequence: Excel Datei in Array speichern" sap:VirtualizedContainerService.HintSize="484.8,594.4" sap2010:WorkflowViewState.IdRef="Sequence_208">
+      <Sequence DisplayName="Sequence: Excel Datei in Array speichern" sap:VirtualizedContainerService.HintSize="486,596" sap2010:WorkflowViewState.IdRef="Sequence_208">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Assign DisplayName="Assign: Excel Datei Array-Variable zuweisen" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_36">
+        <Assign DisplayName="Assign: Excel Datei Array-Variable zuweisen" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_36">
           <Assign.To>
             <OutArgument x:TypeArguments="s:String[]">[arrProbantenListe]</OutArgument>
           </Assign.To>
@@ -269,20 +269,20 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <If Condition="[arrProbantenListe.Length = 0]" DisplayName="If: Ordner enthält keine Datei" sap:VirtualizedContainerService.HintSize="451.2,328" sap2010:WorkflowViewState.IdRef="If_38">
+        <If Condition="[arrProbantenListe.Length = 0]" DisplayName="If: Ordner enthält keine Datei" sap:VirtualizedContainerService.HintSize="452,329" sap2010:WorkflowViewState.IdRef="If_38">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_218">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_218">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Throw Exception="[New Exception(&quot;GSR-Liste nicht gefunden im Ordner: Input&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1">
+              <Throw Exception="[New Exception(&quot;GSR-Liste nicht gefunden im Ordner: Input&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -292,7 +292,7 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_219">
+            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_219">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -303,14 +303,14 @@
           </If.Else>
         </If>
       </Sequence>
-      <Sequence sap:VirtualizedContainerService.HintSize="484.8,594.4" sap2010:WorkflowViewState.IdRef="Sequence_210">
+      <Sequence sap:VirtualizedContainerService.HintSize="486,596" sap2010:WorkflowViewState.IdRef="Sequence_210">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Assign DisplayName="Excel Datei Array-Variable zuweisen" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_37">
+        <Assign DisplayName="Excel Datei Array-Variable zuweisen" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_37">
           <Assign.To>
             <OutArgument x:TypeArguments="s:String[]">[arrKriterienListe]</OutArgument>
           </Assign.To>
@@ -318,19 +318,19 @@
             <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(in_str_InputOrdner, "Kriter*.xlsx")]</InArgument>
           </Assign.Value>
         </Assign>
-        <If Condition="[arrKriterienListe.Length = 0]" DisplayName="If: Ordner enthält keine Datei" sap:VirtualizedContainerService.HintSize="451.2,328" sap2010:WorkflowViewState.IdRef="If_39">
+        <If Condition="[arrKriterienListe.Length = 0]" DisplayName="If: Ordner enthält keine Datei" sap:VirtualizedContainerService.HintSize="452,329" sap2010:WorkflowViewState.IdRef="If_39">
           <If.Then>
-            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_222">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_222">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Throw Exception="[New Exception(&quot;Kriterienliste nicht gefunden im Ordner: Input&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+              <Throw Exception="[New Exception(&quot;Kriterienliste nicht gefunden im Ordner: Input&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_223">
+            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_223">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -341,7 +341,7 @@
           </If.Else>
         </If>
       </Sequence>
-      <ui:MultipleAssign DisplayName="Multiple Assign speichert beide Excel-Dateien" sap:VirtualizedContainerService.HintSize="484.8,171.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
+      <ui:MultipleAssign DisplayName="Multiple Assign speichert beide Excel-Dateien" sap:VirtualizedContainerService.HintSize="486,171" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_46">
@@ -370,7 +370,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
     </Sequence>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[int_iterationIndex]" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="860.8,10666.4" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[arrProbantenListe]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[int_iterationIndex]" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="862,10669" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[arrProbantenListe]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
@@ -381,13 +381,13 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="859.2,10536" sap2010:WorkflowViewState.IdRef="Sequence_323">
+          <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="860,10538" sap2010:WorkflowViewState.IdRef="Sequence_323">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="825.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_68">
+            <Assign sap:VirtualizedContainerService.HintSize="826,175" sap2010:WorkflowViewState.IdRef="Assign_68">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_ExcelDateiProbatenliste]</OutArgument>
               </Assign.To>
@@ -524,25 +524,23 @@
                   </scg:List>
                 </ui:FilterDataTable.Filters>
                 <ui:FilterDataTable.SelectColumns>
-                  <scg:List x:TypeArguments="InArgument" Capacity="8">
+                  <scg:List x:TypeArguments="InArgument" Capacity="4">
                     <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
                     <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
                     <InArgument x:TypeArguments="x:Int32">[2]</InArgument>
                     <InArgument x:TypeArguments="x:Int32">[10]</InArgument>
-                    <InArgument x:TypeArguments="x:Int32">[11]</InArgument>
-                    <InArgument x:TypeArguments="x:Int32">[12]</InArgument>
                   </scg:List>
                 </ui:FilterDataTable.SelectColumns>
               </ui:FilterDataTable>
             </Sequence>
-            <Sequence DisplayName="Transformation und Daten-, Alterscheck, Spalten hinzufügen" sap:VirtualizedContainerService.HintSize="825.6,9174.4" sap2010:WorkflowViewState.IdRef="Sequence_203">
+            <Sequence DisplayName="Transformation und Daten-, Alterscheck, Spalten hinzufügen" sap:VirtualizedContainerService.HintSize="826,9175" sap2010:WorkflowViewState.IdRef="Sequence_203">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="792,174.4" sap2010:WorkflowViewState.IdRef="Assign_34">
+              <Assign sap:VirtualizedContainerService.HintSize="792,175" sap2010:WorkflowViewState.IdRef="Assign_34">
                 <Assign.To>
                   <OutArgument x:TypeArguments="sd:DataTable">[dt_finalProbanliste]</OutArgument>
                 </Assign.To>
