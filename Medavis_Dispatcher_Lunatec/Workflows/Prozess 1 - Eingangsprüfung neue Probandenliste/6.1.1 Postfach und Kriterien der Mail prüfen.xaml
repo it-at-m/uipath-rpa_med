@@ -187,7 +187,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="[in_strGSRRobotPostfach]" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_3" MailFolder="Posteingang" MarkAsRead="True" Messages="[EMailMedavisMailMessage]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="30" />
+      <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" Account="[in_strGSRRobotPostfach]" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_3" MailFolder="Posteingang" MarkAsRead="True" Messages="[EMailMedavisMailMessage]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" TimeoutMS="60000" Top="10" />
       <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="592,3425" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[EMailMedavisMailMessage]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="snm:MailMessage">
