@@ -362,7 +362,7 @@
             </uix:NClick>
             <uix:NCheckState DisplayName="Use Application: 6.2.4 Eingabe der Daten - Sonderfall: Patient existiert bereits, check, ob Pop-Up 'Patient vorhanden' angezeigt wird" sap:VirtualizedContainerService.HintSize="1076,1482.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Pop-Up wird angezeigt" sap:VirtualizedContainerService.HintSize="511.2,962.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Pop-Up wird angezeigt" sap:VirtualizedContainerService.HintSize="511.2,998.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -399,14 +399,26 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'JA' bei Verwerfen der Eingabe" sap:VirtualizedContainerService.HintSize="477.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'JA' bei Verwerfen der Eingabe" sap:VirtualizedContainerService.HintSize="477.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="19, 159, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="8185aa5c-7881-4199-b983-dad786521d8a" InformativeScreenshot="3dc66bde0b9395869b09d044f8be0e3a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.PointOffset>
-                          <uix:PointOffset Position="BottomRight" X="201" Y="-12" />
-                        </uix:TargetAnchorable.PointOffset>
+                      <uix:TargetAnchorable DesignTimeRectangle="197, 127, 89, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='Ja' /&gt;" Guid="769cb075-c997-4197-a807-8e1315865b94" ImageBase64="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" InformativeScreenshot="bfea9c61dfb19fcea8bcebe4de6b55b8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector, Image" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="78, 48, 260, 40" FullSelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' check:text='Wollen Sie den Einfügevorgang abbrechen&amp;#xD;&amp;#xA;und die Änderungen verlieren?' /&gt;" Guid="ac716422-dfd6-4b13-ac8d-989810a58316" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
                   </uix:NClick>
                   <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.6,142.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
                     <ui:MultipleAssign.AssignOperations>
