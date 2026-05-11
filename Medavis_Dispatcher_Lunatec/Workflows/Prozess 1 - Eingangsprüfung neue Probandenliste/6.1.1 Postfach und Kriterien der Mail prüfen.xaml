@@ -77,6 +77,9 @@
       <x:String>UiPath.Mail.IMAP.Activities</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>Microsoft.Exchange.WebServices.Data</x:String>
+      <x:String>UiPath.Mail.Exchange</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -155,6 +158,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -162,7 +166,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="_6_1_1_Postfach und Kriterien der Mail prüfen" sap:VirtualizedContainerService.HintSize="1267,3588" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="_6_1_1_Postfach und Kriterien der Mail prüfen" sap:VirtualizedContainerService.HintSize="1269,3525" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="EMailMedavisMailMessage" />
       <Variable x:TypeArguments="x:String" Name="str_neuerDateiname" />
@@ -180,15 +184,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="E-Mail Anhang auf dem Laufwerk ablegen" sap:VirtualizedContainerService.HintSize="626,3565" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="E-Mail Anhang auf dem Laufwerk ablegen" sap:VirtualizedContainerService.HintSize="626,3502" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="ExchangeMailMessage" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" Account="[in_strGSRRobotPostfach]" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_3" MailFolder="Posteingang" MarkAsRead="True" Messages="[EMailMedavisMailMessage]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" TimeoutMS="60000" Top="10" />
-      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="592,3425" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[EMailMedavisMailMessage]">
+      <ui:GetExchangeMailMessages ApplicationId="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" FilterByMessageIds="{x:Null}" FilterExpression="{x:Null}" Password="{x:Null}" Server="{x:Null}" AuthenticationMode="UserNameAndPassword" CustomFolder="Posteingang" DisplayName="Get Exchange Mail Messages" EmailAutodiscover="[in_strGSRRobotAccount]" ExchangeVersion="Exchange2013_SP1" GetAttachements="True" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="GetExchangeMailMessages_1" IsBodyHtml="False" MailFolder="Calendar" MarkAsRead="True" Messages="[ExchangeMailMessage]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" SecurePassword="[in_secPasswordGSRRobotAccount]" SharedMailbox="[in_strGSRRobotPostfach]" TimeoutMS="60000" Top="10" User="[in_strGSRRobotAccount]" />
+      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="592,3362" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[ExchangeMailMessage]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="snm:MailMessage">
             <ActivityAction.Argument>
@@ -199,7 +206,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="590,3303" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="Hauptteil" sap:VirtualizedContainerService.HintSize="590,3240" sap2010:WorkflowViewState.IdRef="Sequence_15">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -218,20 +225,20 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
-              <If Condition="[currentMailMessage.Sender.Address.EndsWith(&quot;@muenchen.de&quot;) OrElse currentMailMessage.Sender.Address.EndsWith(&quot;@reg-ob.bayern.de&quot;) AndAlso strBetreffEingangsMail.Equals(&quot;gsrliste&quot;) AndAlso currentMailMessage.Attachments.Count &gt; 0]" DisplayName="If: Überprüfung der Kriterien der E-Mail" sap:VirtualizedContainerService.HintSize="556,3007" sap2010:WorkflowViewState.IdRef="If_26">
+              <If Condition="[currentMailMessage.Sender.Address.EndsWith(&quot;@muenchen.de&quot;) OrElse currentMailMessage.Sender.Address.EndsWith(&quot;@reg-ob.bayern.de&quot;) AndAlso strBetreffEingangsMail.Equals(&quot;gsrliste&quot;) AndAlso currentMailMessage.Attachments.Count &gt; 0]" DisplayName="If: Überprüfung der Kriterien der E-Mail" sap:VirtualizedContainerService.HintSize="556,2944" sap2010:WorkflowViewState.IdRef="If_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="554,1550" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="554,1487" sap2010:WorkflowViewState.IdRef="Sequence_55">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="True" FolderPath="[in_strInputOrdner]" sap:VirtualizedContainerService.HintSize="520,120" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_5" Message="[currentMailMessage]" OverwriteExisting="False" />
+                    <ui:SaveExchangeAttachements ApplicationId="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" Files="{x:Null}" Password="{x:Null}" Server="{x:Null}" AuthenticationMode="UserNameAndPassword" DisplayName="Save Exchange Attachements" EmailAutodiscover="[in_strGSRRobotPostfach]" ExchangeVersion="Exchange2013_SP1" FolderPath="[in_strInputOrdner]" sap:VirtualizedContainerService.HintSize="520,57" sap2010:WorkflowViewState.IdRef="SaveExchangeAttachements_1" MailMessage="[currentMailMessage]" SecurePassword="[in_secPasswordGSRRobotAccount]" TimeoutMS="60000" User="[in_strGSRRobotAccount]" />
                     <ui:ForEachFileX DisplayName="For Each File In Folder" Filter="*.xlsx" Folder="[in_strInputOrdner]" sap:VirtualizedContainerService.HintSize="520,1090" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                       <ui:ForEachFileX.Body>
                         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
