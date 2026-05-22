@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="rpa004_WebexToken" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="478.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_WebexToken]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="global_WebEx_Token" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="478.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_WebexToken]" />
     <Assign DisplayName="Set Variable Value" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[str_WebexToken]</OutArgument>
