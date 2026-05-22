@@ -165,7 +165,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="rpa015_Webex_Token" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="584,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_WebexToken]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="global_WebEx_Token" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="584,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_WebexToken]" />
     <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="rpa004_DatenbankdateiPfad" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="584,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[str_DatabasefilePath]</OutArgument>
