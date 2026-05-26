@@ -130,7 +130,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_2_4_Eingabe_der_Daten" sap:VirtualizedContainerService.HintSize="1287.6000000000001,4067.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_2_4_Eingabe_der_Daten" sap:VirtualizedContainerService.HintSize="1624,4165.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Nachname" />
       <Variable x:TypeArguments="x:String" Name="str_Vorname" />
@@ -145,7 +145,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1143.2,274.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1624,274.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -191,19 +191,19 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.4 Eingabe der Daten" sap:VirtualizedContainerService.HintSize="1143.2,3769.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="63063385-c041-4569-b185-ffe9efcc42ff" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.4 Eingabe der Daten" sap:VirtualizedContainerService.HintSize="1624,3868" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="63063385-c041-4569-b185-ffe9efcc42ff" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1109.6,3455.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="1590.4,3553.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Nachname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1076,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Nachname]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Nachname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1556.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Nachname]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 165, 216, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='22' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="4b2ef129-d164-4edb-af45-4948ebd54388" ImageBase64="" InformativeScreenshot="ea24553e324f5461de09e57fb677eb0d.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -220,7 +220,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Vorname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1076,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Vorname]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Vorname' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1556.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Vorname]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 191, 216, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='13' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="a532182c-3b7f-4a72-b38e-bbee6aa84954" ImageBase64="" InformativeScreenshot="bf80d8c8aa40a69b52513590c3433d90.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -237,7 +237,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NCheckState DisplayName="Warnung: Geschlecht für Vornamen festgestellt" sap:VirtualizedContainerService.HintSize="1076,530.4" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NCheckState DisplayName="Warnung: Geschlecht für Vornamen festgestellt" sap:VirtualizedContainerService.HintSize="1556.8,530.4" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="PopUp wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,280" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -292,7 +292,7 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geburtsdatum' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1076,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geburtsdatum]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geburtsdatum' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1556.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geburtsdatum]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="201, 218, 106, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGDateField' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGDateField' /&gt;" Guid="0e6f513a-d7d4-4c12-9dd9-69ef0eb03d43" ImageBase64="" InformativeScreenshot="8c301929ec3c8cab6f605680e34fa75c.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -309,7 +309,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geschlecht' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1076,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geschlecht]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Geschlecht' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1556.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Text="[str_Geschlecht]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="595, 218, 78, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' idx='31' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGGroupBox' title=' Patient ' /&gt;&lt;wnd cls='TMGTextField' /&gt;" Guid="0f58e4d1-f733-4ad1-b2cc-9c7810af6b3c" ImageBase64="" InformativeScreenshot="82b18a0a16ea23ce14f517e5e3146db8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -326,7 +326,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf gelbes Plus (Neuen Datensatz anlegen)" sap:VirtualizedContainerService.HintSize="1076,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf gelbes Plus (Neuen Datensatz anlegen)" sap:VirtualizedContainerService.HintSize="1556.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="11, 448, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='83' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="bae753e6-b42d-4429-89e2-b8bc9f993b88" ImageBase64="" InformativeScreenshot="ee4174ce9d6a8054bf7d35952bd6079a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -343,7 +343,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'JA' bei Pop-Up (Patient in Tabelle anlegen)" sap:VirtualizedContainerService.HintSize="1076,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'JA' bei Pop-Up (Patient in Tabelle anlegen)" sap:VirtualizedContainerService.HintSize="1556.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="347, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='&amp;amp;Ja' /&gt;" Guid="78ac6530-ff62-4960-922f-942e20fb5b5e" ImageBase64="" InformativeScreenshot="4c5049c8569c9ed41b2edda22dd660cc.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -360,15 +360,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Use Application: 6.2.4 Eingabe der Daten - Sonderfall: Patient existiert bereits, check, ob Pop-Up 'Patient vorhanden' angezeigt wird" sap:VirtualizedContainerService.HintSize="1076,1482.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+            <uix:NCheckState DisplayName="Use Application: 6.2.4 Eingabe der Daten - Sonderfall: Patient existiert bereits, check, ob Pop-Up 'Patient vorhanden' angezeigt wird" sap:VirtualizedContainerService.HintSize="1556.8,1580.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Pop-Up wird angezeigt" sap:VirtualizedContainerService.HintSize="511.2,998.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Pop-Up wird angezeigt" sap:VirtualizedContainerService.HintSize="992,1337.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'OK' bei PopUp 'Patient vorhanden'" sap:VirtualizedContainerService.HintSize="477.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'OK' bei PopUp 'Patient vorhanden'" sap:VirtualizedContainerService.HintSize="958.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="614, 149, 111, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='OK' check:text='OK' /&gt;" Guid="e79cbe5e-94b9-416c-8ad0-28893f697922" ImageBase64="" InformativeScreenshot="f0da774ccad240a07f6ff83affc50db3.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -379,48 +379,139 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'OK' bei PopUp 'Patientendaten gefunden'" sap:VirtualizedContainerService.HintSize="477.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="19, 149, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="6dfa734d-33d4-4ab8-a48b-b788749e94fc" ImageBase64="" InformativeScreenshot="c307d1202d9564208843911df65484c2.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.PointOffset>
-                          <uix:PointOffset Position="BottomRight" X="410" Y="-14" />
-                        </uix:TargetAnchorable.PointOffset>
-                      </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'Abbrechen' der Dateneingabe" sap:VirtualizedContainerService.HintSize="477.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="11, 398, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="068443df-ca02-4a20-b85e-5825664cf7ed" ImageBase64="" InformativeScreenshot="88e441507e2b161b52b8e93435ea2d8e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:NCheckState DisplayName="Use Application: 6.2.4 Eingabe der Daten - Sonderfall: Patient existiert bereits, check, ob Pop-Up 'Rote Felder stimmen mit Kartendaten nicht überein' angezeigt wird" sap:VirtualizedContainerService.HintSize="958.4,944" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Ziel wird angezeigt" sap:VirtualizedContainerService.HintSize="449.6,693.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'OK' bei PopUp 'Rote Felder stimmen mit Kartendaten nicht überein'" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="534, 127, 89, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='OK' check:text='OK' /&gt;" Guid="4ba1c366-6f99-46a8-bce3-a168d6c337c8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAdCAYAAADIKWCvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAZsSURBVGhD7ZfbUpRHEMd9hXmdRJbiQXIwIspbmJMhSowvkFSlUobEAwlXuUoqVplIEBcLQRBlOe7iLgvLQWBh2e3UdM+hp+ebBS8wN7tVv/pm/v3vw/QVnJsr70KHd8s5KXQ4e9zSR1+9hj8nFzucIdHStdj5nd0vufRWqwWtJkCr2aJzC6DZagVo3d913Hswz+VKr8/nOr+3i9Edopkij5iBdJoz8sp7M/u9RNjb674nj8l+yaUfHzfh+LgFx039bULDfANSWhbS146sPFGvoWey+mk8sp6h0WwhUude/XZ8vySoExJ57LnZTC/9qHFsaMChPR8ZXKwdDYPUT4qdznN4RLxNTvuYrJH26n24nZwYC+voWHLp9cMjxwH72jPRcNoBnj06xuP1I55v47auyTkiuMfX8z15boDJ9x7RB2PiLa5nOHfQ48ggZor3ERN7Guml79UPYe/AUqdvvY7sHxwi5NExE7daneLoOQX72s/6udrBDLY+zZAVD+YS9aJ5ojnFOzK8sl4Qj7y+Hvqdp55e+u7egWPHfvcJGaN43RDGd/frCOWRx+eENTzaYzHa1C3oVgqUox9+4/lTt6BH9cOI7I+6gisj4WyyZ0rPInqj1vGN8dt4TXtPLr22uwe13X1kC9lz1HYIPBvIw332TlAdX+NkbN4e1Eb6cdGXR1gctR4YnDTeyW+hW/XD8A7ri5r2yNl8fXv37+BxG6P5Yw/PbfdG8xbc2X566Rvbb2BjaxepbunzG9JQ53gP+ejuvNv6bGE1ojqypj1PwvVuBX3DdgZfKz/YA6r7JuS1f+Im5NQVuOf6jECf6oHrT99AdZvgc1bxzPtIdlle3Jvvx8/M3hrkmLjJSy69srkDlc1tKCP6THektkNorabv5CEfefyd5/I7q+cg3eZifn4Qcuoy3BE5GM9/AznVDQP5bebT8V+hVynovR/OUNazuh70tnheOVPWWyTxG/yOSKNeFEsufa26BaXqFn6Rdf2tCYyOMaK0TnideWU+97Ea+lyq1pC1u5dB5QZhlM9iZitVh+GiUnDx7hasjQ9Cl+qDoeoEXMspUJeGw9ltfdnLkfE2SeqtOIuZN5jP7xC/+K6t9NJXypuwUtmElfIGrFY2ibKhorUNWNUxh40JbyaUo2tn1/fnlV/6QOVuwN+yBubch0+Ugk/ubMLq2A3oUt3QpRfeex2+yCk4P5DHd/C++C6X77G6I0OT3qCu1nlN9kb3FvNNLn1prWpYh0X9La3jGSnpO8V1DOMCqy9ivqlh8l2OqxPr7jz6NZxXl+BHW1vPgbPo+124oHLw2aMqLD7SPgUXhkwu5uXg81E2i5k5e275NjaP6x3OZt+W5XUxtiv7TS69sFqBQrGC33kDahwdL5YJEbM5LrcYnvndUSwjYWwMPu1S8NFPYoZiBR58mQPVNQAPdL1/BuB91Qs/YB3iLx03WjhzmzmZLj2pO2qmZ1Y9/No3Fyvppb9cfg1zy6/d1545XLMe6ZX3dmR5Ubvdi38yfnib6ah1wdWHRnv4FS79+6DOv3D1vAJ14edkL0k7TztdajLGv8mlzy6uwexiCWYWS/idXdBfrZGOsQXNGoJxDs/TPn4WOK+ti9+w1+zCEHwQ/HN0Eb7juQ+uwXtaC3quwQzqCtTHQ1GfbExf/SZ3tnPbt0poZiR6E98N1UsufXq+CNPzq56Cpkhw3aF1Bvp5jvlmEeVm5DuMzr3RLHzmVZiaJ7LnIu/UfBHh87s84Y3eHLxBzmA1700u/dmrFZh8uWxYgWcvV2BSa6gTqLEzvzuvy1mO8k+DniOYxdSw/YK5JLJeoIl6Fl5TzCDfGOh2Tkm0l+X00p/OLcPTF5olOs8t0VkwMUeQx/j43XqdvgQTOi+jlotjL9bfzRDXp94GmxPNwHVbR9azNSzMI+d7sYwE3uAs56YcO0Ny6U9miPws8cR8OTIeeHSMxQNNImrwOnYOqWfNIOvJunRfQGQ9d+c1EvNZXdaIe4mYyUkuffz5AozPaAow/tyycCKPnxcQytV3IvSdVI/FTB1fX9bTvQwn1Me5Io/Ex20v19PNIr1e8362B9ef8pNLH5suwNj0vPkW4PGUvTPNebz2Nuh8qmGhWthrah557LAznAYzE9YJ+0mPnyE7J5usN8e7CfsZpgrppd/7/Y8OZ0Ry6R3OlmjpHd4dnaX/D/wHlMxQKMMVECUAAAAASUVORK5CYII=" InformativeScreenshot="583fe895feacb0e0cdded8f87aa6b02e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector, Image" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="78, 48, 498, 40" FullSelectorArgument="&lt;wnd aaname='Auf der eingelesenen Karte wurden Patientendaten gefunden.  Der *' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Auf der eingelesenen Karte wurden Patientendaten gefunden.  Der *' cls='TMGCustomTextArea' check:text='Auf der eingelesenen Karte wurden Patientendaten gefunden.&amp;#xD;&amp;#xA;Der Inhalt der roten Felder stimmt jedoch nicht mit den Daten auf der Karte überein.' /&gt;" Guid="4b166271-8d39-4e98-ba8c-9d97d5879c2c" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="Schaltfläche 'OK'" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="534, 127, 89, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' title='OK' check:text='OK' /&gt;" Guid="f28d24af-0678-4215-9d72-b1444d651436" InformativeScreenshot="b35185883e613013b5d8c348ecd02d75.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="78, 48, 498, 40" FullSelectorArgument="&lt;wnd aaname='Auf der eingelesenen Karte wurden Patientendaten gefunden.  Der *' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Auf der eingelesenen Karte wurden Patientendaten gefunden.  Der *' cls='TMGCustomTextArea' check:text='Auf der eingelesenen Karte wurden Patientendaten gefunden.&amp;#xD;&amp;#xA;Der Inhalt der roten Felder stimmt jedoch nicht mit den Daten auf der Karte überein.' /&gt;" Guid="e8f31322-78b7-4d0a-8662-9fa138c7e16a" ImageBase64="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" SearchSteps="Selector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:VerifyExecutionOptions.Target>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'Abbrechen' der Dateneingabe" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="11, 398, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="068443df-ca02-4a20-b85e-5825664cf7ed" ImageBase64="" InformativeScreenshot="88e441507e2b161b52b8e93435ea2d8e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="11, 448, 51, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='85' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="9563914c-64af-4cee-80ee-d9d46df883c8" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'JA' bei Verwerfen der Eingabe" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="197, 127, 89, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='Ja' /&gt;" Guid="769cb075-c997-4197-a807-8e1315865b94" ImageBase64="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" InformativeScreenshot="bfea9c61dfb19fcea8bcebe4de6b55b8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector, Image" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="78, 48, 260, 40" FullSelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' check:text='Wollen Sie den Einfügevorgang abbrechen&amp;#xD;&amp;#xA;und die Änderungen verlieren?' /&gt;" Guid="ac716422-dfd6-4b13-ac8d-989810a58316" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Ziel wird nicht angezeigt" sap:VirtualizedContainerService.HintSize="449.6,657.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'OK' bei PopUp 'Patientendaten gefunden'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="19, 149, 31, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="6dfa734d-33d4-4ab8-a48b-b788749e94fc" ImageBase64="" InformativeScreenshot="c307d1202d9564208843911df65484c2.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.PointOffset>
+                                <uix:PointOffset Position="BottomRight" X="410" Y="-14" />
+                              </uix:TargetAnchorable.PointOffset>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'Abbrechen' der Dateneingabe" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="11, 398, 51, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='86' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="068443df-ca02-4a20-b85e-5825664cf7ed" ImageBase64="" InformativeScreenshot="88e441507e2b161b52b8e93435ea2d8e.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="11, 448, 51, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='85' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="9563914c-64af-4cee-80ee-d9d46df883c8" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'JA' bei Verwerfen der Eingabe" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="197, 127, 89, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='Ja' /&gt;" Guid="769cb075-c997-4197-a807-8e1315865b94" ImageBase64="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" InformativeScreenshot="bfea9c61dfb19fcea8bcebe4de6b55b8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector, Image" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="78, 48, 260, 40" FullSelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' check:text='Wollen Sie den Einfügevorgang abbrechen&amp;#xD;&amp;#xA;und die Änderungen verlieren?' /&gt;" Guid="ac716422-dfd6-4b13-ac8d-989810a58316" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="78, 48, 498, 40" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd aaname='Auf der eingelesenen Karte wurden Patientendaten gefunden.  Der *' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Auf der eingelesenen Karte wurden Patientendaten gefunden.  Der *' cls='TMGCustomTextArea' check:text='Auf der eingelesenen Karte wurden Patientendaten gefunden.&amp;#xD;&amp;#xA;Der Inhalt der roten Felder stimmt jedoch nicht mit den Daten auf der Karte überein.' /&gt;" Guid="37ecb6b2-a328-48f1-bf5b-e81e6170b441" InformativeScreenshot="e33e49f43e584d96aef0b29e8095a708.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Information' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="11, 448, 51, 50" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='85' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="9563914c-64af-4cee-80ee-d9d46df883c8" SearchSteps="Selector" />
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="15, 127, 25, 25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TMGButton' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGButton' /&gt;" Guid="a840bd97-12cb-44d7-89a1-844815c196f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOpSURBVEhLxVNLb5tVFOwP4B/Ahh0rumLBsiCERDcVIFaskIIqsSkFuuJRJCoVaKVUQikiShsoTYiS5u24jWWnDoU+8qhx7Dok9mfHz9ixHceO87K/b9A5997Psc0VqwRLozl3zpwZWbJPrGQrOG6caBWOA3bpo/A6PP7YkaKtlMSj/GhLLcuCZQKWaYnZAkzLgmlBvmk+xGZjJ3xCE+/mG21pvW6iXrdQN4lN1CQ3gTS1b9213qjZNPWlB7W6RA37tTq8Dx7iuRdPteGFk6fx9K/AIX8DdEf3rZq2dG//wMbu/gFmZv/kkrPnL+LS1S5cutLFsype8C1Jb82+UaxmgZq+tLq3j+quwh7c3j+4gFjpHqmp4rlFP3vtO5mxQ7Dz9vSllequjXJ1F66ZBxxOXN4RutI6r/dyKeHxvI/96k6xmgna0s1KFZuVHUapsoN7nlkuuOf5XWpVW+s49yXe++BT+xvTrhkiY7MsZm1pYWsbhVKFkS9tw+nycuiUy4vCFuli/+a7Z9t+XHl1Sz6Gem8ztKW5Yhm54hayjDIc0/c5cHL6PuuE8FqKdcf0DOs0E88+nJP3IoOYcpSmLc3kS0jnS8yE8bseLiVmbaOh/Ruu3+hvymDeEKwtTWSLSOSKSGQLSOaKGHW6OWx0yo0k7bIFW7t8rRsjU27G5c5uu7irp0/cZ4vyRrC2dC2Tl9hALJPH8KSLg4YdLn6vpRvanUmX7ac9ac+//BbzD92/spf3krWlRjIHI5VjjiRzGByf5pBX3ngfr7/9IT668A2GJoRGTB7yK9/NvmH20nztp1siK5VDJJXTl67G17ESX7fZ+9iHC19ftdH54y8YGLvLocTkIzjc4r9LhaqUcDhPW7ocy2A5lkYolmZejjaYtFA0jb4RJwf2jzgRkn7CZxev4LUzHTh1pgMvvfoOe/g+Sp6MvjQYSSEYSTZgqJn0FIJGCreHpzjw9h2H2BtJBCIpBGxfEp989T17Dt9pS5fCCfhX4xIJLK3SW7HQbg05OJCY3rznO8nhBM5/8R171N4fjutLfStx+P4mrIl5Za1t7h2c4MCfByekLnd8S544PpalTzlL7LWlCyGBxWWBhRZeDMVwc2CcA3sHxqUvKvZ0K73nPv+WPXwrdW3p/LMo5kMEA/PPFKJNuPHbmP3r/C+Qf05makufBA08CUYkG5gLCLbfQQMzj/zo6RtDT/9Yg/tHJTfDvg0Y+tIhp/vIoC09arSVHif+l9J/AGhlIt/jy8uQAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick 'JA' bei Verwerfen der Eingabe" sap:VirtualizedContainerService.HintSize="477.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63063385-c041-4569-b185-ffe9efcc42ff" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="197, 127, 89, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;wnd aaname='Ja' cls='TMGButton' title='&amp;amp;Ja' check:text='Ja' /&gt;" Guid="769cb075-c997-4197-a807-8e1315865b94" ImageBase64="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" InformativeScreenshot="bfea9c61dfb19fcea8bcebe4de6b55b8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMMsgDialog' title='Bestätigung' /&gt;" SearchSteps="Selector, Image" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="78, 48, 260, 40" FullSelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Wollen Sie den Einfügevorgang abbrechen  und die Änderungen verl*' cls='TMGCustomTextArea' check:text='Wollen Sie den Einfügevorgang abbrechen&amp;#xD;&amp;#xA;und die Änderungen verlieren?' /&gt;" Guid="ac716422-dfd6-4b13-ac8d-989810a58316" SearchSteps="Selector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.6,142.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="958.4,142.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
