@@ -153,7 +153,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID2}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1679,868" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID2}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1561,868" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -873,9 +873,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="604,6999" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="604,7117" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <Sequence DisplayName="Sequence EndProcess" sap:VirtualizedContainerService.HintSize="558,6853" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                <Sequence DisplayName="Sequence EndProcess" sap:VirtualizedContainerService.HintSize="558,6971" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1066,7 +1066,7 @@
                                       </Sequence>
                                     </TryCatch.Finally>
                                   </TryCatch>
-                                  <TryCatch DisplayName="Try Catch delete temp project Folder" sap:VirtualizedContainerService.HintSize="524,557" sap2010:WorkflowViewState.IdRef="TryCatch_20">
+                                  <TryCatch DisplayName="Try Catch delete temp project Folder" sap:VirtualizedContainerService.HintSize="524,675" sap2010:WorkflowViewState.IdRef="TryCatch_20">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1096,7 +1096,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:LogMessage DisplayName="Log Message error temp project Folder" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Warn" Message="[&quot;Failed to delete temp project folder. Reason: &quot;+exception.Message]" />
+                                          <ui:LogMessage DisplayName="Log Message error temp project Folder" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Warn" Message="[&quot;Failed to delete temp project folder. Reason: &quot;+exception.Message]" />
                                         </ActivityAction>
                                       </Catch>
                                     </TryCatch.Catches>
@@ -1664,16 +1664,8 @@
       <Variable x:TypeArguments="x:String" Name="str_KriterienlisteDatei" />
       <Variable x:TypeArguments="x:String" Name="str_DatenbankDatei" />
       <Variable x:TypeArguments="ss:SecureString" Name="str_secPasswordGSRRobotAccount" />
-      <Variable x:TypeArguments="x:Boolean" Name="bool_RunWebexPerformerEndeAndReport">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Boolean" Name="bool_InitSystemExceptionNotification">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="bool_RunWebexPerformerEndeAndReport" />
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="bool_InitSystemExceptionNotification" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>
