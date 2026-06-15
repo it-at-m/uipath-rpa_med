@@ -118,9 +118,8 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1225,4772" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1516,4623" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_WebexToken" />
       <Variable x:TypeArguments="x:String" Name="str_WebexRoomID" />
       <Variable x:TypeArguments="x:String" Name="str_WebexApiUrl" />
       <Variable x:TypeArguments="x:String" Name="str_WebexMessage" />
@@ -163,20 +162,6 @@
         <OutArgument x:TypeArguments="x:String">[str_WebexRoomID]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="586,149" sap2010:WorkflowViewState.IdRef="MultipleAssign_14">
-      <ui:MultipleAssign.AssignOperations>
-        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[str_WebexToken]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[new System.Net.NetworkCredential("", secstr_WebexToken).Password]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-        </scg:List>
-      </ui:MultipleAssign.AssignOperations>
-    </ui:MultipleAssign>
     <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="586,167" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="EXCEL" />
     <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="586,285" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[str_CriterialistfilePath]">
       <ui:ExcelApplicationScope.Body>
@@ -552,7 +537,7 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Cookies>
       <ui:HttpClient.Headers>
-        <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer " + str_WebexToken]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer " + New System.Net.NetworkCredential("", secstr_WebexToken).Password]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>

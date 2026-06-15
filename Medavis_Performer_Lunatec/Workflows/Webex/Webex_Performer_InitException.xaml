@@ -104,9 +104,8 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1231,867.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1522,867.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_WebexToken" />
       <Variable x:TypeArguments="x:String" Name="str_WebexRoomID" />
       <Variable x:TypeArguments="x:String" Name="str_WebexApiUrl" />
       <Variable x:TypeArguments="x:String" Name="str_WebexMessage" />
@@ -122,14 +121,6 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="global_WebEx_Token" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="478,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_WebexToken]" />
-    <Assign DisplayName="Set Variable Value" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[str_WebexToken]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[New System.Net.NetworkCredential("", secstr_WebexToken).Password]</InArgument>
-      </Assign.Value>
-    </Assign>
     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -197,7 +188,7 @@ Ihr Medavis-Roboter</InArgument>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Cookies>
       <ui:HttpClient.Headers>
-        <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer " + str_WebexToken]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Authorization">["Bearer " + New System.Net.NetworkCredential("", secstr_WebexToken).Password]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
