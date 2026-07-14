@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1522,867.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1679,867.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_WebexToken" />
       <Variable x:TypeArguments="x:String" Name="str_WebexRoomID" />
@@ -130,12 +130,7 @@
               <OutArgument x:TypeArguments="x:String">[str_WebexMessage]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String" xml:space="preserve">Hallo,
-
-der Medavis-Roboter hat mit der Eingabe der Daten in Medavis RIS begonnen.
-
-Mit freundlichen Grüßen
-Ihr Medavis-Roboter</InArgument>
+              <InArgument x:TypeArguments="x:String">RPA-Status: Medavis RIS - Dateneingabe gestartet</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
