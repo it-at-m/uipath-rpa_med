@@ -46,6 +46,7 @@
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -116,9 +117,10 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1516,4623" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1673,4623" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_WebexRoomID" />
       <Variable x:TypeArguments="x:String" Name="str_WebexApiUrl" />
@@ -495,7 +497,8 @@
               <OutArgument x:TypeArguments="x:String">[str_WebexMessage]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String" xml:space="preserve">["**RPA-Bot Statusmeldung " + str_Date + "**" + Environment.NewLine +
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">["**RPA-Status: Medavis RIS**" + Environment.NewLine +
+"Verarbeitungsergebnis vom " + str_Date + Environment.NewLine + 
 "Gesamt: " + int_CountTotal.ToString + Environment.NewLine +
 " | Erfolgreich: " + int_CountSuccessfull.ToString + Environment.NewLine +
 " | Fehlgeschlagen: " + int_CountFailed.ToString + Environment.NewLine +
