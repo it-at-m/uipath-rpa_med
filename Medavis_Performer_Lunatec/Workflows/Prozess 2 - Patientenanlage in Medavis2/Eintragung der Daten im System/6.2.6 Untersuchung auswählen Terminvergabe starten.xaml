@@ -104,25 +104,25 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_2_6_Untersuchung_auswählen_Terminvergabe_starten" sap:VirtualizedContainerService.HintSize="568.8,1796.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_2_6_Untersuchung_auswählen_Terminvergabe_starten" sap:VirtualizedContainerService.HintSize="1709,1707" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.6 Untersuchung auswählen Terminvergabe starten" sap:VirtualizedContainerService.HintSize="506.4,1684.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 6.2.6 Untersuchung auswählen Terminvergabe starten" sap:VirtualizedContainerService.HintSize="520,1684" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="472.8,1393.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Ausführen" sap:VirtualizedContainerService.HintSize="486,1368" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Untersuchung' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="410.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Text="rthpa" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="In Feld 'Untersuchung' schreiben" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,251" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Text="rthpa" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="778, 168, 91, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGTextField' idx='10' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGTextField' /&gt;" Guid="c6378134-b07c-4c40-aa9c-e606d7eb6638" ImageBase64="" InformativeScreenshot="f46263bbb484a923a8b870ae7397790a.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -133,8 +133,8 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Eingabe in Feld 'Untersuchung' mit Enter bestätigen" sap:VirtualizedContainerService.HintSize="410.4,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'Terminvergabe'" sap:VirtualizedContainerService.HintSize="410.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V3">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Eingabe in Feld 'Untersuchung' mit Enter bestätigen" sap:VirtualizedContainerService.HintSize="452,212" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf 'Terminvergabe'" sap:VirtualizedContainerService.HintSize="452,190" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="1755, 829, 161, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Terminvergabe' cls='TMGButton' title='&amp;amp;Terminvergabe' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Terminvergabe' cls='TMGButton' title='&amp;amp;Terminvergabe' check:text='&amp;amp;Terminvergabe' /&gt;" Guid="7bd72653-15e4-4859-96ff-f96dac576019" ImageBase64="" InformativeScreenshot="b15b80c86017bc0d001b2c318b93acc8.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMCaseRegistrationForm' title='medavis Ris *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -145,15 +145,15 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <If Condition="[in_FallanmerkungVorhanden]" sap:VirtualizedContainerService.HintSize="410.4,628" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[in_FallanmerkungVorhanden]" DisplayName="If Fallanmerkung vorhanden" sap:VirtualizedContainerService.HintSize="452,653" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376.8,444.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,431" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf DropDown-Menü 'Terminfarbe'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick auf DropDown-Menü 'Terminfarbe'" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="289, 82, 270, 28" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TMGPanel' idx='10' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGPanel' /&gt;" Guid="2ddcf18d-56cc-444e-bd7a-cd2033460b76" InformativeScreenshot="57800eb0b4a4102513292cd4f7ed10e7.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMStepAppointmentViewer' title='Terminvergabe' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -168,7 +168,7 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick  auf Farbe 'Fuchsie'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Klick  auf Farbe 'Fuchsie'" sap:VirtualizedContainerService.HintSize="416,181" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4d0a790f-7e66-4b30-abc4-86b9eb2117c1" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="2, 309, 150, 24" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='Fuchsie' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TMGListField' /&gt;&lt;ctrl name='Fuchsie' role='list item' automationid='' check:text='Fuchsie' /&gt;" Guid="abc82088-c579-4e67-b7f4-9a83ea9ee951" InformativeScreenshot="7142936b0115436e20fcb836d22c71e9.png" ScopeSelectorArgument="&lt;wnd app='ris.exe' cls='TMGPopupListBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -182,7 +182,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" />
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
               </If.Else>
             </If>
           </Sequence>
