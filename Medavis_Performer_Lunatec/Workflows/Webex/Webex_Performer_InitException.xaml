@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1522,867.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Webex_Performer_Ende" sap:VirtualizedContainerService.HintSize="1551,867.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_WebexRoomID" />
       <Variable x:TypeArguments="x:String" Name="str_WebexApiUrl" />
@@ -120,8 +120,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="global_WebEx_Token" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="478,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_WebexToken]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="global_WebEx_Token" CacheStrategy="None" DisplayName="Get Credential WebEx-Token" sap:VirtualizedContainerService.HintSize="478,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_WebexToken]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign WebEx Requestdaten setzen" sap:VirtualizedContainerService.HintSize="478,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -158,7 +158,7 @@ Ihr Medavis-Roboter</InArgument>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="Multiple Assign WebEx JSON-Body erstellen" sap:VirtualizedContainerService.HintSize="478,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -180,7 +180,7 @@ Ihr Medavis-Roboter</InArgument>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[str_JsonBody]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[str_WebexApiUrl]" sap:VirtualizedContainerService.HintSize="478,94" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[str_ResponseBody]" StatusCode="[int_StatusCode]" TimeoutMS="6000">
+    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[str_JsonBody]" BodyFormat="application/json" DisplayName="HTTP Request WebEx Nachricht senden" EnableSSLVerification="True" EndPoint="[str_WebexApiUrl]" sap:VirtualizedContainerService.HintSize="478,94" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[str_ResponseBody]" StatusCode="[int_StatusCode]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
