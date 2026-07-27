@@ -8,6 +8,7 @@
     <x:Property Name="in_str_DatenbankDatei" Type="InArgument(x:String)" />
     <x:Property Name="in_str_InputdateiName" Type="InArgument(x:String)" />
     <x:Property Name="in_str_KriterienlisteDatei" Type="InArgument(x:String)" />
+    <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <this:_6_1_Excel_VorqualifizierungListe.in_str_ProbantenListeFolder>
     <InArgument x:TypeArguments="x:String" />
@@ -75,6 +76,7 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>UiPath.Semantic.Activities</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>Microsoft.Office.Interop.Word</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -158,6 +160,8 @@
       <AssemblyReference>System.Threading.AccessControl</AssemblyReference>
       <AssemblyReference>System.Threading</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -167,7 +171,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="_6_1_2_Vorqualifizierung_der_Liste_in_Excel" sap:VirtualizedContainerService.HintSize="1545,15502" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_1_2_Vorqualifizierung_der_Liste_in_Excel" sap:VirtualizedContainerService.HintSize="1545,15709" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="gebDatum" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="list_workbookSheets_1" />
@@ -242,14 +246,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Sequence Suche Excel-Dateien im Ordner" sap:VirtualizedContainerService.HintSize="868,1455" sap2010:WorkflowViewState.IdRef="Sequence_220">
+    <Sequence DisplayName="Sequence Suche Excel-Dateien im Ordner" sap:VirtualizedContainerService.HintSize="868,1662" sap2010:WorkflowViewState.IdRef="Sequence_220">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Sequence Probantenliste in Array speichern" sap:VirtualizedContainerService.HintSize="486,596" sap2010:WorkflowViewState.IdRef="Sequence_208">
+      <Sequence DisplayName="Sequence Probantenliste in Array speichern" sap:VirtualizedContainerService.HintSize="486,803" sap2010:WorkflowViewState.IdRef="Sequence_208">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -269,19 +273,24 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <If Condition="[arrProbantenListe.Length = 0]" DisplayName="If Ordner enthält keine Datei" sap:VirtualizedContainerService.HintSize="452,329" sap2010:WorkflowViewState.IdRef="If_38">
+        <If Condition="[arrProbantenListe.Length = 0]" DisplayName="If Ordner enthält keine Datei" sap:VirtualizedContainerService.HintSize="452,536" sap2010:WorkflowViewState.IdRef="If_38">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_218">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,381" sap2010:WorkflowViewState.IdRef="Sequence_218">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Webex_Dispatcher_keine_Mail_im_Postfach - Invoke Workflow File (Workflows\Webex\Webex_Dispatcher_keine_Mail_im_Postfach.xaml)" sap:VirtualizedContainerService.HintSize="416,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Webex\Webex_Dispatcher_keine_Mail_im_Postfach.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[in_config]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
               <Throw Exception="[New Exception(&quot;GSR-Liste nicht gefunden im Ordner: Input&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">

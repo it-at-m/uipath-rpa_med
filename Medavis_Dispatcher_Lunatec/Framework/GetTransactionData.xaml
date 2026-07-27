@@ -129,6 +129,8 @@
       <Variable x:TypeArguments="x:String" Name="str_DatenbankDatei" />
       <Variable x:TypeArguments="x:String" Name="str_InputdateiName" />
       <Variable x:TypeArguments="x:String" Name="str_KriterienlisteDatei" />
+      <Variable x:TypeArguments="x:String" Name="str_WebexRoomID" />
+      <Variable x:TypeArguments="x:String" Name="str_WebexApiUrl" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -264,6 +266,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_strInputOrdner">[str_InputOrdner]</InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_strInputdateiName">[str_InputdateiName]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strOrgMailbox">[str_OrgMailbox]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[in_config]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="6.1.2 Vorqualifizierung der Liste in Excel - Invoke Workflow File (Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.2 Vorqualifizierung der Liste in Excel.xaml)" sap:VirtualizedContainerService.HintSize="478,207" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Prozess 1 - Eingangsprüfung neue Probandenliste\6.1.2 Vorqualifizierung der Liste in Excel.xaml">
@@ -276,9 +279,10 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_str_DatenbankDatei">[str_DatenbankDatei]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_InputdateiName">[str_InputdateiName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_str_KriterienlisteDatei">[str_KriterienlisteDatei]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[in_config]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ReadRange AddHeaders="True" DataTable="[out_transactionData]" DisplayName="Read Range Workbook Datenbankdatei" sap:VirtualizedContainerService.HintSize="478.4,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Datenbank" WorkbookPath="[str_DatenbankDatei]">
+    <ui:ReadRange AddHeaders="True" DataTable="[out_transactionData]" DisplayName="Read Range Workbook Datenbankdatei" sap:VirtualizedContainerService.HintSize="478,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Datenbank" WorkbookPath="[str_DatenbankDatei]">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
