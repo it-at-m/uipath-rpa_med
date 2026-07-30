@@ -1,0 +1,21 @@
+# UiPath local/runtime
+**/.local/
+**/.settings/
+**/.tmh/
+**/.objects/
+**/.screenshots/
+**/.entities/
+**/.templates/
+**/.variations/
+**/Exceptions_Screenshots/
+
+# Packages / build artifacts
+*.nupkg
+*.nrproj
+*.dll
+*.pdb
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.user
